@@ -1,0 +1,94 @@
+html{
+    font-size: 62.5%; /** resete para rems - 62.5%=10px**/
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+
+    color: #fff;
+}
+
+/*sistema de tamaños que son directamente proporcionales*/
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+
+/**/
+a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.contenedor{
+    width: 100%;
+    min-height: 100vh;/*altura minima*/
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1440px auto ; /*la pagina tendra 2 columnas con las medidas anteriores*/
+    grid-template-rows: 60px  40px  100vh auto; /*la pagina tendra 2 filas con las medidas anteriores*/
+    grid-template-areas: "header header" /*se establecen las areas que va a acupar cada elemento en la cuadricula*/
+                          "filtros filtros"
+                          "contenido redes"/* header ocupa todo lo de arriba y menu y contenido todo lo de abajo*/
+                          "pie pie";
+    transition: all .3s ease;/*transicion en la aparicion del menu*/
+}
+
+.encabezado{
+    background-color: #2699FB;
+    color: white;
+    grid-area: header;
+    padding: 0px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto ;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 25px;/*espaceado de 20px entre las divisiones del grid*/
+    grid-template-areas: "logo espaceado iniciar registro agregar";
+}
+.encabezado .barra-busqueda{
+    grid-area: busqueda;
+    display: flex;/*centrar elementos */
+    align-items: center;
+    justify-content: center;
+}
+
+.filtros{
+    grid-area: filtros;
+    background-color: #7FC4FD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:10px;
+   
+}
+.filtros a{
+    margin-right:10px;
+    padding: 10px;
+}
+
+.filtros a:hover{
+    background-color: teal;
+    border-radius: 5px;
+}
+
+
+.principal{
+    grid-area: contenido;
+}
+.pie{
+    grid-area: pie;
+    background-color: #2699FB;
+}
+.redes{
+    grid-area: redes;
+    
+}
