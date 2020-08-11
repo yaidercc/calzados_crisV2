@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Inicio</title>
 </head>
@@ -12,22 +11,23 @@
     <div class="contenedor">
         <!--cabecera de pagina-->
         <header class="header">
-            <div class="elements">
-                <div class="contenedor-logo">
-                    <h1>CALZADOS CRIS</h1>
-                </div>
-                    <p></p>
-                    <a href="#"><i title="notificaciones" class="fas fa-bell"> NOTIFICACIONES</i></a>
-                    <a href="#"><i title="notificaciones" class="fas fa-user"> YAIDER</i></a>
-                    <a href="#" class="cerrar">SALIR</a>
+            <div class="contenedor-logo">
+                <h1>CALZADOS CRIS</h1>
             </div>
+            <div class="navegacion">
+                <a href="#"><i title="notificaciones" class="fas fa-bell"> NOTIFICACIONES</i></a>
+                <a href="#"><i title="notificaciones" class="fas fa-user"> YAIDER</i></a>
+            </div>
+            <a href="#" class="cerrar">SALIR</a>
         </header>
 
         <!--filtros-->
         <div class="filtros">
-            <a href="#">MUJER</a>
-            <a href="#">HOMBRE</a>
-            <a href="#">MAS FILTROS<i class="fas fa-chevron-down"></i></a>
+            <div class="nav">
+                <a href="#">MUJER</a>
+                <a href="#">HOMBRE</a>
+                <a href="#">MAS FILTROS<i class="fas fa-chevron-down"></i></a>
+            </div>
         </div>
 
         <!--contenido principal-->
@@ -42,7 +42,11 @@
 
         <!--pie de pagina-->
         <footer class="pie">
-            <p>pie</p>
+            <div class="redes">
+                <a href="#" class="red"><i class="fab fa-whatsapp-square"></i><span>3148582774</span></a>
+                <a href="#" class="red"><i class="fab fa-facebook-square"></i><span>yaidercc.1</span></a>
+                <a href="#" class="red"><i class="fab fa-instagram-square"></i><span>@yaidercc</span></a>
+            </div>
         </footer>
     </div>
 
