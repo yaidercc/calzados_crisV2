@@ -11,12 +11,16 @@
     <!--contenedor de la pagina-->
     <div class="contenedor">
         <!--cabecera de pagina-->
-        <header class="encabezado">
-            <h1 class="">CALZADOS CRIS</h1>
-            <p></p>
-            <a href="#"><i title="notificaciones" class="fas fa-bell"> NOTIFICACIONES</i></a>
-            <a href="#"><i title="notificaciones" class="fas fa-user"> YAIDER</i></a>
-            <a href="#" class="cerrar">SALIR</a>
+        <header class="header">
+            <div class="elements">
+                <div class="contenedor-logo">
+                    <h1>CALZADOS CRIS</h1>
+                </div>
+                    <p></p>
+                    <a href="#"><i title="notificaciones" class="fas fa-bell"> NOTIFICACIONES</i></a>
+                    <a href="#"><i title="notificaciones" class="fas fa-user"> YAIDER</i></a>
+                    <a href="#" class="cerrar">SALIR</a>
+            </div>
         </header>
 
         <!--filtros-->
