@@ -7,9 +7,10 @@ html{
     font-size: 62.5%; /** resete para rems - 62.5%=10px**/
 }
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Archivo Narrow', sans-serif;
     font-size: 1.6rem;
     color: #fff;
+    text-transform: capitalize;
 }
 a{
     text-decoration: none;
@@ -45,41 +46,61 @@ h4{
                           "pie";
     transition: all .3s ease;
 }
-
+/*ENCABEZADO*/
 .header{
     background-color: #2699FB;
     color: white;
+    font-size: 1.6rem;
     grid-area: header;
-    padding: 0rem 2rem;
     display: grid;
-    grid-template-columns: auto 1fr auto 40px;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
+    grid-template-columns: auto 1fr auto auto auto;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
     align-items: center;
     justify-content: space-between;
-    grid-gap: 20px;/*espaceado de 20px entre las divisiones del grid*/
-    grid-template-areas: "logo busqueda iconos entrar";
+    grid-gap: 5px;/*espaceado de 20px entre las divisiones del grid*/
+    grid-template-areas: "logo busqueda chat iconos salir";
 }
-.header .elements{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.header  .navegacion{
+
+.header .navegacion{
     grid-area: iconos;
+    padding: 0rem 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
+    grid-gap: 25px;/*espaceado de 20px entre las divisiones del grid*/
+    grid-template-areas: "noti name";
+}
+.header .navegacion .notificaciones{
+    grid-area:noti;
+}
+.header .navegacion .nombre{
+    grid-area:name;
+}
+.header .navegacion .fas{
+    padding: 0rem 1rem;
+}
+.header .navegacion .cerrar{
+    grid-area:salir;
+    background-color:#7FC4FD ;
 }
 .header  .contenedor-logo{
     grid-area: logo;
+    padding: 0rem 1rem;
 }
 .header .barra-busqueda{
     grid-area: busqueda;
     display: flex;/*centrar elementos */
     align-items: center;
     justify-content: center;
-    
+
 }
-.header .cerrar{
-    grid-area: entrar;
-    background-color:#7FC4FD ;
-    padding: 0px 10px;
+.header .salir{
+    grid-area: salir;
+    width: 100%;
+    padding: 20px;
+}
+.header .salir:hover{
+    cursor: pointer;
+    background-color: #7FC4FD;
+
 }
 .filtros{
     grid-area: filtros;
@@ -90,15 +111,29 @@ h4{
 }
 .filtros .nav a{
     margin-right: 2rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
+/*PRINCIPAL*/
 .principal{
     grid-area: principal;
 }
+.principal .container{
+    margin: 3rem;
+    display: inline-block;
+}
+.principal .container .producto{
+    width: 315px;
+    height: 350px;
+    background-color: indigo;
+    margin: 3rem;
+    display: inline-block;
+}
+/*PIE DE PAGINA*/
 .pie{
     grid-area: pie;
     background-color: #2699FB;
     padding: 1rem;
+    font-size: 2rem;
 }
 .pie .redes{
     display: flex;

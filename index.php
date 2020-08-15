@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/estilos.css">
     <title>Inicio</title>
 </head>
@@ -12,27 +13,39 @@
         <!--cabecera de pagina-->
         <header class="header">
             <div class="contenedor-logo">
-                <h1>CALZADOS CRIS</h1>
+                <h1>calzados cris</h1>
             </div>
             <div class="navegacion">
-                <a href="#"><i title="notificaciones" class="fas fa-bell"> NOTIFICACIONES</i></a>
-                <a href="#"><i title="notificaciones" class="fas fa-user"> YAIDER</i></a>
+                <a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
+                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
             </div>
-            <a href="#" class="cerrar">SALIR</a>
+            <div class="salir">
+                <a href="#" class="cerrar">salir</a>
+            </div>
         </header>
 
         <!--filtros-->
         <div class="filtros">
             <div class="nav">
-                <a href="#">MUJER</a>
-                <a href="#">HOMBRE</a>
-                <a href="#">MAS FILTROS<i class="fas fa-chevron-down"></i></a>
+                <a href="#">mujer</a>
+                <a href="#">hombre</a>
+                <a href="#">mas filtros</a>
             </div>
         </div>
 
         <!--contenido principal-->
         <main class="principal">
-            <p>principal</p>
+            <div class="container">
+            <div class="producto"></div>
+            <div class="producto"></div>
+            <div class="producto"></div>
+            <div class="producto"></div>
+            <div class="producto"></div>
+            <div class="producto"></div>
+            <div class="producto"></div>
+            <div class="producto"></div>
+            </div>
+            
         </main>
 
         <!--redes sociales-->
