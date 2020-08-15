@@ -36,14 +36,21 @@
         <!--contenido principal-->
         <main class="principal">
             <div class="container">
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
-            <div class="producto"></div>
+                <div class="producto">
+                    <img class="imagen" src="img/zapatos.jpg" height="100%" width="100%">
+                    <div class="precio">
+                        <h1>yaider cc</h1>
+                        <p>para: hombre</p>
+                        <h2>$ 30.000</h2>
+                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
+                    </div>
+                    <div class="botones">
+                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="sol">SOLICITAR</a>
+                    </div>
+                    
+                </div>
+                
             </div>
             
         </main>

@@ -38,8 +38,7 @@ h4{
     min-height: 100vh;/*altura minima*/
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 6rem 4rem 100vh 50px ; /*la pagina tendra 2 filas con las medidas anteriores*/
+    grid-template-rows: 6rem 4rem 1000px 50px ; /*la pagina tendra 2 filas con las medidas anteriores*/
     grid-template-areas: "header"
                           "filtros"
                           "principal"
@@ -118,15 +117,48 @@ h4{
     grid-area: principal;
 }
 .principal .container{
-    margin: 3rem;
-    display: inline-block;
+    padding: 25px;
 }
 .principal .container .producto{
-    width: 315px;
-    height: 350px;
-    background-color: indigo;
-    margin: 3rem;
+    width: 360px;
+    height: 420px;
+    box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);
     display: inline-block;
+    display: grid;
+    grid-template-rows:200px 130px 80px;
+    grid-template-areas: "imagen"
+                         "descripcion"
+                         "botones";
+    padding: 10px;
+}
+.principal .container .producto .botones{
+    grid-area: botones;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.principal .container .car{
+    background-color: #2699FB;
+    display: inline-block;
+    padding: 10px 0px;
+    text-align: center;
+    width: 50px;
+    margin-right: 10px;
+}
+.principal .container .sol{
+    background-color: #2699FB;
+    display: inline-block;
+    padding: 10px 0px;
+    text-align: center;
+    width: 250px;
+}
+.imagen{
+    grid-area: imagen;
+    background-color: teal;
+}
+.precio{
+    grid-area:descripcion;
+    color: #2699FB;
 }
 /*PIE DE PAGINA*/
 .pie{
@@ -137,12 +169,10 @@ h4{
 }
 .pie .redes{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    
 }
 .pie .redes .fab{
-    padding: 0rem 1rem;
+    padding: 0 1rem;
     font-size: 2.5rem;
 }
 .pie .redes .red{
