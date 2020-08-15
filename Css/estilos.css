@@ -15,23 +15,24 @@ body{
 a{
     text-decoration: none;
     color: #fff;
+    text-transform: capitalize;
 }
-a:hover{
-
-}
-
 /*sistema de tamaños que son directamente proporcionales*/
 h1{
     font-size: 3.8rem;
+
 }
 h2{
     font-size: 3.4rem;
+
 }
 h3{
     font-size: 3rem;
+
 }
 h4{
     font-size: 2.6rem;
+    
 }
 .contenedor{
     width: 100%;
@@ -59,48 +60,53 @@ h4{
     grid-template-areas: "logo busqueda chat iconos salir";
 }
 
-.header .navegacion{
-    grid-area: iconos;
-    padding: 0rem 2rem;
-    display: grid;
-    grid-template-columns: auto 1fr;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
-    grid-gap: 25px;/*espaceado de 20px entre las divisiones del grid*/
-    grid-template-areas: "noti name";
-}
-.header .navegacion .notificaciones{
-    grid-area:noti;
-}
-.header .navegacion .nombre{
-    grid-area:name;
-}
-.header .navegacion .fas{
-    padding: 0rem 1rem;
-}
-.header .navegacion .cerrar{
-    grid-area:salir;
-    background-color:#7FC4FD ;
-}
-.header  .contenedor-logo{
-    grid-area: logo;
-    padding: 0rem 1rem;
-}
-.header .barra-busqueda{
-    grid-area: busqueda;
-    display: flex;/*centrar elementos */
-    align-items: center;
-    justify-content: center;
+    .header .navegacion{
+        grid-area: iconos;
+        padding: 0rem 2rem;
+        display: grid;
+        grid-template-columns: auto 1fr;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
+        grid-gap: 2.5rem;/*espaceado de 20px entre las divisiones del grid*/
+        grid-template-areas: "noti name";
+    }
+        .header  .contenedor-logo{
+            grid-area: logo;
+            padding: 0rem 1rem;
+        }
+        .header .navegacion .notificaciones{
+            grid-area:noti;
+        }
+        
+        .header .navegacion .nombre{
+            grid-area:name;
+        }
+        .header .navegacion .fas{
+            padding: 0rem 1rem;
+        }
+        .header .navegacion .cerrar{
+            grid-area:salir;
+            background-color:#7FC4FD ;
+        }
+            .header .barra-busqueda{
+                grid-area: busqueda;
+                display: flex;/*centrar elementos */
+                align-items: center;
+                justify-content: center;
 
-}
-.header .salir{
-    grid-area: salir;
-    width: 100%;
-    padding: 20px;
-}
-.header .salir:hover{
-    cursor: pointer;
-    background-color: #7FC4FD;
+            }
 
-}
+        .header .salir{
+            grid-area: salir;
+            width: 100%;
+            padding: 2rem;
+            border: 1px solid #fff;
+        }
+        .header .salir:hover{
+            cursor: pointer;
+            background-color: #7FC4FD;
+
+        }
+
+/*FILTROS*/
 .filtros{
     grid-area: filtros;
     background-color: #7FC4FD;
@@ -108,80 +114,102 @@ h4{
     align-items: center;
     justify-content: center;
 }
-.filtros .nav a{
-    margin-right: 2rem;
-    font-size: 2rem;
-}
+    .filtros .nav a{
+        margin-right: 2rem;
+        font-size: 2rem;
+    }
+
 /*PRINCIPAL*/
 .principal{
     grid-area: principal;
 }
-.principal .container{
-    padding: 25px;
-}
-.principal .container .producto{
-    width: 360px;
-    height: 420px;
-    box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-    display: grid;
-    grid-template-rows:200px 130px 80px;
-    grid-template-areas: "imagen"
-                         "descripcion"
-                         "botones";
-    padding: 10px;
-}
-.principal .container .producto .botones{
-    grid-area: botones;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
-.principal .container .car{
-    background-color: #2699FB;
-    display: inline-block;
-    padding: 10px 0px;
-    text-align: center;
-    width: 50px;
-    margin-right: 10px;
-}
-.principal .container .sol{
-    background-color: #2699FB;
-    display: inline-block;
-    padding: 10px 0px;
-    text-align: center;
-    width: 250px;
-}
-.imagen{
-    grid-area: imagen;
-    background-color: teal;
-}
-.precio{
-    grid-area:descripcion;
-    color: #2699FB;
-}
+    .principal .calzado{
+        padding: 0rem 1rem;
+        color: #2699FB;
+    }
+    .principal .container{
+        padding: 5rem ;
+        margin-left:2rem ;
+        /*alinear horizontalmente*/
+        display: grid;
+        grid-gap: 40px 20px;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+        /*PRODUCTOS*/
+        .principal .container .producto{
+            width: 36rem;
+            height: 42rem;
+            box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);/*sombra exterior*/
+            display: grid;
+            grid-template-rows:20rem 13rem 8rem;
+            grid-template-areas: "imagen"
+                                "descripcion"
+                                "botones";
+            padding: 1rem;
+        }
+            .principal .container .producto .botones{
+                grid-area: botones;
+                display: flex;
+                align-items: center;
+                justify-content: left;
+            }
+            .principal .container .car{
+                background-color: #2699FB;
+                display: inline-block;
+                padding: 1rem 0px;
+                text-align: center;
+                width: 50px;
+                margin-right: 10px;
+            }
+            .principal .container .car:hover{
+                background-color:#76b8f1 ;
+
+            }
+            .principal .container .sol{
+                background-color: #2699FB;
+                display: inline-block;
+                padding: 1rem 0px;
+                text-align: center;
+                width: 27rem;
+            }
+            .principal .container .sol:hover{
+                background-color:#76b8f1 ;
+            }
+
+            .imagen{
+                grid-area: imagen;
+                background-color: teal;
+            }
+            .precio{
+                grid-area:descripcion;
+                color: #2699FB;
+            }
+/*VENTANA EMERJENTE DE LOGIN*/
+
 /*PIE DE PAGINA*/
+
 .pie{
     grid-area: pie;
     background-color: #2699FB;
     padding: 1rem;
     font-size: 2rem;
 }
-.pie .redes{
-    display: flex;
-    justify-content: space-between;
-}
-.pie .redes .fab{
-    padding: 0 1rem;
-    font-size: 2.5rem;
-}
-.pie .redes .red{
-    display: flex;
-    align-items: center;
-}
-.pie .redes a{
-    color: #fff;
+    .pie .redes{
+        display: flex;
+        justify-content: space-between;
+    }
+    .pie .redes .fab{
+        padding: 0 1rem;
+        font-size: 2.5rem;
+    }
+    .pie .redes .red{
+        display: flex;
+        align-items: center;
+    }
+    .pie .redes a{
+        color: #fff;
 
-}
+    }
 
 
