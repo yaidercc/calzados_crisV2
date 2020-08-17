@@ -38,10 +38,6 @@
         <main class="principal">
         <div class="cabeza-main">
                 <h1 class="calzado">calzados para hombre y para mujer</h1>
-                <a href="#" class="cart nn">
-                    <span class="num_notifs">0</span>
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
             </div>
             <!--contenedor productos-->
             <div class="container">
@@ -114,16 +110,21 @@
 
     <div class="overlay" id="login">
                 <div class="popup" id="popup">
-                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                        <h1>iniciar sesion</h1>
-                        <form action="">
-                            <div class="contenedor-inputs">
-                                <input type="number" placeholder="ingrese su cedula" required>
-                                <input type="password" placeholder="ingrese clave" required>
-                            </div>
-                            <input class="btn-submit" type="submit" value="entrar">
-                            <input class="btn-submit" type="submit" value="registro">
-                        </form>
+                        <div class="btn-registro">
+                            <h1>adsd</h1>
+                        </div>
+                        <div class="logins">
+                        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                            <h1>iniciar sesion</h1>
+                            <form action="">
+                                <div class="contenedor-inputs">
+                                    <input type="number" placeholder="ingrese su cedula" required>
+                                    <input type="password" placeholder="ingrese clave" required>
+                                </div>
+                                <input class="btn-submit" type="submit" value="entrar">
+                                <input class="btn-submit" type="submit" value="registro">
+                            </form>
+                        </div>
                 </div>
             </div>
 

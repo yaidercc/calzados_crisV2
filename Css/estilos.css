@@ -239,11 +239,21 @@ h4{
 .popup{
     background-color: #f8f8f8;
     box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
-    padding:20px;
     text-align: center;
-    width: 80rem;
-    height: 50rem;
+    width: 97rem;
+    height: 70rem;
     color:#2699FB ;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: " registrar iniciar";
+}
+.logins{
+    grid-area: iniciar;
+    background-color: cadetblue;
+}
+.btn-registrar{
+    grid-area: registro;
+    background-color: cadetblue;
 }
 .popup .btn-cerrar-popup{
     font-size: 1.6rem;
