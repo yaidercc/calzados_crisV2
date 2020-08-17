@@ -15,9 +15,11 @@
             <div class="contenedor-logo">
                 <h1>calzados cris</h1>
             </div>
+            
             <div class="navegacion">
-                <!--<a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
-                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>-->
+            <a href="#" class="chat"><i title="notificaciones" class="fas fa-comments"> </i>chat</a>
+                <a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
+                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
             </div>
             <div class="salir">
                 <a href="#" class="cerrar" id="abrir">entrar</a>

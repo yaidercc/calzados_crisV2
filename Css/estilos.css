@@ -54,11 +54,11 @@ h4{
     font-size: 1.6rem;
     grid-area: header;
     display: grid;
-    grid-template-columns: auto 1fr auto auto auto;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
+    grid-template-columns: auto 1fr auto auto ;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
     align-items: center;
     justify-content: space-between;
     grid-gap: 5px;/*espaceado de 20px entre las divisiones del grid*/
-    grid-template-areas: "logo busqueda chat iconos salir";
+    grid-template-areas: "logo busqueda  iconos salir";
 }
 
     .header .navegacion{
@@ -67,8 +67,11 @@ h4{
         display: grid;
         grid-template-columns: auto 1fr;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
         grid-gap: 2.5rem;/*espaceado de 20px entre las divisiones del grid*/
-        grid-template-areas: "noti name";
+        grid-template-areas: "chat noti name";
     }
+        .header .navegacion .chat{
+            grid-area: chat;
+        }
         .header  .contenedor-logo{
             grid-area: logo;
             padding: 0rem 1rem;
@@ -76,7 +79,6 @@ h4{
         .header .navegacion .notificaciones{
             grid-area:noti;
         }
-        
         .header .navegacion .nombre{
             grid-area:name;
         }
