@@ -12,7 +12,6 @@
     <div class="contenedor">
         <!--cabecera de pagina-->
         <header class="header">
-        
             <div class="contenedor-logo">
                 <h1>calzados cris</h1>
             </div>
@@ -20,8 +19,8 @@
                 <!--<a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
                 <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>-->
             </div>
-            <div class="salir" id="abrir">
-                <a href="#" class="cerrar" >entrar</a>
+            <div class="salir">
+                <a href="#" class="cerrar" id="abrir">entrar</a>
             </div>
         </header>
 
@@ -36,13 +35,15 @@
 
         <!--contenido principal-->
         <main class="principal">
-        <div class="cabeza-main">
+            <div class="cabeza-main">
                 <h1 class="calzado">calzados para hombre y para mujer</h1>
                 <a href="#" class="cart nn">
                     <span class="num_notifs">0</span>
                     <i class="fas fa-shopping-cart"></i>
+
                 </a>
             </div>
+           
             <!--contenedor productos-->
             <div class="container">
                 <!--productos-->
@@ -52,53 +53,50 @@
                         <h1>tenis nike</h1>
                         <p>para: hombre</p>
                         <h2>$ 350.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
+                        <p><i class="fas fa-cart-arrow-down"></i> 4</p>
                     </div>
                     <div class="botones">
                         <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="sol">SOLICITAR</a>
                     </div>
                     
-                </div>
-
-                <div class="producto">
-                    <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
-                    <div class="precio">
-                        <h1>tenis adidas</h1>
-                        <p>para: hombre</p>
-                        <h2>$ 240.500</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
-                    </div>
-                    <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
-                    </div>
-                </div>
-
-                <div class="producto">
-                    <img class="imagen" src="img/zapatos.png" height="100%" width="100%">
-                    <div class="precio">
-                        <h1>tacones color piel</h1>
-                        <p>para: hombre</p>
-                        <h2>$ 85.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
-                    </div>
-                    
-                    <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
-                    </div>
                 </div>
 
                 <div class="producto">
                     <img class="imagen" src="img/plataformas.jpg" height="100%" width="100%">
                     <div class="precio">
-                        <h1>plataformas negras</h1>
-                        <p>para: hombre</p>
-                        <h2>$ 78.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
+                        <h1>zapatillas vans</h1>
+                        <p>para: mujer</p>
+                        <h2>$ 80.900</h2>
+                        <p><i class="fas fa-cart-arrow-down"></i> 8</p>
                     </div>
-                    
+                    <div class="botones">
+                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="sol">SOLICITAR</a>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
+                    <div class="precio">
+                        <h1>tenis adidas</h1>
+                        <p>para: hombre</p>
+                        <h2>$ 240.000</h2>
+                        <p><i class="fas fa-cart-arrow-down"></i> 8</p>
+                    </div>
+                    <div class="botones">
+                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="sol">SOLICITAR</a>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <img class="imagen" src="img/tacos.jpg" height="100%" width="100%">
+                    <div class="precio">
+                        <h1>tacones</h1>
+                        <p>para: mujer</p>
+                        <h2>$ 55.000</h2>
+                        <p><i class="fas fa-cart-arrow-down"></i> 5</p>
+                    </div>
                     <div class="botones">
                         <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="sol">SOLICITAR</a>
@@ -110,23 +108,49 @@
         </main>
         
         <!--Iniciar sesion-->
-        
-
-    <div class="overlay" id="login">
-                <div class="popup" id="popup">
-                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                        <h1>iniciar sesion</h1>
-                        <form action="">
-                            <div class="contenedor-inputs">
-                                <input type="number" placeholder="ingrese su cedula" required>
-                                <input type="password" placeholder="ingrese clave" required>
-                            </div>
-                            <input class="btn-submit" type="submit" value="entrar">
-                            <input class="btn-submit" type="submit" value="registro">
-                        </form>
-                </div>
+        <div class="overlay" id="login">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h1>iniciar sesion</h1>
+                    <form action="">
+                        <div class="contenedor-inputs">
+                            <input type="number" placeholder="ingrese su cedula" required>
+                            <input type="password" placeholder="ingrese clave" required>
+                        </div>
+                        <input class="btn-submit" type="submit" value="entrar">
+                        <input class="btn-submit" type="submit" value="registro">
+                    </form>
             </div>
+        </div>
 
+        <!--Registrarse-->
+        <div class="overlay" id="registro">
+            <div class="popup" id="popups">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h1>iniciar sesion</h1>
+                    <form action="">
+                        <div class="contenedor-inputs">
+                            <input type="number" placeholder="ingrese su cedula" required>
+                            <input type="password" placeholder="ingrese clave" required>
+                        </div>
+                        <input class="btn-submit" type="submit" value="entrar">
+                    </form>
+            </div>
+        </div>
+        <!--Carrito-->
+        <div class="overlay" id="registro">
+            <div class="popup" id="popups">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h1>iniciar sesion</h1>
+                    <form action="">
+                        <div class="contenedor-inputs">
+                            <input type="number" placeholder="ingrese su cedula" required>
+                            <input type="password" placeholder="ingrese clave" required>
+                        </div>
+                        <input class="btn-submit" type="submit" value="entrar">
+                    </form>
+            </div>
+        </div>
         <!--pie de pagina-->
         <footer class="pie">
             <div class="redes">
