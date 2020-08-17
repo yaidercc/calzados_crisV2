@@ -170,6 +170,12 @@ h4{
                 background-color:#76b8f1 ;
 
             }
+            .principal .container .car.cared{
+                background-color: #fb2626;
+            }
+            .principal .container .car.cared:hover{
+                background-color: #e67575;
+            }
             .principal .container .sol{
                 background-color: #2699FB;
                 display: inline-block;
@@ -217,8 +223,72 @@ h4{
                 color: #2699FB;
                 background-color: #fff;
             }
-               
-                            
+            .principal .container .producto .inp{
+                width: 100%;
+                height:25px;
+                padding: 10px;
+
+            }
+/*switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }                    
 /*VENTANA EMERJENTE DE LOGIN*/
 .overlay{
     background-color:rgba(0, 0, 0, 0.3);
@@ -244,16 +314,29 @@ h4{
     height: 70rem;
     color:#2699FB ;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 55%;
     grid-template-areas: " registrar iniciar";
 }
 .logins{
     grid-area: iniciar;
-    background-color: cadetblue;
+    background-color: lawngreen;
 }
-.btn-registrar{
-    grid-area: registro;
-    background-color: cadetblue;
+.btn-registro{
+    grid-area: registrar;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    
+}
+.btn-registro .btn-submit{
+    padding: 0 2rem;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background-color: #2699FB;
+    cursor: pointer;
+    transition: .3s ease all;
+    
 }
 .popup .btn-cerrar-popup{
     font-size: 1.6rem;
@@ -272,16 +355,20 @@ h4{
     margin-bottom: 10px;
     /**opacity: ;**/
 }
-.popup .contenedor-inputs{ }
+.popup .contenedor-inputs{ 
+
+}
 
 .popup .contenedor-inputs input{
-    width: 100%;
+    width: 80%;
     margin-bottom: 20px;
     height: 52px;
     line-height: 52px;
     font-size:18px;
     text-align: center;
     border: 1px solid #bbbbbb;
+    display: flex;
+    
 }
 .popup form .btn-submit{
     padding: 0 2rem;

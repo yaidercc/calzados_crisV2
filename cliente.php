@@ -16,8 +16,8 @@
                 <h1>calzados cris</h1>
             </div>
             <div class="navegacion">
-                <!--<a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
-                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>-->
+                <a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
+                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
             </div>
             <div class="salir">
                 <a href="#" class="cerrar" id="abrir">entrar</a>
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="producto">
-                    <img class="imagen" src="img/tacos.jpg" height="100%" width="100%">
+                    <img class="imagen" src="img/zapatos.png" height="100%" width="100%">
                     <div class="precio">
                         <h1>tacones</h1>
                         <p>para: mujer</p>

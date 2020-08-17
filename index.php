@@ -109,24 +109,26 @@
         
 
     <div class="overlay" id="login">
-                <div class="popup" id="popup">
-                        <div class="btn-registro">
-                            <h1>adsd</h1>
-                        </div>
-                        <div class="logins">
-                        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                            <h1>iniciar sesion</h1>
-                            <form action="">
-                                <div class="contenedor-inputs">
-                                    <input type="number" placeholder="ingrese su cedula" required>
-                                    <input type="password" placeholder="ingrese clave" required>
-                                </div>
-                                <input class="btn-submit" type="submit" value="entrar">
-                                <input class="btn-submit" type="submit" value="registro">
-                            </form>
-                        </div>
-                </div>
+        <div class="popup" id="popup">
+            <div class="btn-registro">
+                <h1>bienvenido!</h1>
+                <p>aun no tienes cuenta?, puedes inciiar sesion danco clic en el siguiente boton</p>
+                <input class="btn-submit" type="submit" value="entrar">
             </div>
+            <div class="logins">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <h1>iniciar sesion</h1>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <input type="number" placeholder="ingrese su cedula" required>
+                        <input type="password" placeholder="ingrese clave" required>
+                    </div>
+                    <input class="btn-submit" type="submit" value="entrar">
+
+                </form>
+            </div>
+        </div>
+    </div>
 
         <!--pie de pagina-->
         <footer class="pie">

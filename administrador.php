@@ -50,14 +50,14 @@
                 <div class="producto">
                     <img class="imagen" src="img/nike.jpg" height="100%" width="100%">
                     <div class="precio">
-                        <h1>tenis nike</h1>
+                        <input type="text" value="tenis nike" class="inp">
                         <p>para: hombre</p>
-                        <h2>$ 350.000</h2>
+                        <input type="text" value="350.000" class="inp">
                         <p><i class="fas fa-cart-arrow-down"></i> 4</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                        <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#" class="sol">modificar</a>
                     </div>
                     
                 </div>
@@ -65,41 +65,41 @@
                 <div class="producto">
                     <img class="imagen" src="img/plataformas.jpg" height="100%" width="100%">
                     <div class="precio">
-                        <h1>zapatillas vans</h1>
+                        <input type="text" value="plataformas negras" class="inp">
                         <p>para: mujer</p>
-                        <h2>$ 80.900</h2>
+                        <input type="text" value="80.000" class="inp">
                         <p><i class="fas fa-cart-arrow-down"></i> 8</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                    <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#" class="sol">modificar</a>
                     </div>
                 </div>
                 <div class="producto">
                     <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
                     <div class="precio">
-                        <h1>tenis adidas</h1>
+                        <input type="text" value="tenis adidas" class="inp">
                         <p>para: hombre</p>
-                        <h2>$ 240.000</h2>
+                        <input type="text" value="240.000" class="inp">
                         <p><i class="fas fa-cart-arrow-down"></i> 8</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                    <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#" class="sol">modificar</a>
                     </div>
                 </div>
 
                 <div class="producto">
-                    <img class="imagen" src="img/tacos.jpg" height="100%" width="100%">
+                    <img class="imagen" src="img/zapatos.png" height="100%" width="100%">
                     <div class="precio">
-                        <h1>tacones</h1>
+                        <input type="text" value="tacones" class="inp">
                         <p>para: mujer</p>
-                        <h2>$ 55.000</h2>
+                        <input type="text" value="55.000" class="inp">
                         <p><i class="fas fa-cart-arrow-down"></i> 5</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                        <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#" class="sol">modificar</a>
                     </div>
                 </div>
                 
