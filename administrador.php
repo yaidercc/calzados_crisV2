@@ -12,20 +12,21 @@
     <div class="contenedor">
         <!--cabecera de pagina-->
         <header class="header">
+
             <div class="contenedor-logo">
                 <h1>calzados cris</h1>
             </div>
-            
             <div class="navegacion">
-            <a href="#" class="chat"><i title="notificaciones" class="fas fa-comments"> </i>chat</a>
+                <a href="#" class="chat"><i title="notificaciones" class="fas fa-comments"> </i>chat</a>
                 <a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
                 <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
             </div>
+
             <div class="salir">
                 <a href="#" class="cerrar" id="abrir">entrar</a>
             </div>
-        </header>
 
+        </header>
         <!--filtros-->
         <div class="filtros">
             <div class="nav">
@@ -42,10 +43,8 @@
                 <a href="#" class="cart nn">
                     <span class="num_notifs">0</span>
                     <i class="fas fa-shopping-cart"></i>
-
                 </a>
             </div>
-           
             <!--contenedor productos-->
             <div class="container">
                 <!--productos-->
@@ -61,7 +60,6 @@
                         <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
                         <a href="#" class="sol">modificar</a>
                     </div>
-                    
                 </div>
 
                 <div class="producto">
@@ -77,6 +75,7 @@
                         <a href="#" class="sol">modificar</a>
                     </div>
                 </div>
+
                 <div class="producto">
                     <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
                     <div class="precio">
@@ -153,6 +152,7 @@
                     </form>
             </div>
         </div>
+
         <!--pie de pagina-->
         <footer class="pie">
             <div class="redes">
@@ -162,7 +162,6 @@
             </div>
         </footer>
     </div>
-
     <!--archivos y links-->
     <script src='main.js'></script> 
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>

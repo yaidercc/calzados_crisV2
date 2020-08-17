@@ -61,56 +61,54 @@ h4{
     grid-template-areas: "logo busqueda  iconos salir";
 }
 
-    .header .navegacion{
-        grid-area: iconos;
-        padding: 0rem 2rem;
-        display: grid;
-        grid-template-columns: auto 1fr;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
-        grid-gap: 2.5rem;/*espaceado de 20px entre las divisiones del grid*/
-        grid-template-areas: "chat noti name";
-    }
-        .header .navegacion .chat{
-            grid-area: chat;
-        }
-        .header  .contenedor-logo{
-            grid-area: logo;
-            padding: 0rem 1rem;
-        }
-        .header .navegacion .notificaciones{
-            grid-area:noti;
-        }
-        .header .navegacion .nombre{
-            grid-area:name;
-        }
-        .header .navegacion .fas{
-            padding: 0rem 1rem;
-        }
-        .header .navegacion .cerrar{
-            grid-area:salir;
-            background-color:#7FC4FD ;
-        }
-            .header .barra-busqueda{
-                grid-area: busqueda;
-                display: flex;/*centrar elementos */
-                align-items: center;
-                justify-content: center;
+.header .navegacion{
+    grid-area: iconos;
+    padding: 0rem 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
+    grid-gap: 2.5rem;/*espaceado de 20px entre las divisiones del grid*/
+    grid-template-areas: "chat noti name";
+}
+.header .navegacion .chat{
+    grid-area: chat;
+}
+.header  .contenedor-logo{
+    grid-area: logo;
+    padding: 0rem 1rem;
+}
+.header .navegacion .notificaciones{
+   grid-area:noti;
+}
+.header .navegacion .nombre{
+    grid-area:name;
+}
+.header .navegacion .fas{
+    padding: 0rem 1rem;
+}
+.header .navegacion .cerrar{
+    grid-area:salir;
+    background-color:#7FC4FD ;
+}
+.header .barra-busqueda{
+    grid-area: busqueda;
+    display: flex;/*centrar elementos */
+    align-items: center;
+    justify-content: center;
+}
+.header .salir{
+    grid-area: salir;
+    width: 100%;
+    padding: 2rem;
+}
+.header .salir a{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.header .salir:hover{
+cursor: pointer;
+background-color: #7FC4FD;
 
-            }
-
-        .header .salir{
-            grid-area: salir;
-            width: 100%;
-            padding: 2rem;
-        }
-        .header .salir a{
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        .header .salir:hover{
-            cursor: pointer;
-            background-color: #7FC4FD;
-
-        }
+}
 
 /*FILTROS*/
 .filtros{
@@ -129,108 +127,108 @@ h4{
 .principal{
     grid-area: principal;
 }
-    .principal .calzado{
-        padding: 0rem 1rem;
-        color: #2699FB;
-    }
-    .principal .container{
-        padding: 3.5rem ;
-        margin:0px auto;
-        /*alinear horizontalmente*/
-        display: grid;
-        grid-gap: 40px 20px;
-        grid-template-columns: repeat(4,1fr);
-    }
+.principal .calzado{
+    padding: 0rem 1rem;
+    color: #2699FB;
+}
+.principal .container{
+    padding: 3.5rem ;
+    margin:0px auto;
+    /*alinear horizontalmente*/
+    display: grid;
+    grid-gap: 40px 20px;
+    grid-template-columns: repeat(4,1fr);
+}
 
-        /*PRODUCTOS*/
-        .principal .container .producto{
-            width: 36rem;
-            height: 42rem;
-            box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);/*sombra exterior*/
-            display: grid;
-            grid-template-rows:20rem 13rem 8rem;
-            grid-template-areas: "imagen"
-                                "descripcion"
-                                "botones";
-            padding: 1rem;
-        }
-            .principal .container .producto .botones{
-                grid-area: botones;
-                display: flex;
-                align-items: center;
-                justify-content: left;
-            }
-            .principal .container .car{
-                background-color: #2699FB;
-                display: inline-block;
-                padding: 1rem 0px;
-                text-align: center;
-                width: 50px;
-                margin-right: 10px;
-            }
-            .principal .container .car:hover{
-                background-color:#76b8f1 ;
+/*PRODUCTOS*/
+.principal .container .producto{
+    width: 36rem;
+    height: 42rem;
+    box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);/*sombra exterior*/
+    display: grid;
+    grid-template-rows:20rem 13rem 8rem;
+    grid-template-areas: "imagen"
+                        "descripcion"
+                        "botones";
+    padding: 1rem;
+}
+.principal .container .producto .botones{
+    grid-area: botones;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.principal .container .car{
+    background-color: #2699FB;
+    display: inline-block;
+    padding: 1rem 0px;
+    text-align: center;
+    width: 50px;
+    margin-right: 10px;
+}
+.principal .container .car:hover{
+    background-color:#76b8f1 ;
 
-            }
-            .principal .container .car.cared{
-                background-color: #fb2626;
-            }
-            .principal .container .car.cared:hover{
-                background-color: #e67575;
-            }
-            .principal .container .sol{
-                background-color: #2699FB;
-                display: inline-block;
-                padding: 1rem 0px;
-                text-align: center;
-                width: 27rem;
-            }
-            .principal .container .sol:hover{
-                background-color:#76b8f1 ;
-            }
+}
+.principal .container .car.cared{
+    background-color: #fb2626;
+}
+.principal .container .car.cared:hover{
+    background-color: #e67575;
+}
+.principal .container .sol{
+    background-color: #2699FB;
+    display: inline-block;
+    padding: 1rem 0px;
+    text-align: center;
+    width: 27rem;
+}
+.principal .container .sol:hover{
+    background-color:#76b8f1 ;
+}
 
-            .imagen{
-                grid-area: imagen;
-                background-color: teal;
-            }
-            .precio{
-                grid-area:descripcion;
-                color: #2699FB;
-            }
-            .principal .cabeza-main{
-                grid-area: cabezamain;
-                display:flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 5px;
-            }
-            .principal .cabeza-main .cart{
-                display: inline-block;
-                padding: 1.2rem 0px;
-                text-align: center;
-                font-size: 30px;
-                margin-right: 10px;
-                color:#2699FB ;
-            }
-            .principal .cabeza-main .cart{
-                background-color: #2699FB;
-                color: white;
-                text-decoration: none;
-                padding: 10px 20px;
-                position: relative;
-                display: inline-block;
-            }
-            .principal .cabeza-main .cart:hover{
-                border:1px solid #2699FB;
-                color: #2699FB;
-                background-color: #fff;
-            }
-            .principal .container .producto .inp{
-                width: 100%;
-                height:25px;
-                padding: 10px;
+.imagen{
+    grid-area: imagen;
+    background-color: teal;
+}
+.precio{
+    grid-area:descripcion;
+    color: #2699FB;
+}
+.principal .cabeza-main{
+    grid-area: cabezamain;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.principal .cabeza-main .cart{
+    display: inline-block;
+    padding: 1.2rem 0px;
+    text-align: center;
+    font-size: 30px;
+    margin-right: 10px;
+    color:#2699FB ;
+}
+.principal .cabeza-main .cart{
+    background-color: #2699FB;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    display: inline-block;
+}
+.principal .cabeza-main .cart:hover{
+    border:1px solid #2699FB;
+    color: #2699FB;
+    background-color: #fff;
+}
+.principal .container .producto .inp{
+    width: 100%;
+    height:25px;
+    padding: 10px;
 
-            }
+}
 /*switch*/
 .switch {
     position: relative;
