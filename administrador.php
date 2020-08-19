@@ -23,7 +23,7 @@
             </div>
 
             <div class="salir">
-                <a href="#" class="cerrar" id="abrir">entrar</a>
+                <a href="#" class="cerrar" id="abrir">salir</a>
             </div>
 
         </header>

@@ -135,8 +135,7 @@ background-color: #7FC4FD;
     color: #2699FB;
 }
 .principal .container{
-    margin:auto 15px ;
-    padding: 3.2rem ;
+    padding:2rem 4rem;
     /*alinear horizontalmente*/
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -153,7 +152,6 @@ background-color: #7FC4FD;
                         "descripcion"
                         "botones";
     padding: 1rem;
-    margin-right: 10px
 }
 .principal .container .producto .botones{
     grid-area: botones;
@@ -356,6 +354,39 @@ background-color: #7FC4FD;
 }
 .popup .ingreso{
     background-color: saddlebrown;
+}
+.contenedor-producto{
+    width: 110rem;
+    height: 65rem;
+    margin: 20px auto;
+    border: 5px solid #2699FB;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-areas: "img caracteristicas";
+}
+.contenedor-producto .foto{
+    grid-area:img;
+}
+.contenedor-producto .caracteristicas{
+    grid-area:caracteristicas;
+    background-color: lawngreen;
+    display: grid;
+    grid-template-rows:auto 48rem auto;
+    grid-template-areas: "nombre"
+                        "etc" 
+                        "btns";
+}
+.contenedor-producto .caracteristicas .title{
+    grid-area:nombre;
+    background-color: lightseagreen;
+}
+.contenedor-producto .caracteristicas .carac{
+    grid-area:etc;
+    background-color: orange;
+}
+.contenedor-producto .caracteristicas .btns{
+    grid-area:btns;
+    background-color: midnightblue;
 }
 /*PIE DE PAGINA*/
 
