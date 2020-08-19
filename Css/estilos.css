@@ -366,21 +366,24 @@ background-color: #7FC4FD;
 }
 .contenedor-producto .foto{
     grid-area:img;
+    background-color: orange;
 }
 .contenedor-producto .caracteristicas{
     grid-area:caracteristicas;
-    background-color: lawngreen;
     display: grid;
-    grid-template-rows:auto 48rem auto;
+    grid-template-rows:8rem 48rem 8rem;
     grid-template-areas: "nombre"
                         "etc" 
                         "btns";
 }
 .contenedor-producto .caracteristicas .title{
     grid-area:nombre;
-    background-color: lightseagreen;
+    text-align:center;
+    color: #2699FB;
+    text-transform: uppercase;
+    font-weight: 700;
 }
-.contenedor-producto .caracteristicas .carac{
+.contenedor-producto .caracteristicas .elecciones{
     grid-area:etc;
     background-color: orange;
 }
