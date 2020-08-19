@@ -135,11 +135,10 @@ background-color: #7FC4FD;
     color: #2699FB;
 }
 .principal .container{
-    padding: 3.5rem ;
-    margin:0px auto;
+    margin:auto 15px ;
+    padding: 3.2rem ;
     /*alinear horizontalmente*/
     display: grid;
-    grid-gap: 40px 20px;
     grid-template-columns: repeat(4,1fr);
 }
 
@@ -154,6 +153,7 @@ background-color: #7FC4FD;
                         "descripcion"
                         "botones";
     padding: 1rem;
+    margin-right: 10px
 }
 .principal .container .producto .botones{
     grid-area: botones;
