@@ -118,10 +118,10 @@ background-color: #7FC4FD;
     align-items: center;
     justify-content: center;
 }
-    .filtros .nav a{
-        margin-right: 2rem;
-        font-size: 2rem;
-    }
+.filtros .nav a{
+    margin-right: 2rem;
+    font-size: 2rem;
+}
 
 /*PRINCIPAL*/
 .principal{
@@ -228,6 +228,14 @@ background-color: #7FC4FD;
     height:25px;
     padding: 10px;
 
+}
+.principal .container .producto .visible{
+    display: flex;
+    align-items:center;
+    padding-top:1rem;
+}
+.principal .container .producto .visible .txt{
+    padding-right: 1rem;
 }
 /*switch*/
 .switch {

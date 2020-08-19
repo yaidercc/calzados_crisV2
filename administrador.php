@@ -40,10 +40,7 @@
         <main class="principal">
             <div class="cabeza-main">
                 <h1 class="calzado">calzados para hombre y para mujer</h1>
-                <a href="#" class="cart nn">
-                    <span class="num_notifs">0</span>
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
+                
             </div>
             <!--contenedor productos-->
             <div class="container">
@@ -55,6 +52,10 @@
                         <p>para: hombre</p>
                         <input type="text" value="350.000" class="inp">
                         <p><i class="fas fa-cart-arrow-down"></i> 4</p>
+                        <div class="visible">
+                            <p class="txt">visibilidad del producto</p>
+                            <i class="fas fa-eye"></i>
+                        </div>
                     </div>
                     <div class="botones">
                         <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
@@ -69,6 +70,10 @@
                         <p>para: mujer</p>
                         <input type="text" value="80.000" class="inp">
                         <p><i class="fas fa-cart-arrow-down"></i> 8</p>
+                        <div class="visible">
+                            <p class="txt">visibilidad del producto</p>
+                            <i class="fas fa-eye"></i>
+                        </div>
                     </div>
                     <div class="botones">
                     <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
@@ -83,6 +88,10 @@
                         <p>para: hombre</p>
                         <input type="text" value="240.000" class="inp">
                         <p><i class="fas fa-cart-arrow-down"></i> 8</p>
+                        <div class="visible">
+                            <p class="txt">visibilidad del producto</p>
+                            <i class="fas fa-eye"></i>
+                        </div>
                     </div>
                     <div class="botones">
                     <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
@@ -97,6 +106,10 @@
                         <p>para: mujer</p>
                         <input type="text" value="55.000" class="inp">
                         <p><i class="fas fa-cart-arrow-down"></i> 5</p>
+                        <div class="visible">
+                            <p class="txt">visibilidad del producto</p>
+                            <a href="#"><i class="fas fa-eye"></i></a>
+                        </div>
                     </div>
                     <div class="botones">
                         <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
