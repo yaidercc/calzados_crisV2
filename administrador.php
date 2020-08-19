@@ -108,7 +108,7 @@
                         <p><i class="fas fa-cart-arrow-down"></i> 5</p>
                         <div class="visible">
                             <p class="txt">visibilidad del producto</p>
-                            <a href="#"><i class="fas fa-eye"></i></a>
+                            <i class="fas fa-eye"></i>
                         </div>
                     </div>
                     <div class="botones">

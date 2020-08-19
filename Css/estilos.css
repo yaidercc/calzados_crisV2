@@ -69,6 +69,9 @@ h4{
     grid-gap: 2.5rem;/*espaceado de 20px entre las divisiones del grid*/
     grid-template-areas: "chat noti name";
 }
+.header .navegacion a{
+    font-size: 1.9rem;
+}
 .header .navegacion .chat{
     grid-area: chat;
 }
@@ -102,7 +105,7 @@ h4{
 }
 .header .salir a{
     font-size: 2rem;
-    font-weight: bold;
+   
 }
 .header .salir:hover{
 cursor: pointer;
@@ -159,7 +162,7 @@ background-color: #7FC4FD;
     justify-content: left;
 }
 .principal .container .car{
-    background-color: #2699FB;
+    background-color: #35b446;
     display: inline-block;
     padding: 1rem 0px;
     text-align: center;
@@ -167,7 +170,7 @@ background-color: #7FC4FD;
     margin-right: 10px;
 }
 .principal .container .car:hover{
-    background-color:#76b8f1 ;
+    background-color: #57d668;
 
 }
 .principal .container .car.cared{
@@ -177,6 +180,7 @@ background-color: #7FC4FD;
     background-color: #e67575;
 }
 .principal .container .sol{
+    
     background-color: #2699FB;
     display: inline-block;
     padding: 1rem 0px;
@@ -236,67 +240,7 @@ background-color: #7FC4FD;
 }
 .principal .container .producto .visible .txt{
     padding-right: 1rem;
-}
-/*switch*/
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }                    
+}             
 /*VENTANA EMERJENTE DE LOGIN*/
 .overlay{
     background-color:rgba(0, 0, 0, 0.3);
@@ -319,7 +263,7 @@ background-color: #7FC4FD;
     box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 97rem;
-    height: 70rem;
+    height: 60rem;
     color:#2699FB ;
     display: grid;
     grid-template-columns: 45% 55%;
@@ -327,13 +271,26 @@ background-color: #7FC4FD;
 }
 .logins{
     grid-area: iniciar;
-    background-color: lawngreen;
+
 }
+
 .btn-registro{
     grid-area: registrar;
-    background-image: url(../img/fondo.jpg);
-    background-size: cover;
-    
+    background-color:#5ca0db ;
+    color: #fff;
+}
+
+.btn-registro .elementos-registro{
+    padding-top:50%;
+    font-size:2rem;
+    display: inline-block;
+}
+.logins .elementos{
+    padding-top: calc(33.3% - 3rem);
+}
+.logins .elementos .contenedor-inputs input{
+    margin: 20px auto;
+
 }
 .btn-registro .btn-submit{
     padding: 0 2rem;
@@ -346,13 +303,14 @@ background-color: #7FC4FD;
     transition: .3s ease all;
     
 }
-.popup .btn-cerrar-popup{
+.btn-cerrar-popup{
     font-size: 1.6rem;
     line-height: 16px;
     display: block;
     text-align: right;
     color: #bbbbbb;
     transition: .3s ease all;
+    padding: 1rem;
 }
 .popup .btn-cerrar-popup:hover{
     color:#000;
@@ -364,7 +322,7 @@ background-color: #7FC4FD;
     /**opacity: ;**/
 }
 .popup .contenedor-inputs{ 
-
+    margin: 0px auto;
 }
 
 .popup .contenedor-inputs input{
@@ -376,6 +334,7 @@ background-color: #7FC4FD;
     text-align: center;
     border: 1px solid #bbbbbb;
     display: flex;
+    
     
 }
 .popup form .btn-submit{

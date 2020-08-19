@@ -110,22 +110,26 @@
 
     <div class="overlay" id="login">
         <div class="popup" id="popup">
+       
             <div class="btn-registro">
-                <h1>bienvenido!</h1>
-                <p>aun no tienes cuenta?, puedes inciiar sesion danco clic en el siguiente boton</p>
-                <input class="btn-submit" type="submit" value="entrar">
+                <div class="elementos-registro">
+                    <h1>bienvenido!</h1>
+                    <p>aun no tienes cuenta?, puedes inciar sesion dando clic en el siguiente boton</p>
+                    <input class="btn-submit registra" type="submit" value="entrar">
+                </div>
             </div>
             <div class="logins">
-                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                <h1>iniciar sesion</h1>
-                <form action="">
-                    <div class="contenedor-inputs">
-                        <input type="number" placeholder="ingrese su cedula" required>
-                        <input type="password" placeholder="ingrese clave" required>
-                    </div>
-                    <input class="btn-submit" type="submit" value="entrar">
-
-                </form>
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <div class="elementos">
+                    <h1>iniciar sesion</h1>
+                    <form action="">
+                        <div class="contenedor-inputs">
+                            <input type="number" placeholder="ingrese su cedula" required>
+                            <input type="password" placeholder="ingrese clave" required>
+                        </div>
+                        <input class="btn-submit" type="submit" value="entrar">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
