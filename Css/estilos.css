@@ -159,7 +159,7 @@ background-color: #7FC4FD;
     align-items: center;
     justify-content: left;
 }
-.principal .container .car{
+.car{
     background-color: #35b446;
     display: inline-block;
     padding: 1rem 0px;
@@ -167,9 +167,15 @@ background-color: #7FC4FD;
     width: 50px;
     margin-right: 10px;
 }
-.principal .container .car:hover{
+.car:hover{
     background-color: #57d668;
 
+}
+.car.flecha{
+    background-color:#76b8f1;
+}
+.car.flecha:hover{
+    background-color:#9dbfdd;
 }
 .principal .container .car.cared{
     background-color: #fb2626;
@@ -177,15 +183,14 @@ background-color: #7FC4FD;
 .principal .container .car.cared:hover{
     background-color: #e67575;
 }
-.principal .container .sol{
-    
+.sol{
     background-color: #2699FB;
     display: inline-block;
     padding: 1rem 0px;
     text-align: center;
     width: 27rem;
 }
-.principal .container .sol:hover{
+.sol:hover{
     background-color:#76b8f1 ;
 }
 
@@ -361,20 +366,21 @@ background-color: #7FC4FD;
     margin: 20px auto;
     border: 5px solid #2699FB;
     display: grid;
-    grid-template-columns: 50% 50% ;
+    grid-template-columns: 45% 55% ;
     grid-template-areas: "img caracteristicas";
 }
 .contenedor-producto .foto{
     grid-area:img;
     background-color: orange;
+   
 }
 .contenedor-producto .caracteristicas{
     grid-area:caracteristicas;
     display: grid;
     grid-template-rows:8rem 48rem 8rem;
     grid-template-areas: "nombre"
-                        "etc" 
-                        "btns";
+                         "etc" 
+                         "btns";
 }
 .contenedor-producto .caracteristicas .title{
     grid-area:nombre;
@@ -384,12 +390,26 @@ background-color: #7FC4FD;
     font-weight: 700;
 }
 .contenedor-producto .caracteristicas .elecciones{
+    color: #000;
     grid-area:etc;
-    background-color: orange;
+    
+}
+.contenedor-producto .caracteristicas .elecciones .tallas{
+    display: flex;
+}
+.contenedor-producto .caracteristicas .elecciones .tallas .listado-tallas{
+    width: 5.5rem;
+    height: 2.5rem;
+
 }
 .contenedor-producto .caracteristicas .btns{
     grid-area:btns;
-    background-color: midnightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-producto .caracteristicas .btns .sol{
+    margin-right: 1rem;
 }
 /*PIE DE PAGINA*/
 
