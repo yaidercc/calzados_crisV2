@@ -374,6 +374,12 @@ background-color: #7FC4FD;
     background-color: orange;
    
 }
+.contenedor-producto .foto .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .contenedor-producto .caracteristicas{
     grid-area:caracteristicas;
     display: grid;
@@ -392,7 +398,7 @@ background-color: #7FC4FD;
 .contenedor-producto .caracteristicas .elecciones{
     color: #000;
     grid-area:etc;
-    
+    font-size:3.5rem ;
 }
 .contenedor-producto .caracteristicas .elecciones .tallas{
     display: flex;
@@ -410,6 +416,21 @@ background-color: #7FC4FD;
 }
 .contenedor-producto .caracteristicas .btns .sol{
     margin-right: 1rem;
+}
+.contenedor-producto .caracteristicas .unidades{
+    display: flex;
+}
+.contenedor-producto .caracteristicas .colores .color{
+    display: inline-block;
+}
+.contenedor-producto .caracteristicas .colores .color.rojo{
+    color: #fb2626;
+}
+.contenedor-producto .caracteristicas .colores .color.verde{
+    color: #3ffb26;
+}
+.contenedor-producto .caracteristicas .colores .color.amarillo{
+    color: #e6fb26;
 }
 /*PIE DE PAGINA*/
 
