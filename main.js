@@ -1,7 +1,7 @@
 var btnAbrirpopup = document.getElementById('abrir'),
         overlay= document.getElementById('login'),
         popup = document.getElementById('popup'),
-        btncerrar= document.getElementById('btn-cerrar-popup1');
+        btncerrar= document.getElementById('btn-cerrar-popup');
         if(btnAbrirpopup &&  btncerrar){
                 btnAbrirpopup.addEventListener('click', function(){
                         overlay.classList.add('activate');
@@ -14,6 +14,7 @@ var btnAbrirpopup = document.getElementById('abrir'),
                 
         }
 
+// carrito
 var btnAbrirpopup1 = document.getElementById('carrito'),
         overlay1= document.getElementById('carro'),
         popup1 = document.getElementById('productos'),
@@ -29,7 +30,7 @@ if(btnAbrirpopup1 &&  btncerrar1){
         });     
                 
 }
-
+// notificaciones
 var btnAbrirpopup2 = document.getElementById('notificar'),
         overlay2= document.getElementById('notificaciones'),
         popup2 = document.getElementById('popup-notificaiones'),
@@ -46,4 +47,19 @@ if(btnAbrirpopup2 &&  btncerrar2){
                 
                 
 }
-
+var btnAbrirpopup3 = document.getElementById('agg'),
+        overlay3= document.getElementById('agregar'),
+        popup3 = document.getElementById('agregar-producto'),
+        btncerrar3= document.getElementById('btn-cerrar-popup3');
+if(btnAbrirpopup3 &&  btncerrar3){
+        btnAbrirpopup3.addEventListener('click', function(){
+                overlay3.classList.add('activate');
+                popup3.classList.add('activate');
+        });
+        btncerrar3.addEventListener('click', function(){
+                overlay3.classList.remove('activate');
+                popup3.classList.add('activate');
+        });
+                
+                
+}

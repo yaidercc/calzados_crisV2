@@ -16,7 +16,6 @@
                 <h1>calzados cris</h1>
             </div>
             <div class="navegacion">
-                <a href="#" id="notificar" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
                 <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
             </div>
             <div class="salir">
@@ -109,7 +108,7 @@
         
         <!--carrito-->
         <div class="overlay" id="carro">
-            <div class="popup" id="productos">
+            <div class="popup carro" id="productos">
                 <a href="#" id="btn-cerrar-popup1" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>carrito</h1>
                     <form action="">
@@ -123,21 +122,7 @@
             </div>
         </div>
 
-        <!--notificaciones-->
-        <div class="overlay" id="notificaciones">
-            <div class="popup" id="popup-notificaiones">
-                <a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>carrito</h1>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="number" placeholder="ingrese su cedula" required>
-                            <input type="password" placeholder="ingrese clave" required>
-                        </div>
-                        <input class="btn-submit" type="submit" value="entrar">
-                        <input class="btn-submit" type="submit" value="registro">
-                    </form>
-            </div>
-        </div>
+       
 
 
 

@@ -309,6 +309,11 @@ background-color: #7FC4FD;
     grid-template-columns: 45% 55%;
     grid-template-areas: " registrar iniciar";
 }
+.popup.notificaciones{
+    width: 60rem;
+    height: 60rem;
+    display: flex;
+}
 .logins{
     grid-area: iniciar;
 

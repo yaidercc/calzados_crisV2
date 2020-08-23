@@ -113,7 +113,7 @@
                 <div class="elementos-registro">
                     <h1 class="hijo">bienvenido!</h1>
                     <p class="hijo">aun no tienes cuenta?, puedes inciar sesion dando clic en el siguiente boton</p>
-                    <input class="hijo btn-submit registra" type="submit" value="entrar">
+                    <input class="hijo btn-submit registra" type="submit" value="registro">
                 </div>
             </div>
             <div class="logins">
@@ -131,6 +131,21 @@
             </div>
         </div>
     </div>
+
+    <!--popup registro-->
+    <div class="overlay" id="rego">
+            <div class="popup" id="pop">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup4"><i class="fas fa-times"></i></a>
+                    <h1>iniciar sesion</h1>
+                    <form action="">
+                        <div class="contenedor-inputs">
+                            <input type="number" placeholder="ingrese su cedula" required>
+                            <input type="password" placeholder="ingrese clave" required>
+                        </div>
+                        <input class="btn-submit" type="submit" value="entrar">
+                    </form>
+            </div>
+        </div>
 
         <!--pie de pagina-->
         <footer class="pie">

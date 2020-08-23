@@ -18,7 +18,7 @@
             </div>
             <div class="navegacion">
                 <a href="#" class="chat"><i title="notificaciones" class="fas fa-comments"> </i>chat</a>
-                <a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
+                <a href="#" id="notificar"class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
                 <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
             </div>
 
@@ -33,6 +33,7 @@
                 <a href="#">mujer</a>
                 <a href="#">hombre</a>
                 <a href="#">mas filtros</a>
+                <a href="#" id="agg">agregar productos</a>
             </div>
         </div>
 
@@ -137,7 +138,18 @@
             </div>
         </div>
 
-        <!--Registrarse-->
+         <!--notificaciones-->
+         <div class="overlay" id="notificaciones">
+            <div class="popup notificaciones" id="popup-notificaiones">
+                <a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h1>carrito</h1>
+                    <form action="">
+                        <input class="btn-submit" type="submit" value="entrar">
+                    </form>
+            </div>
+        </div>
+
+        <!--Carrito-->
         <div class="overlay" id="registro">
             <div class="popup" id="popups">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
@@ -151,11 +163,11 @@
                     </form>
             </div>
         </div>
-        <!--Carrito-->
-        <div class="overlay" id="registro">
-            <div class="popup" id="popups">
-                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>iniciar sesion</h1>
+
+        <div class="overlay" id="agregar">
+            <div class="popup" id="agregar-producto">
+                <a href="#" id="btn-cerrar-popup3" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h1>agregar productos</h1>
                     <form action="">
                         <div class="contenedor-inputs">
                             <input type="number" placeholder="ingrese su cedula" required>
