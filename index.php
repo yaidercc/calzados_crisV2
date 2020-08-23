@@ -106,16 +106,14 @@
         </main>
         
         <!--Iniciar sesion-->
-        
-
     <div class="overlay" id="login">
         <div class="popup" id="popup">
        
             <div class="btn-registro">
                 <div class="elementos-registro">
-                    <h1>bienvenido!</h1>
-                    <p>aun no tienes cuenta?, puedes inciar sesion dando clic en el siguiente boton</p>
-                    <input class="btn-submit registra" type="submit" value="entrar">
+                    <h1 class="hijo">bienvenido!</h1>
+                    <p class="hijo">aun no tienes cuenta?, puedes inciar sesion dando clic en el siguiente boton</p>
+                    <input class="hijo btn-submit registra" type="submit" value="entrar">
                 </div>
             </div>
             <div class="logins">

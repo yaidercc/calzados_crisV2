@@ -38,7 +38,6 @@
             <div class="contenedor-producto">
                 <div class="foto">
                     <img class="imagen" src="img/zapatos.png" height="90%" width="100%">
-                   
                     <!--estrellas-->
                     <div class="icons">
                         <i class="flecha fas fa-chevron-left"></i>
@@ -96,7 +95,7 @@
                     </div>
                     <div class="btns">
                         <div class="elements">
-                            <a href="#" class="car flecha"><i class="fas fa-chevron-left"></i></a>
+                            <a href="cliente.php" class="car flecha"><i class="fas fa-chevron-left"></i></a>
                             <a href="#" class="sol">SOLICITAR</a>
                             <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
                         </div>
