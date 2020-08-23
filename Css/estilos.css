@@ -12,10 +12,16 @@ body{
     color: #fff;
     text-transform: capitalize;
 }
+i{
+    cursor: pointer;
+}
 a{
     text-decoration: none;
     color: #fff;
     text-transform: capitalize;
+}
+i{
+    cursor: pointer;
 }
 /*sistema de tamaños que son directamente proporcionales*/
 h1{
@@ -209,7 +215,7 @@ background-color: #7FC4FD;
     align-items: center;
     padding: 5px;
 }
-.principal .cabeza-main .cart{
+.cart{
     display: inline-block;
     padding: 1.2rem 0px;
     text-align: center;
@@ -217,7 +223,7 @@ background-color: #7FC4FD;
     margin-right: 10px;
     color:#2699FB ;
 }
-.principal .cabeza-main .cart{
+.cart{
     background-color: #2699FB;
     color: white;
     text-decoration: none;
@@ -225,7 +231,7 @@ background-color: #7FC4FD;
     position: relative;
     display: inline-block;
 }
-.principal .cabeza-main .cart:hover{
+.cart:hover{
     border:1px solid #2699FB;
     color: #2699FB;
     background-color: #fff;
@@ -243,7 +249,26 @@ background-color: #7FC4FD;
 }
 .principal .container .producto .visible .txt{
     padding-right: 1rem;
-}             
+}      
+.filtros.cabecera{
+    display: flex;
+    justify-content: space-between;
+}
+.filtros .menu{
+    display: flex;
+    align-items:center;
+    font-size:2rem;
+    padding:1rem;
+}
+.filtros .menu i{
+    margin-right:1rem; 
+}
+.filtros .cart{
+    height: 100%;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
 /*VENTANA EMERJENTE DE LOGIN*/
 .overlay{
     background-color:rgba(0, 0, 0, 0.3);
@@ -381,6 +406,7 @@ background-color: #7FC4FD;
 }
 .contenedor-producto .foto .flecha{
     font-size: 3rem;
+    cursor: pointer;
 }
 .contenedor-producto .foto .icons{
     display: flex;
@@ -445,6 +471,8 @@ background-color: #7FC4FD;
     width:5rem;
     text-align:center;
     margin-left:1rem;
+    border: none;
+    border-bottom:3px solid #2699FB;
 }
 .contenedor-producto .caracteristicas .hijo{
     margin-bottom:3rem;
