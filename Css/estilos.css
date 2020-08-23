@@ -383,7 +383,7 @@ background-color: #7FC4FD;
 .contenedor-producto .caracteristicas{
     grid-area:caracteristicas;
     display: grid;
-    grid-template-rows:8rem 48rem 8rem;
+    grid-template-rows:8rem auto 8rem;
     grid-template-areas: "nombre"
                          "etc" 
                          "btns";
@@ -398,14 +398,26 @@ background-color: #7FC4FD;
 .contenedor-producto .caracteristicas .elecciones{
     color: #000;
     grid-area:etc;
-    font-size:3.5rem ;
+    font-size:3rem ;
+}
+.contenedor-producto .caracteristicas .elecciones .hijo.general{
+    display:flex;
+}
+.contenedor-producto .caracteristicas .elecciones .later{
+    margin-left: 1rem;
+    color: #2699FB; 
 }
 .contenedor-producto .caracteristicas .elecciones .tallas{
     display: flex;
+    align-items:center;
 }
+
 .contenedor-producto .caracteristicas .elecciones .tallas .listado-tallas{
-    width: 5.5rem;
-    height: 2.5rem;
+    width: 20rem;
+    height: 3rem;
+    display: flex;
+    margin-left: 1rem;
+    padding: 0rem 1rem;
 
 }
 .contenedor-producto .caracteristicas .btns{
@@ -419,6 +431,14 @@ background-color: #7FC4FD;
 }
 .contenedor-producto .caracteristicas .unidades{
     display: flex;
+}
+.contenedor-producto .caracteristicas .unidades input{
+    width:5rem;
+    text-align:center;
+    margin-left:1rem;
+}
+.contenedor-producto .caracteristicas .hijo{
+    margin-bottom:3rem;
 }
 .contenedor-producto .caracteristicas .colores .color{
     display: inline-block;
