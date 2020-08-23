@@ -371,13 +371,22 @@ background-color: #7FC4FD;
 }
 .contenedor-producto .foto{
     grid-area:img;
-    background-color: orange;
    
+}
+.contenedor-producto .foto .puntuaciones i, .icons p,.icons .flecha{
+    color:#2699FB;
+}
+.contenedor-producto .foto .puntuaciones{
+    text-align:center;
+}
+.contenedor-producto .foto .flecha{
+    font-size: 3rem;
 }
 .contenedor-producto .foto .icons{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
 .contenedor-producto .caracteristicas{
