@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Inicio</title>
+    <title>Calzados Cris</title>
 </head>
 <body>
     <!--contenedor de la pagina-->
@@ -31,15 +31,19 @@
                 <p>chats</p>
             </div>
 
-            <a href="#" class="cart nn">
+            <a href="#" class="cart">
                 <span class="num_notifs">0</span>
                 <i class="fas fa-shopping-cart"></i>
             </a>
         </div>
 
         <!--contenido principal-->
-        <main class="principal">
-            <div class="chats"></div>
+        <main class="principal chatear">
+            <div class="chats">
+                <div class="contenedor-chat">
+                    <img src="">
+                </div>
+            </div>
             <div class="converasacion"></div>
         </main>
         

@@ -45,10 +45,9 @@ h4{
     min-height: 100vh;/*altura minima*/
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 6rem 4rem 1rem 100rem 5rem ; /*la pagina tendra 2 filas con las medidas anteriores*/
+    grid-template-rows: 6rem 4rem  100rem 5rem ; /*la pagina tendra 2 filas con las medidas anteriores*/
     grid-template-areas: "header"
                           "filtros"
-                          "cabezamain"
                           "principal"
                           "pie";
     transition: all .3s ease;
@@ -111,7 +110,6 @@ h4{
 }
 .header .salir a{
     font-size: 2rem;
-   
 }
 .header .salir:hover{
 cursor: pointer;
@@ -257,16 +255,30 @@ background-color: #7FC4FD;
 .filtros .menu{
     display: flex;
     align-items:center;
-    font-size:2rem;
+    font-size:2.7rem;
     padding:1rem;
 }
 .filtros .menu i{
-    margin-right:1rem; 
+    margin-right:1rem;
 }
+
 .filtros .cart{
     height: 100%;
     font-size: 1.4rem;
     margin: 0;
+}
+.principal.chatear {
+    display: grid;
+    grid-template-columns:auto 80%;
+    grid-template-areas:"conversaciones conversacion";
+}
+.principal.chatear .chats{
+    grid-area: conversaciones;
+    border:6px solid #2699FB;
+    border-top: none; border-bottom: none;
+}
+.principal.chatear .converasacion{
+    grid-area: conversacion;
 }
 
 /*VENTANA EMERJENTE DE LOGIN*/
