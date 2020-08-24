@@ -107,15 +107,19 @@ h4{
     grid-area: salir;
     width: 100%;
     padding: 2rem;
+    transition: background-color 0.5s;
+    transform-origin: left;
 }
 .header .salir a{
     font-size: 2rem;
 }
+
 .header .salir:hover{
     cursor: pointer;
     background-color: #7FC4FD;
 
 }
+
 .header .registrate{
     grid-area: registro;
 }
@@ -128,10 +132,14 @@ h4{
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .filtros .nav a{
     margin-right: 2rem;
     font-size: 2rem;
+}
+.filtros .nav a:hover{
+    color:#2699FB ;
 }
 
 /*PRINCIPAL*/
@@ -174,6 +182,8 @@ h4{
     text-align: center;
     width: 50px;
     margin-right: 10px;
+    transition: background-color 0.5s;
+    transform-origin: left;
 }
 .car:hover{
     background-color: #57d668;
@@ -197,7 +207,10 @@ h4{
     padding: 1rem 0px;
     text-align: center;
     width: 27rem;
+    transition: background-color 0.5s;
+    transform-origin: left;
 }
+
 .sol:hover{
     background-color:#76b8f1 ;
 }
@@ -219,19 +232,17 @@ h4{
 }
 .cart{
     display: inline-block;
-    padding: 1.2rem 0px;
+    padding: 1rem 2rem;
     text-align: center;
+    position: relative;
+    text-decoration: none;
     font-size: 30px;
     margin-right: 10px;
-    color:#2699FB ;
-}
-.cart{
+    color:#fff ;
     background-color: #2699FB;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    position: relative;
-    display: inline-block;
+    transition: background-color 0.5s;
+    transform-origin: left;
+ 
 }
 .cart:hover{
     border:1px solid #2699FB;

@@ -29,7 +29,7 @@
             <div class="nav">
                 <a href="#">mujer</a>
                 <a href="#">hombre</a>
-                <a href="#">mas filtros</a>
+                <a href="#">mas filtros <i class="fas fa-chevron-left"></i></a>
             </div>
         </div>
 

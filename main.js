@@ -61,7 +61,7 @@ if(btnAbrirpopup2 &&  btncerrar2){
                 
                 
 }
-var btnAbrirpopup3 = document.getElementById('agg'),
+var btnAbrirpopup3 = document.getElementById('chateasion'),
         overlay3= document.getElementById('agregar'),
         popup3 = document.getElementById('agregar-producto'),
         btncerrar3= document.getElementById('btn-cerrar-popup3');

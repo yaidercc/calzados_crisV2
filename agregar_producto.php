@@ -23,25 +23,13 @@
                 <a href="#" class="cerrar" id="abrir">salir</a>
             </div>
         </header>
-
-        <!--filtros-->
-        <div class="filtros cabecera">
-            <div class="menu">
-                <i class="fas fa-bars"></i>
-                <p>chats</p>
-            </div>
-
-            <a href="#" class="cart">
-                <span class="num_notifs">0</span>
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-        </div>
-
         <!--contenido principal-->
         <main class="principal chatear">
             <div class="chats">
                 <div class="contenedor-chat">
                     <img src="">
+                    <h1>yaidercc</h1>
+                    <p>hola, comoa va el pr</p>
                 </div>
             </div>
             <div class="converasacion"></div>

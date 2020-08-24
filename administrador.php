@@ -17,7 +17,7 @@
                 <h1>calzados cris</h1>
             </div>
             <div class="navegacion">
-                <a href="#" class="chat"><i title="notificaciones" class="fas fa-comments"> </i>chat</a>
+                <a href="#" class="chat" id="chateasion"><i title="notificaciones" class="fas fa-comments" > </i>chat</a>
                 <a href="#" id="notificar"class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
                 <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
             </div>
@@ -32,8 +32,8 @@
             <div class="nav">
                 <a href="#">mujer</a>
                 <a href="#">hombre</a>
-                <a href="#">mas filtros</a>
-                <a href="#" id="agg">agregar productos</a>
+                <a href="#">mas filtros  <i class="fas fa-chevron-down"></i></a>
+                <a href="#">agregar productos</a>
             </div>
         </div>
 
@@ -121,22 +121,6 @@
             </div>
             
         </main>
-        
-        <!--Iniciar sesion-->
-        <div class="overlay" id="login">
-            <div class="popup" id="popup">
-                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>iniciar sesion</h1>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="number" placeholder="ingrese su cedula" required>
-                            <input type="password" placeholder="ingrese clave" required>
-                        </div>
-                        <input class="btn-submit" type="submit" value="entrar">
-                        <input class="btn-submit" type="submit" value="registro">
-                    </form>
-            </div>
-        </div>
 
          <!--notificaciones-->
          <div class="overlay" id="notificaciones">
@@ -193,20 +177,7 @@
             </div>
         </div>
 
-        <!--Carrito-->
-        <div class="overlay" id="registro">
-            <div class="popup" id="popups">
-                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>iniciar sesion</h1>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="number" placeholder="ingrese su cedula" required>
-                            <input type="password" placeholder="ingrese clave" required>
-                        </div>
-                        <input class="btn-submit" type="submit" value="entrar">
-                    </form>
-            </div>
-        </div>
+
 
         <div class="overlay" id="agregar">
             <div class="popup" id="agregar-producto">
