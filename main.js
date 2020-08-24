@@ -11,7 +11,21 @@ var btnAbrirpopup = document.getElementById('abrir'),
                         overlay.classList.remove('activate');
                         popup.classList.add('activate');
                 });
-                
+        }
+
+        var btnAbrirpopup4 = document.getElementById('registrate'),
+        overlay4= document.getElementById('rego'),
+        popup4 = document.getElementById('pop'),
+        btncerrar4= document.getElementById('btn-cerrar-popup4');
+        if(btnAbrirpopup4 &&  btncerrar4){
+                btnAbrirpopup4.addEventListener('click', function(){
+                        overlay4.classList.add('activate');
+                        popup4.classList.add('activate');
+                });
+                btncerrar4.addEventListener('click', function(){
+                        overlay4.classList.remove('activate');
+                        popup4.classList.add('activate');
+                });
         }
 
 // carrito

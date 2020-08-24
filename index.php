@@ -23,8 +23,10 @@
             <div class="salir" id="abrir">
                 <a href="#" class="cerrar" >entrar</a>
             </div>
+            <div class="registrate" id="registrate">
+                <a href="#" class="cerrar" >registrate</a>
+            </div>
         </header>
-
         <!--filtros-->
         <div class="filtros">
             <div class="nav">
@@ -108,15 +110,7 @@
         <!--Iniciar sesion-->
     <div class="overlay" id="login">
         <div class="popup" id="popup">
-       
-            <div class="btn-registro">
-                <div class="elementos-registro">
-                    <h1 class="hijo">bienvenido!</h1>
-                    <p class="hijo">aun no tienes cuenta?, puedes inciar sesion dando clic en el siguiente boton</p>
-                    <input class="hijo btn-submit registra" type="submit" value="registro">
-                </div>
-            </div>
-            <div class="logins">
+            <div class="interno">
             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                 <div class="elementos">
                     <h1>iniciar sesion</h1>
@@ -134,16 +128,22 @@
 
     <!--popup registro-->
     <div class="overlay" id="rego">
-            <div class="popup" id="pop">
-                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup4"><i class="fas fa-times"></i></a>
-                    <h1>iniciar sesion</h1>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="number" placeholder="ingrese su cedula" required>
-                            <input type="password" placeholder="ingrese clave" required>
-                        </div>
-                        <input class="btn-submit" type="submit" value="entrar">
-                    </form>
+            <div class="popup formu" id="pop">
+            <div class="interno registros">
+                <a href="#" id="btn-cerrar-popup4" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <div class="elementos">
+                        <h1>registrarse</h1>
+                        <form action="">
+                            <div class="contenedor-inputs">
+                                <input type="number" placeholder="ingrese su cedula" required>
+                                <input type="text" placeholder="ingrese su nombre" required>
+                                <input type="number" placeholder="ingrese su numero telefonico" required>
+                                <input type="password" placeholder="ingrese clave" required>
+                            </div>
+                            <input class="btn-submit" type="submit" value="entrar">
+                        </form>
+                    </div> 
+                 </div>
             </div>
         </div>
 

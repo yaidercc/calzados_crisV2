@@ -142,10 +142,54 @@
          <div class="overlay" id="notificaciones">
             <div class="popup notificaciones" id="popup-notificaiones">
                 <a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>carrito</h1>
+                    <h1>entregas pendientes</h1>
+                    <scroll-container> 
                     <form action="">
-                        <input class="btn-submit" type="submit" value="entrar">
+                        <scroll-page>
+                            <div class="pendientes">
+                                <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
+                                <p class="desc"><strong>NOMBRE COMPRADOR:</p>
+                                <p class="desc"><strong>NOMBRE PRODUCTO: </p>
+                                <p class="desc"><strong>TALLA: </p>
+                                <p class="desc"><strong>DIRECCION:</p>
+                                <p class="desc"><strong>TELEFONO: </p>
+                                <p class="desc"><strong>CANTIDAD:</p>
+                                <p class="desc"><strong>TOTAL:</p>                               
+                                <input type="submit" class="btn-submit" value="entregado"> 
+                            </div>
+                        </scroll-page>
                     </form>
+                    <form action="">
+                        <scroll-page>
+                            <div class="pendientes">
+                                <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
+                                <p class="desc"><strong>NOMBRE COMPRADOR:</p>
+                                <p class="desc"><strong>NOMBRE PRODUCTO: </p>
+                                <p class="desc"><strong>TALLA: </p>
+                                <p class="desc"><strong>DIRECCION:</p>
+                                <p class="desc"><strong>TELEFONO: </p>
+                                <p class="desc"><strong>CANTIDAD:</p>
+                                <p class="desc"><strong>TOTAL:</p>                               
+                                <input type="submit" class="btn-submit" value="entregado"> 
+                            </div>
+                        </scroll-page>
+                    </form>
+                    <form action="">
+                        <scroll-page>
+                            <div class="pendientes">
+                                <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
+                                <p class="desc"><strong>NOMBRE COMPRADOR:</p>
+                                <p class="desc"><strong>NOMBRE PRODUCTO: </p>
+                                <p class="desc"><strong>TALLA: </p>
+                                <p class="desc"><strong>DIRECCION:</p>
+                                <p class="desc"><strong>TELEFONO: </p>
+                                <p class="desc"><strong>CANTIDAD:</p>
+                                <p class="desc"><strong>TOTAL:</p>                               
+                                <input type="submit" class="btn-submit" value="entregado"> 
+                            </div>
+                        </scroll-page>
+                    </form>
+            </scroll-container> 
             </div>
         </div>
 
