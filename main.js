@@ -1,3 +1,4 @@
+//ventana emergente de iniciar sesion
 var btnAbrirpopup = document.getElementById('abrir'),
         overlay= document.getElementById('login'),
         popup = document.getElementById('popup'),
@@ -28,7 +29,7 @@ var btnAbrirpopup = document.getElementById('abrir'),
                 });
         }
 
-// carrito
+// ventana emergente de carrito
 var btnAbrirpopup1 = document.getElementById('carrito'),
         overlay1= document.getElementById('carro'),
         popup1 = document.getElementById('productos'),
@@ -61,6 +62,7 @@ if(btnAbrirpopup2 &&  btncerrar2){
                 
                 
 }
+// ventana emergente de chat
 var btnAbrirpopup3 = document.getElementById('chateasion'),
         overlay3= document.getElementById('agregar'),
         popup3 = document.getElementById('agregar-producto'),
@@ -77,3 +79,43 @@ if(btnAbrirpopup3 &&  btncerrar3){
                 
                 
 }
+// modificar input type file
+function cambiar(){
+        var aux =document.getElementById('subir').isDefaultNamespace.[0].name;
+        document.getElementById('info').innerHTML=aux;
+}
+
+/*
+	By Osvaldas Valutis, www.osvaldas.info
+	Available for use under the MIT License
+*/
+
+'use strict';
+
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
+
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
+
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
+
+		// Firefox bug fix
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));

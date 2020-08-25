@@ -242,7 +242,6 @@ h4{
     background-color: #2699FB;
     transition: background-color 0.5s;
     transform-origin: left;
- 
 }
 .cart:hover{
     border:1px solid #2699FB;
@@ -282,18 +281,148 @@ h4{
     font-size: 1.4rem;
     margin: 0;
 }
-.principal.chatear {
+.elementos-producto{
+    border: 5px solid #2699FB;
+    height: 60rem;
+    width: 80rem;
+    color: #2699FB;
+    margin: 2.5rem auto;
+    padding: 2rem;
     display: grid;
-    grid-template-columns:auto 80%;
-    grid-template-areas:"conversaciones conversacion";
+    grid-template-rows:10rem 8rem auto 7rem;
+    grid-template-areas: "titulos"
+                            "files"
+                         "contenidos"
+                         "botones";
 }
-.principal.chatear .chats{
-    grid-area: conversaciones;
-    border:6px solid #2699FB;
-    border-top: none; border-bottom: none;
+.elementos-producto .contenedor-boton{
+    grid-area:botones;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.principal.chatear .converasacion{
-    grid-area: conversacion;
+input[type="file"]{
+    display: none;
+}
+
+input[type="file"]:hover{
+    border: 3px solid #2699FB ;
+}
+label i{
+    margin-right: .5rem;
+}
+
+.inputfile-5 + label {
+    color: #d3394c;
+}
+
+.inputfile-5:focus + label,
+.inputfile-5.has-focus + label,
+.inputfile-5 + label:hover {
+    color: #722040;
+}
+
+.inputfile-5 + label figure {
+    width: 100px;
+    height: 135px;
+    background-color: #d3394c;
+    display: block;
+    position: relative;
+    padding: 30px;
+    margin: 0 auto 10px;
+}
+
+.inputfile-5:focus + label figure,
+.inputfile-5.has-focus + label figure,
+.inputfile-5 + label:hover figure {
+    background-color: #722040;
+}
+
+.inputfile-5 + label figure::before,
+.inputfile-5 + label figure::after {
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.inputfile-5 + label figure::before {
+    border-top: 20px solid #dfc8ca;
+    border-left: 20px solid transparent;
+}
+
+.inputfile-5 + label figure::after {
+    border-bottom: 20px solid #722040;
+    border-right: 20px solid transparent;
+}
+
+.inputfile-5:focus + label figure::after,
+.inputfile-5.has-focus + label figure::after,
+.inputfile-5 + label:hover figure::after {
+    border-bottom-color: #d3394c;
+}
+
+.inputfile-5 + label svg {
+    width: 100%;
+    height: 100%;
+    fill: #f1e5e6;
+}
+.elementos-producto .files{
+    grid-area: files;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elementos-producto .columnas{
+    grid-area: contenidos;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elementos-producto .columnas input,select{
+    margin-bottom:2rem;
+    margin-top: .5rem;
+}
+
+.elementos-producto h1{
+    text-align:center;
+}
+.columnas{
+    display: grid;
+    grid-template-columns: 50% 49%;
+    grid-template-areas: "izq der";
+    grid-gap: 20px;
+    margin: 0px auto;
+}
+.columnas .left{
+    grid-area: izq;
+}
+.columnas .right{
+    grid-area:der;
+}
+.elementos-producto .columnas  .contenedor-general{
+   display: grid;
+   grid-template-columns: 15rem 15rem;
+   grid-template-areas: "lft rgt";
+}
+.elementos-producto .columnas .contenedor-general .lft{
+    grid-area: lft;
+}
+.elementos-producto .columnas  .contenedor-general .rgt{
+    grid-area: rgt;
+}
+.elementos-producto .columnas  .contenedor-general input{
+    width: 10rem;
+}
+.elementos-producto input[type="text"],input[type="number"],select{
+    width: 25rem;
+    height: 3.2rem;
+    padding: 1.5rem;
+}
+.elementos-producto a{
+   
 }
 
 /*VENTANA EMERJENTE DE LOGIN*/

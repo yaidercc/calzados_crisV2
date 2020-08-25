@@ -33,7 +33,7 @@
                 <a href="#">mujer</a>
                 <a href="#">hombre</a>
                 <a href="#">mas filtros  <i class="fas fa-chevron-down"></i></a>
-                <a href="#">agregar productos</a>
+                <a href="agregar_producto.php">agregar productos</a>
             </div>
         </div>
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/estilos.css">
+    
     <title>Calzados Cris</title>
 </head>
 <body>
@@ -23,21 +24,87 @@
                 <a href="#" class="cerrar" id="abrir">salir</a>
             </div>
         </header>
+        <!--filtros de la pagina-->
+        <div class="filtros">
+            <div class="nav">
+                <a href="#">mujer</a>
+                <a href="#">hombre</a>
+                <a href="#">mas filtros  <i class="fas fa-chevron-down"></i></a>
+            </div>
+        </div>
         <!--contenido principal-->
-        <main class="principal chatear">
-            <div class="chats">
-                <div class="contenedor-chat">
-                    <img src="">
-                    <h1>yaidercc</h1>
-                    <p>hola, comoa va el pr</p>
+        <main class="principal">
+            <!--elementos de la pagina-->
+            
+            <div class="elementos-producto">
+                <h1 class="titulo">agregar producto</h1>
+                <div class="files">
+                    <div class="sub">
+                        <div class="box">
+                            <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1"  />
+                            <label for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Choose a file&hellip;</span></label>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="columnas">
+                    <div class="left">
+                        <p>nombre producto</p>
+                        <input type="text" placeholder="ingrese nombre del producto" focus>
+                        
+                        <div class="contenedor-general">
+                            <div class="lft">
+                                <p>talla mas pequeña</p>
+                                <input type="text" placeholder="talla">
+
+                                <p>cantidades</p>
+                                <input type="number" placeholder="ingresar">
+                            </div>
+                            <div class="rgt">
+                                <p>talla mas grande</p>
+                                <input  type="text" placeholder="talla">
+                                
+                                <p>color 1</p>
+                                <input type="text" placeholder="ingresar">
+                            </div>
+                            
+                        </div>
+                </div>
+
+                <div class="right">
+                    <p>precio</p>
+                    <input type="text" placeholder="precio">
+                    <p>sexo</p>
+                    <select name="sexo">
+                        <option>mujer</option>
+                        <option>hombre</option>
+                        <option>hombre & mujer</option>
+                    </select>
+                    <div class="contenedor-general">
+                        <div class="lft">
+                            <p>color 2</p>
+                            <input type="text" placeholder="ingresar">
+                        </div>
+                        <div class="rgt">
+                            <p>color 3</p>
+                            <input type="text" placeholder="ingresar">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+               
+                
+                <!--boton aqregar producto-->
+                <div class="contenedor-boton">
+                    <a href="#" class="sol">agregar producto</a>
                 </div>
             </div>
-            <div class="converasacion"></div>
         </main>
         
         <!--Carrito-->
         <div class="overlay" id="registro">
             <div class="popup" id="popups">
+                <!--boton cerrar popup-->
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>iniciar sesion</h1>
                     <form action="">
