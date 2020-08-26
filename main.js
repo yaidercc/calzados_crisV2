@@ -64,8 +64,8 @@ if(btnAbrirpopup2 &&  btncerrar2){
 }
 // ventana emergente de chat
 var btnAbrirpopup3 = document.getElementById('chateasion'),
-        overlay3= document.getElementById('agregar'),
-        popup3 = document.getElementById('agregar-producto'),
+        overlay3= document.getElementById('chat'),
+        popup3 = document.getElementById('chatear'),
         btncerrar3= document.getElementById('btn-cerrar-popup3');
 if(btnAbrirpopup3 &&  btncerrar3){
         btnAbrirpopup3.addEventListener('click', function(){
@@ -80,15 +80,6 @@ if(btnAbrirpopup3 &&  btncerrar3){
                 
 }
 // modificar input type file
-function cambiar(){
-        var aux =document.getElementById('subir').isDefaultNamespace.[0].name;
-        document.getElementById('info').innerHTML=aux;
-}
-
-/*
-	By Osvaldas Valutis, www.osvaldas.info
-	Available for use under the MIT License
-*/
 
 'use strict';
 
