@@ -33,7 +33,7 @@
                 <a href="#">mujer</a>
                 <a href="#">hombre</a>
                 <a href="#">mas filtros  <i class="fas fa-chevron-down"></i></a>
-                <a href="agregar_producto.php">agregar productos</a>
+                <a href="gestionar_producto.php">agregar productos</a>
             </div>
         </div>
 
@@ -179,16 +179,11 @@
 
 
 
-        <div class="overlay" id="agregar">
-            <div class="popup" id="agregar-producto">
+        <div class="overlay" id="chat">
+            <div class="popup" id="chatear">
                 <a href="#" id="btn-cerrar-popup3" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>agregar productos</h1>
+                    <h1>conversacion</h1>
                     <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="number" placeholder="ingrese su cedula" required>
-                            <input type="password" placeholder="ingrese clave" required>
-                        </div>
-                        <input class="btn-submit" type="submit" value="entrar">
                     </form>
             </div>
         </div>
