@@ -1,2 +1,5 @@
 ## Notas:
-porfavor no modificar nada de esta pagina
+pueden hacer loq ue quieran
+
+### GitHub
+cambios realizados en github
