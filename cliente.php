@@ -83,7 +83,7 @@
                         <p><i class="fas fa-cart-arrow-down"></i> 8</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="car" ><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="sol">SOLICITAR</a>
                     </div>
                 </div>
@@ -112,11 +112,7 @@
                 <a href="#" id="btn-cerrar-popup1" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>carrito</h1>
                     <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="number" placeholder="ingrese su cedula" required>
-                            <input type="password" placeholder="ingrese clave" required>
-                        </div>
-                        <input class="btn-submit" type="submit" value="entrar">
+                        <input class="btn-submit" id="sks" type="submit" value="entrar">
                         <input class="btn-submit" type="submit" value="registro">
                     </form>
             </div>

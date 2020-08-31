@@ -106,3 +106,18 @@ if(btnAbrirpopup3 &&  btncerrar3){
 		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
 	});
 }( document, window, 0 ));
+
+
+
+var cont=0;
+document.querySelectorAll('.car').addEventListener('click', function(e){
+     e.preventDefault();
+     cont+=1;
+     document.querySelector('.num_notifs').textContent=cont;
+});
+
+document.querySelector('#sks').addEventListener('click', function(e){
+        e.preventDefault();
+        cont=0;
+        document.querySelector('.num_notifs').textContent=cont;
+   });
