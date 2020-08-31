@@ -110,13 +110,19 @@ if(btnAbrirpopup3 &&  btncerrar3){
 
 
 var cont=0;
-document.querySelectorAll('.car').addEventListener('click', function(e){
-     e.preventDefault();
-     cont+=1;
-     document.querySelector('.num_notifs').textContent=cont;
-});
+var carritos= document.querySelectorAll('.car');
+// agregar un evento a varios elementos con la misma clase
+for(var i=0;i<carritos.length;i++){
 
-document.querySelector('#sks').addEventListener('click', function(e){
+        carritos[i].addEventListener('click', function(e){
+                e.preventDefault();
+                cont+=1;
+                document.querySelector('.num_notifs').textContent=cont;
+        },false);
+}
+
+
+document.querySelector('#vaciar').addEventListener('click', function(e){
         e.preventDefault();
         cont=0;
         document.querySelector('.num_notifs').textContent=cont;

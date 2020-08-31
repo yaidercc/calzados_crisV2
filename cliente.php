@@ -26,10 +26,11 @@
         <!--filtros-->
         <div class="filtros">
             <div class="nav">
-                <a href="#">mujer</a>
-                <a href="#">hombre</a>
-                <a href="#">mas filtros <i class="fas fa-chevron-down"></i></a>
-            </div>
+                <a href="#">mujer <i class="fas fa-female"></i></a>
+                <a href="#">hombre <i class="fas fa-male"></i></a>
+                <a href="#">mas Comprados <i class="fas fa-cart-plus"></i></a>
+                <a href="#">mas baratos <i class="fas fa-coins"></i></a>
+                </div>
         </div>
 
         <!--contenido principal-->
@@ -52,7 +53,7 @@
                         <h1>tenis nike</h1>
                         <p>para: hombre</p>
                         <h2>$ 350.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 4</p>
+                        <p><i class="fas fa-cart-plus"></i> 4</p>
                     </div>
                     <div class="botones">
                         <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
@@ -67,7 +68,7 @@
                         <h1>zapatillas vans</h1>
                         <p>para: mujer</p>
                         <h2>$ 80.900</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 8</p>
+                        <p><i class="fas fa-cart-plus"></i> 8</p>
                     </div>
                     <div class="botones">
                         <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
@@ -80,7 +81,7 @@
                         <h1>tenis adidas</h1>
                         <p>para: hombre</p>
                         <h2>$ 240.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 8</p>
+                        <p><i class="fas fa-cart-plus"></i> 8</p>
                     </div>
                     <div class="botones">
                         <a href="#" class="car" ><i class="fas fa-shopping-cart"></i></a>
@@ -94,7 +95,7 @@
                         <h1>tacones color piel</h1>
                         <p>para: mujer</p>
                         <h2>$ 55.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 5</p>
+                        <p><i class="fas fa-cart-plus"></i> 5</p>
                     </div>
                     <div class="botones">
                         <a href="" class="car"><i class="fas fa-shopping-cart"></i></a>
@@ -112,7 +113,7 @@
                 <a href="#" id="btn-cerrar-popup1" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>carrito</h1>
                     <form action="">
-                        <input class="btn-submit" id="sks" type="submit" value="entrar">
+                        <input class="btn-submit" id="vaciar" type="submit" value="entrar">
                         <input class="btn-submit" type="submit" value="registro">
                     </form>
             </div>
