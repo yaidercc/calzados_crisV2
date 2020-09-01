@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
+    
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" type="png" href="img/icon.png" />
-    <title>Inicio</title>
+    <title>Vista Producto</title>
 </head>
 <body>
     <!--contenedor de la pagina-->
@@ -27,10 +28,11 @@
 
         <!--filtros-->
         <div class="filtros">
-            <div class="nav">
-                <a href="#">mujer</a>
-                <a href="#">hombre</a>
-                <a href="#">mas filtros <i class="fas fa-chevron-left"></i></a>
+        <div class="nav">
+                <a href="#">mujer <i class="fas fa-female"></i></a>
+                <a href="#">hombre  <i class="fas fa-male"></i></a>
+                <a href="#">mas comprados <i class="fas fa-cart-plus"></i></a>
+                <a href="#">mas baratos <i class="fas fa-coins"></i></a>
             </div>
         </div>
 
@@ -38,17 +40,18 @@
         <main class="principal">
             <div class="contenedor-producto">
                 <div class="foto">
-                    <img class="imagen" src="img/zapatos.png" height="90%" width="100%">
+                    <img class="imagen" src="img/adidas.jpg" height="90%" width="100%">
                     <!--estrellas-->
                     <div class="icons">
                         <i class="flecha fas fa-chevron-left"></i>
                         <div class="puntuaciones">
-                            <a href="#" ><i id="1" class="fas fa-star"></i></a>
-                            <a href="#" ><i id="2" class="fas fa-star"></i></a>
-                            <a href="#" ><i  id="3" class="fas fa-star"></i></a>
-                            <a href="#"><i  id="4" class="fas fa-star"></i></a>
-                            <a href="#" ><i id="5" class="fas fa-star"></i></a>
-                            <p id="texto"></p>
+                            <a href="#" id="1"><i class="fas fa-star"></i></a>
+                            <a href="#" id="2"><i class="fas fa-star"></i></a>
+                            <a href="#" id="3"><i class="fas fa-star"></i></a>
+                            <a href="#" id="4"><i class="fas fa-star"></i></a>
+                            <a href="#" id="5"><i class="fas fa-star"></i></a>
+                            <br/>
+                            <span class="calificacion"></span>
                         </div>
                         <i class="flecha fas fa-chevron-right"></i>
                     </div>
@@ -60,15 +63,12 @@
                             <p>tallas: </p>
                             <div class="caja">
                                 <select class="listado-tallas" name="select">
-                                    <option>yaider</option>
-                                    <option>cordoba</option>
-                                    <option>cordoba</option>
+                                    <option>---- Seleccionar Talla ----</option>
                                 </select>
                             </div>
                         </div>
                         <div class="hijo general">
                             <p>unidades disponibles:</p> <p class="later">50 Unidades</p>
-                           
                         </div> 
 
                         <div class="hijo unidades">
@@ -83,7 +83,7 @@
 
                         <div class="hijo general">
                             <p >precio unitario:</p>
-                            <p class="later">$ 50.000</p>
+                            <p class="precio">$ 50.000</p>
                         </div>
                         
                         <div class="hijo colores">
@@ -92,66 +92,17 @@
                             <a href="#" class="color verde">verde</a>
                             <a href="#" class="color amarillo">amarillo</a>
                         </div>
-                        
                     </div>
-                    <div class="btns">
+                    <div class="contenedor-botones">
                         <div class="elements">
-                            <a href="cliente.php" class="car flecha"><i class="fas fa-chevron-left"></i></a>
-                            <a href="#" class="sol">SOLICITAR</a>
-                            <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="cliente.php" class="btn-carrito flecha"><i class="fas fa-chevron-left"></i></a>
+                            <a href="#" class="btn-solicitar">SOLICITAR</a>
                         </div>
                     </div>
                 </div>
-                
             </div>
-            
         </main>
-        
-        <!--Iniciar sesion-->
-        <div class="overlay" id="login">
-            <div class="popup" id="popup">
-                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>iniciar sesion</h1>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="number" placeholder="ingrese su cedula" required>
-                            <input type="password" placeholder="ingrese clave" required>
-                        </div>
-                        <input class="btn-submit" type="submit" value="entrar">
-                        <input class="btn-submit" type="submit" value="registro">
-                    </form>
-            </div>
-        </div>
 
-        <!--Registrarse-->
-        <div class="overlay" id="registro">
-            <div class="popup" id="popups">
-                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>iniciar sesion</h1>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="number" placeholder="ingrese su cedula" required>
-                            <input type="password" placeholder="ingrese clave" required>
-                        </div>
-                        <input class="btn-submit" type="submit" value="entrar">
-                    </form>
-            </div>
-        </div>
-
-        <!--Carrito-->
-        <div class="overlay" id="registro">
-            <div class="popup" id="popups">
-                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>iniciar sesion</h1>
-                    <form action="">
-                        <div class="contenedor-inputs">
-                            <input type="number" placeholder="ingrese su cedula" required>
-                            <input type="password" placeholder="ingrese clave" required>
-                        </div>
-                        <input class="btn-submit" type="submit" value="entrar">
-                    </form>
-            </div>
-        </div>
         <!--pie de pagina-->
         <footer class="pie">
             <div class="redes">
@@ -163,7 +114,7 @@
     </div>
 
     <!--archivos y links-->
-    <script src='main.js'></script> 
+    <script src='js/main.js'></script> 
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     </script>

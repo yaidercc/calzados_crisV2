@@ -111,7 +111,7 @@ if(btnAbrirpopup3 &&  btncerrar3){
 
 var cont=0;//contador de elementos agregados al carro
 var carro=document.querySelectorAll('.car');//boton encargado de agregar elementos
-var cantidades=document.querySelector('.num_notifs');//numero de productos agregado
+var cantidades=document.querySelector('.numero_notificaiones');//numero de productos agregado
 for(var i=0;i<carro.length;i++){// ciclo para agregar evento a todos los elementos con la misma clase
         carro[i].addEventListener('click', function(e){//evento que va a tener todos los elementos
                 e.preventDefault();// cortar la funcion del acion en los formularios
@@ -121,10 +121,19 @@ for(var i=0;i<carro.length;i++){// ciclo para agregar evento a todos los element
 }
 
 // vaciar carro
+var vaciar = document.querySelector('#vacio');
+if(vaciar){
+        vaciar.addEventListener('click', function(e){
+                e.preventDefault();
+                cont=0;
+                cantidades.innerText=cont;
+        });
+}
 
 
-   // calificaiones
-   var calificaiones=["mala","regular","buena", "muy buena","excelente"];
+
+   // calificaiones con evento click
+   /*var calificaiones=["mala","regular","buena", "muy buena","excelente"];
    var aux1=document.querySelector(".puntuaciones");
    aux1.addEventListener('click',cal);
 
@@ -138,4 +147,29 @@ for(var i=0;i<carro.length;i++){// ciclo para agregar evento a todos los element
         }
         
        
-   }
+   }*/
+
+   ///calificaiones con evento mouseenter
+   document.addEventListener('DOMContentLoaded', function() {
+        var calificaciones = ["mala", "regular", "buena", "muy buena", "excelente"];
+        var aux1 = document.querySelectorAll(".puntuaciones>a");
+        var calif = document.querySelector(".puntuaciones .calificacion");
+        for (const item of aux1) {
+            item.addEventListener('mouseenter', cal);
+        }
+        function cal(e) {
+            e.stopPropagation();
+            var auxi = parseInt(e.target.id);
+            var elementos = e.target.parentElement.querySelectorAll(".puntuaciones>a");
+    
+            //Quito la clase a todos, no hago un toggle por que cuando sea el cambio a un elemento superior me quitara los anteriores
+            Array.from(elementos).forEach(e => e.classList.remove("seleccionado"));
+    
+            //fitlo por los que el atributo id sea menor a el actual y en el foreach le asigno la clase seleccionado
+            Array.from(elementos).filter(item => { return parseInt(item.id) <= auxi })
+                .forEach(e => e.classList.add("seleccionado"));
+    
+            //obtengo la calificación y la asigno.
+            calif.innerHTML = `${calificaciones[auxi - 1]}`;
+        }
+    });

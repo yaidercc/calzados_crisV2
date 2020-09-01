@@ -1,3 +1,5 @@
+                            /**  ----------       ESTILOS -> GENERALES    ------------  **/
+
 *{
     padding: 0;
     margin: 0;
@@ -20,9 +22,7 @@ a{
     color: #fff;
     text-transform: capitalize;
 }
-i{
-    cursor: pointer;
-}
+
 /*sistema de tamaños que son directamente proporcionales*/
 h1{
     font-size: 3.8rem;
@@ -40,19 +40,23 @@ h4{
     font-size: 2.6rem;
     
 }
+
+
 .contenedor{
     width: 100%;
-    min-height: 100vh;/*altura minima*/
+    min-height: 100vh;/*altura minima de toda la pantalla*/
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 6rem 4rem  100rem 5rem ; /*la pagina tendra 2 filas con las medidas anteriores*/
+    grid-template-rows: 6rem 4rem  100rem 5rem ; 
     grid-template-areas: "header"
                           "filtros"
                           "principal"
                           "pie";
     transition: all .3s ease;
 }
-/*ENCABEZADO*/
+
+                            /**  ----------     ESTILOS ->  ENCABEZADO PRINCIPAL   ------------  **/
+
 .header{
     background-color: #2699FB;
     color: white;
@@ -126,7 +130,7 @@ h4{
 }
 
 
-/*FILTROS*/
+                    /**  ----------       ESTILOS -> FILTROS DE LOS PRODUCTOS    ------------  **/
 .filtros{
     grid-area: filtros;
     background-color: #7FC4FD;
@@ -143,140 +147,7 @@ h4{
     color:#2699FB ;
 }
 
-/*PRINCIPAL*/
-.principal{
-    grid-area: principal;
-}
-.principal .calzado{
-    padding: 0rem 1rem;
-    color: #2699FB;
-}
-.principal .container{
-    padding:1rem;
-    /*alinear horizontalmente*/
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
-
-/*PRODUCTOS*/
-.principal .container .producto{
-    max-width: 34rem;
-    height: 42rem;
-    box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);/*sombra exterior*/
-    display: grid;
-    grid-template-rows:20rem 13rem auto;
-    grid-template-areas: "imagen"
-                        "descripcion"
-                        "botones";
-    padding: 1rem;
-    margin-right:1rem;
-}
-.principal .container .producto .botones{
-    grid-area: botones;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
-.car{
-    background-color: #35b446;
-    display: inline-block;
-    padding: 1rem 0px;
-    text-align: center;
-    width: 5rem;
-    margin-right: 10px;
-    transition: background-color 0.5s;
-    transform-origin: left;
-}
-.car.v2{
-    width: 15%;
-}
-
-.car:hover{
-    background-color: #57d668;
-
-}
-.car.flecha{
-    background-color:#76b8f1;
-}
-.car.flecha:hover{
-    background-color:#9dbfdd;
-}
-.principal .container .car.cared{
-    background-color: #fb2626;
-}
-.principal .container .car.cared:hover{
-    background-color: #e67575;
-}
-.sol{
-    background-color: #2699FB;
-    display: inline-block;
-    padding: 1rem 0px;
-    text-align: center;
-    width: 27rem;
-    transition: background-color 0.5s;
-    transform-origin: left;
-}
-.sol.v2{
-    width: 80%;
-}
-
-.sol:hover{
-    background-color:#76b8f1 ;
-}
-
-.imagen{
-    grid-area: imagen;
-    background-color: teal;
-}
-.precio{
-    grid-area:descripcion;
-    color: #2699FB;
-    height: 100%;
-    
-}
-.precio h1{
-    font-size: 2.8rem;
-}
-.principal .cabeza-main{
-    grid-area: cabezamain;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-}
-.cart{
-    display: inline-block;
-    padding: 1rem 2rem;
-    text-align: center;
-    position: relative;
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 10px;
-    color:#fff ;
-    background-color: #2699FB;
-    transition: background-color 0.5s;
-    transform-origin: left;
-}
-.cart:hover{
-    border:1px solid #2699FB;
-    color: #2699FB;
-    background-color: #fff;
-}
-.principal .container .producto .inp{
-    width: 100%;
-    height:25px;
-    padding: 10px;
-
-}
-.principal .container .producto .visible{
-    display: flex;
-    align-items:center;
-    padding-top:1rem;
-}
-.principal .container .producto .visible .txt{
-    padding-right: 1rem;
-}      
-.filtros.cabecera{
+/*.filtros.cabecera{
     display: flex;
     justify-content: space-between;
 }
@@ -294,7 +165,161 @@ h4{
     height: 100%;
     font-size: 1.4rem;
     margin: 0;
+}*/
+
+                    /**  ----------       ESTILOS -> CONTENIDO PRINCIPAL DE LA PAGINA    ------------  **/
+
+.principal{
+    grid-area: principal;
 }
+
+.principal .cabeza-main{
+    grid-area: cabezamain;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.principal .calzado{
+    padding: 0rem 1rem;
+    color: #2699FB;
+}
+
+                        /**  ----------       ESTILOS -> CONTENEDOR DE PRODUCTOS    ------------  **/
+
+.principal .container-productos{
+    padding:1rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+                        /**  ----------       ESTILOS -> DESCRIPCION DEL PRODUCTO    ------------  **/
+.principal .container-productos .producto{
+    max-width: 34rem;
+    height: 42rem;
+    box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-rows:20rem 13rem auto;
+    grid-template-areas: "imagen"
+                        "descripcion"
+                        "botones";
+    padding: 1rem;
+    margin-right:1rem;
+}                   
+            /**BOTONES**/
+
+.principal .container-productos .producto .botones{
+    grid-area: botones;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.principal .container-productos .producto .inp{
+    width: 100%;
+    height:25px;
+    padding: 10px;
+
+}
+.principal .container-productos .producto .visible{
+    display: flex;
+    align-items:center;
+    padding-top:1rem;
+}
+.principal .container-productos .producto .visible .txt{
+    padding-right: 1rem;
+} 
+        /*  BOTON AGREGAR AL CARRITO  */
+
+.btn-carrito{
+    background-color: #35b446;
+    display: inline-block;
+    padding: 1rem 0px;
+    text-align: center;
+    width: 5rem;
+    margin-right: 10px;
+    transition: background-color 0.5s;
+    transform-origin: left;
+}
+.btn-carrito.v1{
+    width: 15%;
+}
+
+.btn-carrito:hover{
+    background-color: #57d668;
+
+}
+.btn-carrito.flecha{
+    background-color:#76b8f1;
+}
+.btn-carrito.flecha:hover{
+    background-color:#9dbfdd;
+}
+.principal .container-productos .btn-carrito.eliminar{
+    background-color: #fb2626;
+}
+.principal .container-productos .btn-carrito.eliminar:hover{
+    background-color: #e67575;
+}
+        /*BOTON SOLICITAR*/
+.btn-solicitar{
+    background-color: #2699FB;
+    display: inline-block;
+    padding: 1rem 0px;
+    text-align: center;
+    width: 27rem;
+    transition: background-color 0.5s;
+    transform-origin: left;
+}
+.btn-solicitar.v1{
+    width: 80%;
+}
+
+.btn-solicitar:hover{
+    background-color:#76b8f1 ;
+}
+
+            /**IMAGEN DEL PRODUCTO**/
+.imagen{
+    grid-area: imagen;
+    background-color: teal;
+}
+
+            /**CARACTERISTICAS Y PRECIO**/
+.contenedor-descripcion{
+    grid-area:descripcion;
+    color: #2699FB;
+    height: 100%;
+    
+}
+.contenedor-descripcion h1{
+    font-size: 2.8rem;
+}
+
+/**  ----------       ESTILOS -> BOTON CARRITO   ------------  **/
+
+.carrito{
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 10px;
+    color:#fff ;
+    background-color: #2699FB;
+    transition: background-color 0.5s;
+    transform-origin: left;
+}
+
+.carrito:hover{
+    border:1px solid #2699FB;
+    color: #2699FB;
+    background-color: #fff;
+}
+     
+                /**  ----------    ESTILOS -> VISTA PRODUCTO  ------------  **/  
+
 .elementos-producto{
     border: 5px solid #2699FB;
     height: 60rem;
@@ -315,6 +340,123 @@ h4{
     align-items: center;
     justify-content: center;
 }
+.contenedor-producto{
+    width: 110rem;
+    height: 65rem;
+    margin: 20px auto;
+    border: 5px solid #2699FB;
+    display: grid;
+    grid-template-columns: 45% 55% ;
+    grid-template-areas: "img caracteristicas";
+}
+
+   /**  ----------       ESTILOS -> SECCION DE FOTO > VISTA_PRODUCTO  ------------  **/  
+.contenedor-producto .foto{
+    grid-area:img;
+   
+}
+.contenedor-producto .foto .puntuaciones .icons p,.icons .flecha{
+    color:#2699FB;
+}
+.contenedor-producto .foto .puntuaciones{
+    text-align:center;
+}
+.contenedor-producto .foto .flecha{
+    font-size: 3rem;
+    cursor: pointer;
+}
+.contenedor-producto .foto .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+                    /**  ----------   ESTILOS -> SECCION CARACTERISTICAS > VISTA_PRODUCTO   ------------  **/ 
+.contenedor-producto .caracteristicas{
+    grid-area:caracteristicas;
+    display: grid;
+    grid-template-rows:8rem auto 8rem;
+    grid-template-areas: "nombre"
+                         "etc" 
+                         "btns";
+}
+.contenedor-producto .caracteristicas .title{
+    grid-area:nombre;
+    text-align:center;
+    color: #2699FB;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.contenedor-producto .caracteristicas .elecciones{
+    color: #000;
+    grid-area:etc;
+    font-size:3rem ;
+}
+.contenedor-producto .caracteristicas .elecciones .hijo.general{
+    display:flex;
+}
+.contenedor-producto .caracteristicas .elecciones .later{
+    margin-left: 1rem;
+    color: #2699FB; 
+}
+.contenedor-producto .caracteristicas .elecciones .hijo{
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-producto .caracteristicas .elecciones .tallas .listado-tallas{
+    width: 20rem;
+    height: 3rem;
+    margin-left: 1rem;
+    padding: 0rem 1rem;
+
+}
+.contenedor-producto .caracteristicas .contenedor-botones{
+    grid-area:btns;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-producto .caracteristicas .contenedor-botones .btn-solicitar{
+    margin-right: 1rem;
+}
+.contenedor-producto .caracteristicas .unidades{
+    display: flex;
+}
+.contenedor-producto .caracteristicas .unidades input{
+    width:5rem;
+    text-align:center;
+    margin-left:1rem;
+    border: none;
+    border-bottom:3px solid #2699FB;
+}
+.contenedor-producto .caracteristicas .hijo{
+    margin-bottom:2.7rem;
+}
+.contenedor-producto .caracteristicas .colores .color{
+    display: inline-block;
+}
+.contenedor-producto .caracteristicas .colores .color.rojo{
+    color: #fb2626;
+}
+.contenedor-producto .caracteristicas .colores .color.verde{
+    color: #3ffb26;
+}
+.contenedor-producto .caracteristicas .colores .color.amarillo{
+    color: #e6fb26;
+}
+                    /**  ----------       ESTILOS -> GESTIONAR PRODUCTO   ------------  **/
+.puntuaciones a i{
+    color:#2699FB;
+}
+.puntuaciones a.seleccionado i {
+    color: #ffff00;
+}
+
+                    /**  ----------       ESTILOS -> GESTIONAR PRODUCTO   ------------  **/
+
+    /*  ESTILOS INPUT TIYPE: FILE > GESTIONAR PRODUCTO   */
+
 input[type="file"]{
     display: none;
 }
@@ -348,7 +490,6 @@ label i{
 .inputfile + label {
     max-width: 15rem;
     font-size: 1.25rem;
-    /* 20px */
     font-weight: 700;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -356,7 +497,6 @@ label i{
     display: inline-block;
     overflow: hidden;
     padding: 2rem 2rem;
-    /* 10px 20px */
 }
 
 
@@ -366,9 +506,7 @@ label i{
     vertical-align: middle;
     fill: currentColor;
     margin-top: -0.25em;
-    /* 4px */
     margin-right: 0.25em;
-    /* 4px */
     transition: background-color 0.5s;
     transform-origin: left;
 }
@@ -385,12 +523,16 @@ label i{
 .inputfile-1 + label:hover {
     background-color:#76b8f1;
 }
+        
 .elementos-producto .files{
     grid-area: files;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+/**  ----------       ESTILOS -> CAMPOS DE TEXTO > GESTIONAR PRODUCTO   ------------  **/
+        
 .elementos-producto .columnas{
     grid-area: contenidos;
     display: flex;
@@ -408,26 +550,26 @@ label i{
 .columnas{
     display: grid;
     grid-template-columns: 50% 49%;
-    grid-template-areas: "izq der";
+    grid-template-areas: "izquierda derecha";
     grid-gap: 20px;
     margin: 0px auto;
 }
-.columnas .left{
-    grid-area: izq;
+.columnas .lado-izquierdo{
+    grid-area: izquierda;
 }
-.columnas .right{
-    grid-area:der;
+.columnas .lado-derecho{
+    grid-area:derecha;
 }
 .elementos-producto .columnas  .contenedor-general{
    display: grid;
    grid-template-columns: 15rem 15rem;
-   grid-template-areas: "lft rgt";
+   grid-template-areas: "izquierda-1 derecha-1";
 }
-.elementos-producto .columnas .contenedor-general .lft{
-    grid-area: lft;
+.elementos-producto .columnas .contenedor-general .izquierda{
+    grid-area: izquierda-1;
 }
-.elementos-producto .columnas  .contenedor-general .rgt{
-    grid-area: rgt;
+.elementos-producto .columnas  .contenedor-general .derecha{
+    grid-area: derecha-1;
 }
 .elementos-producto .columnas  .contenedor-general input{
     width: 10rem;
@@ -437,11 +579,8 @@ label i{
     height: 3.2rem;
     padding: 1.5rem;
 }
-.elementos-producto a{
-   
-}
 
-/*VENTANA EMERJENTE DE LOGIN*/
+                /**  ----------       ESTILOS -> VENTANAS EMERGENTES   ------------  **/
 .overlay{
     background-color:rgba(0, 0, 0, 0.3);
     position: fixed;
@@ -473,7 +612,6 @@ label i{
 .popup.notificaciones{
     width: 60rem;
     height: 60rem;
-    
 }
 
 .interno .elementos{
@@ -483,31 +621,37 @@ label i{
     height: 50rem;
 }
 
+                /**  ----------       ESTILOS -> POP-UP NOTIFICACIONES   ------------  **/
+
+
 .popup form .pendientes{
     border:3px solid #096BA7;
     padding: 10px;
     width: 100%;
     margin-top:1rem ;
 }
+                /**  ----------       ESTILOS -> SCROLL DE NOTIFICACIONES   ------------  **/
 scroll-container {
     display: block;
     margin: 0 auto;
     text-align: center;
   }
-    scroll-container {
+scroll-container {
     display: block;
     max-width: 80%;
     max-height: 80%;
     overflow-y: scroll;
     scroll-behavior: smooth;
-  }
-  scroll-page {
+}
+scroll-page {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 80%;
     font-size: 16px;
-  }
+}
+
+
 .interno .elementos .contenedor-inputs input{
     margin: 20px auto;
 
@@ -578,110 +722,8 @@ scroll-container {
 .popup .ingreso{
     background-color: saddlebrown;
 }
-.contenedor-producto{
-    width: 110rem;
-    height: 65rem;
-    margin: 20px auto;
-    border: 5px solid #2699FB;
-    display: grid;
-    grid-template-columns: 45% 55% ;
-    grid-template-areas: "img caracteristicas";
-}
-.contenedor-producto .foto{
-    grid-area:img;
-   
-}
-.contenedor-producto .foto .puntuaciones i, .icons p,.icons .flecha{
-    color:#2699FB;
-}
-.contenedor-producto .foto .puntuaciones{
-    text-align:center;
-}
-.contenedor-producto .foto .flecha{
-    font-size: 3rem;
-    cursor: pointer;
-}
-.contenedor-producto .foto .icons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-}
 
-.contenedor-producto .caracteristicas{
-    grid-area:caracteristicas;
-    display: grid;
-    grid-template-rows:8rem auto 8rem;
-    grid-template-areas: "nombre"
-                         "etc" 
-                         "btns";
-}
-.contenedor-producto .caracteristicas .title{
-    grid-area:nombre;
-    text-align:center;
-    color: #2699FB;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-.contenedor-producto .caracteristicas .elecciones{
-    color: #000;
-    grid-area:etc;
-    font-size:3rem ;
-}
-.contenedor-producto .caracteristicas .elecciones .hijo.general{
-    display:flex;
-}
-.contenedor-producto .caracteristicas .elecciones .later{
-    margin-left: 1rem;
-    color: #2699FB; 
-}
-.contenedor-producto .caracteristicas .elecciones .hijo{
-    display: flex;
-    align-items: center;
-}
-
-.contenedor-producto .caracteristicas .elecciones .tallas .listado-tallas{
-    width: 20rem;
-    height: 3rem;
-    margin-left: 1rem;
-    padding: 0rem 1rem;
-
-}
-.contenedor-producto .caracteristicas .btns{
-    grid-area:btns;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contenedor-producto .caracteristicas .btns .sol{
-    margin-right: 1rem;
-}
-.contenedor-producto .caracteristicas .unidades{
-    display: flex;
-}
-.contenedor-producto .caracteristicas .unidades input{
-    width:5rem;
-    text-align:center;
-    margin-left:1rem;
-    border: none;
-    border-bottom:3px solid #2699FB;
-}
-.contenedor-producto .caracteristicas .hijo{
-    margin-bottom:2.7rem;
-}
-.contenedor-producto .caracteristicas .colores .color{
-    display: inline-block;
-}
-.contenedor-producto .caracteristicas .colores .color.rojo{
-    color: #fb2626;
-}
-.contenedor-producto .caracteristicas .colores .color.verde{
-    color: #3ffb26;
-}
-.contenedor-producto .caracteristicas .colores .color.amarillo{
-    color: #e6fb26;
-}
-/*PIE DE PAGINA*/
+                /**  ----------       ESTILOS -> PIE DE PAGINA   ------------  **/
 
 .pie{
     grid-area: pie;
@@ -706,5 +748,7 @@ scroll-container {
         color: #fff;
 
     }
-
-
+    .puntuaciones .calificacion{
+        color: #2699FB;
+    }
+    

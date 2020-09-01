@@ -46,11 +46,11 @@
                 
             </div>
             <!--contenedor productos-->
-            <div class="container">
+            <div class="container-productos">
                 <!--productos-->
                 <div class="producto">
                     <img class="imagen" src="img/nike.jpg" height="100%" width="100%">
-                    <div class="precio">
+                    <div class="contenedor-descripcion">
                         <input type="text" value="tenis nike" class="inp">
                         <p>para: hombre</p>
                         <input type="text" value="350.000" class="inp">
@@ -61,14 +61,14 @@
                         </div>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="sol">modificar</a>
+                        <a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#" class="btn-solicitar v1">modificar</a>
                     </div>
                 </div>
 
                 <div class="producto">
                     <img class="imagen" src="img/plataformas.jpg" height="100%" width="100%">
-                    <div class="precio">
+                    <div class="contenedor-descripcion">
                         <input type="text" value="plataformas negras" class="inp">
                         <p>para: mujer</p>
                         <input type="text" value="80.000" class="inp">
@@ -79,14 +79,14 @@
                         </div>
                     </div>
                     <div class="botones">
-                    <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="sol">modificar</a>
+                        <a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#" class="btn-solicitar v1">modificar</a>
                     </div>
                 </div>
 
                 <div class="producto">
                     <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
-                    <div class="precio">
+                    <div class="contenedor-descripcion">
                         <input type="text" value="tenis adidas" class="inp">
                         <p>para: hombre</p>
                         <input type="text" value="240.000" class="inp">
@@ -97,14 +97,14 @@
                         </div>
                     </div>
                     <div class="botones">
-                    <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="sol">modificar</a>
+                        <a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#" class="btn-solicitar v1">modificar</a>
                     </div>
                 </div>
 
                 <div class="producto">
                     <img class="imagen" src="img/zapatos.png" height="100%" width="100%">
-                    <div class="precio">
+                    <div class="contenedor-descripcion">
                         <input type="text" value="tacones" class="inp">
                         <p>para: mujer</p>
                         <input type="text" value="55.000" class="inp">
@@ -115,8 +115,8 @@
                         </div>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car cared"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="sol">modificar</a>
+                        <a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>
+                        <a href="#" class="btn-solicitar v1">modificar</a>
                     </div>
                 </div>
                 
@@ -130,7 +130,7 @@
                 <a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>entregas pendientes</h1>
                     <scroll-container> 
-                    <form action="">
+                    <form action="#">
                         <scroll-page>
                             <div class="pendientes">
                                 <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
@@ -145,7 +145,7 @@
                             </div>
                         </scroll-page>
                     </form>
-                    <form action="">
+                    <form action="#">
                         <scroll-page>
                             <div class="pendientes">
                                 <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
@@ -160,7 +160,7 @@
                             </div>
                         </scroll-page>
                     </form>
-                    <form action="">
+                    <form action="#">
                         <scroll-page>
                             <div class="pendientes">
                                 <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
@@ -185,7 +185,7 @@
             <div class="popup" id="chatear">
                 <a href="#" id="btn-cerrar-popup3" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>conversacion</h1>
-                    <form action="">
+                    <form action="#">
                     </form>
             </div>
         </div>
@@ -200,7 +200,7 @@
         </footer>
     </div>
     <!--archivos y links-->
-    <script src='main.js'></script> 
+    <script src='js/main.js'></script> 
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     </script>

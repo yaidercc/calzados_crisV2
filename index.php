@@ -6,24 +6,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" type="png" href="img/icon.png" />
-    <title>Calzados</title>
+    <title>Calzados Cris</title>
 </head>
 <body>
     <!--contenedor de la pagina-->
     <div class="contenedor">
         <!--cabecera de pagina-->
         <header class="header">
-        
             <div class="contenedor-logo">
                 <h1>calzados cris</h1>
             </div>
-            <div class="navegacion">
-                <!--<a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
-                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>-->
-            </div>
+
             <div class="salir" id="abrir">
                 <a href="#" class="cerrar" >entrar</a>
             </div>
+
             <div class="registrate" id="registrate">
                 <a href="#" class="cerrar" >registro</a>
             </div>
@@ -31,74 +28,75 @@
         <!--filtros-->
         <div class="filtros">
             <div class="nav">
-                <a href="#">mujer</a>
-                <a href="#">hombre</a>
-                <a href="#">mas filtros</a>
-            </div>
+                    <a href="#">mujer <i class="fas fa-female"></i></a>
+                    <a href="#">hombre  <i class="fas fa-male"></i></a>
+                    <a href="#">mas comprados <i class="fas fa-cart-plus"></i></a>
+                    <a href="#">mas baratos <i class="fas fa-coins"></i></a>
+                </div>
         </div>
 
         <!--contenido principal-->
         <main class="principal">
-        <div class="cabeza-main">
-                <h1 class="calzado">calzados para hombre y para mujer</h1>
+            <div class="cabeza-main">
+                    <h1 class="calzado">calzados para hombre y para mujer</h1>
             </div>
             <!--contenedor productos-->
-            <div class="container">
+            <div class="container-productos">
                 <!--productos-->
                 <div class="producto">
                     <img class="imagen" src="img/nike.jpg" height="100%" width="100%">
-                    <div class="precio">
+                    <div class="contenedor-descripcion">
                         <h1>tenis nike</h1>
                         <p>para: hombre</p>
                         <h2>$ 350.000</h2>
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
+
                     <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
                     </div>
-                    
                 </div>
 
                 <div class="producto">
                     <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
-                    <div class="precio">
+                    <div class="contenedor-descripcion">
                         <h1>tenis adidas</h1>
                         <p>para: hombre</p>
                         <h2>$ 240.500</h2>
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
                     </div>
                 </div>
-               
                
                 <div class="producto">
                     <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
-                    <div class="precio">
+                    <div class="contenedor-descripcion">
                         <h1>tenis adidas</h1>
                         <p>para: hombre</p>
                         <h2>$ 240.500</h2>
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
                     </div>
                 </div>
+               
                 <div class="producto">
-                    <img class="imagen" src="img/tacones.jpg" height="100%" width="100%">
-                    <div class="precio">
+                    <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
+                    <div class="contenedor-descripcion">
                         <h1>tenis adidas</h1>
                         <p>para: hombre</p>
                         <h2>$ 240.500</h2>
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
                     </div>
                 </div>
                 
@@ -106,14 +104,14 @@
             
         </main>
         
-        <!--Iniciar sesion-->
+        <!--pop-up iniciar sesion-->
     <div class="overlay" id="login">
         <div class="popup" id="popup">
             <div class="interno">
             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                 <div class="elementos">
                     <h1>iniciar sesion</h1>
-                    <form action="">
+                    <form action="#">
                         <div class="contenedor-inputs">
                             <input type="number" placeholder="ingrese su cedula" required>
                             <input type="password" placeholder="ingrese clave" required>
@@ -125,14 +123,14 @@
         </div>
     </div>
 
-    <!--popup registro-->
+    <!--pop-up registro-->
     <div class="overlay" id="rego">
             <div class="popup formu" id="pop">
             <div class="interno registros">
                 <a href="#" id="btn-cerrar-popup4" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <div class="elementos">
                         <h1>registrarse</h1>
-                        <form action="">
+                        <form action="#">
                             <div class="contenedor-inputs">
                                 <input type="number" placeholder="ingrese su cedula" required>
                                 <input type="text" placeholder="ingrese su nombre" required>
@@ -157,7 +155,7 @@
     </div>
 
     <!--archivos y links-->
-    <script src='main.js'></script> 
+    <script src='js/main.js'></script> 
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     </script>

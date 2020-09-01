@@ -57,7 +57,7 @@
                 </div>
                
                 <div class="columnas">
-                    <div class="left">
+                    <div class="lado-izquierdo">
                         <p>nombre producto</p>
                         <input type="text" placeholder="ingrese nombre del producto" focus>
                         
@@ -80,33 +80,37 @@
                         </div>
                 </div>
 
-                <div class="right">
+                <div class="lado-derecho">
+
                     <p>precio</p>
                     <input type="text" placeholder="precio">
                     <p>sexo</p>
+
                     <select name="sexo">
                         <option>mujer</option>
                         <option>hombre</option>
                         <option>hombre & mujer</option>
                     </select>
+
                     <div class="contenedor-general">
-                        <div class="lft">
-                            <p>color 2</p>
-                            <input type="text" placeholder="ingresar">
+                            <div class="izquierda">
+                                <p>color 2</p>
+                                <input type="text" placeholder="ingresar">
+                            </div>
+
+                            <div class="derecha">
+                                <p>color 3</p>
+                                <input type="text" placeholder="ingresar">
+                            </div>
                         </div>
-                        <div class="rgt">
-                            <p>color 3</p>
-                            <input type="text" placeholder="ingresar">
-                        </div>
-                    </div>
                     </div>
                 </div>
                
                 
                 <!--boton aqregar producto-->
                 <div class="contenedor-boton">
-                    <a href="administrador.php" class="car flecha"><i class="fas fa-chevron-left"></i></a>
-                    <a href="#" class="sol">agregar producto</a>
+                    <a href="administrador.php" class="btn-carrito flecha"><i class="fas fa-chevron-left"></i></a>
+                    <a href="#" class="btn-solicitar">agregar producto</a>
                 </div>
             </div>
         </main>
@@ -117,7 +121,7 @@
                 <!--boton cerrar popup-->
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>iniciar sesion</h1>
-                    <form action="">
+                    <form action="#">
                         <div class="contenedor-inputs">
                             <input type="number" placeholder="ingrese su cedula" required>
                             <input type="password" placeholder="ingrese clave" required>
@@ -133,7 +137,7 @@
                 <a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>entregas pendientes</h1>
                     <scroll-container> 
-                    <form action="">
+                    <form action="#">
                         <scroll-page>
                             <div class="pendientes">
                                 <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
@@ -148,7 +152,7 @@
                             </div>
                         </scroll-page>
                     </form>
-                    <form action="">
+                    <form action="#">
                         <scroll-page>
                             <div class="pendientes">
                                 <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
@@ -163,7 +167,7 @@
                             </div>
                         </scroll-page>
                     </form>
-                    <form action="">
+                    <form action="#">
                         <scroll-page>
                             <div class="pendientes">
                                 <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
@@ -188,7 +192,7 @@
             <div class="popup" id="chatear">
                 <a href="#" id="btn-cerrar-popup3" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>conversacion</h1>
-                    <form action="">
+                    <form action="#">
                     </form>
             </div>
         </div>
@@ -204,7 +208,7 @@
     </div>
 
     <!--archivos y links-->
-    <script src='main.js'></script>
+    <script src='js/main.js'></script> 
     <script src="custom-file-input.js"></script> 
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
