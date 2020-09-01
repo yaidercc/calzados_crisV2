@@ -108,47 +108,6 @@ if(btnAbrirpopup3 &&  btncerrar3){
 }( document, window, 0 ));
 
 
-
-var cont=0;//contador de elementos agregados al carro
-var carro=document.querySelectorAll('.car');//boton encargado de agregar elementos
-var cantidades=document.querySelector('.numero_notificaiones');//numero de productos agregado
-for(var i=0;i<carro.length;i++){// ciclo para agregar evento a todos los elementos con la misma clase
-        carro[i].addEventListener('click', function(e){//evento que va a tener todos los elementos
-                e.preventDefault();// cortar la funcion del acion en los formularios
-                cont+=1;
-                cantidades.innerText=cont;//agregar
-        });
-}
-
-// vaciar carro
-var vaciar = document.querySelector('#vacio');
-if(vaciar){
-        vaciar.addEventListener('click', function(e){
-                e.preventDefault();
-                cont=0;
-                cantidades.innerText=cont;
-        });
-}
-
-
-
-   // calificaiones con evento click
-   /*var calificaiones=["mala","regular","buena", "muy buena","excelente"];
-   var aux1=document.querySelector(".puntuaciones");
-   aux1.addEventListener('click',cal);
-
-   function cal(e,calf=""){
-        e.stopPropagation();
-        e.preventDefault();
-        var calf=e.target.id;
-        if(calf!=""){
-                document.getElementById('texto').innerText=calificaiones[calf-1];
-                console.log(calificaiones[calf-1]);
-        }
-        
-       
-   }*/
-
    ///calificaiones con evento mouseenter
    document.addEventListener('DOMContentLoaded', function() {
         var calificaciones = ["mala", "regular", "buena", "muy buena", "excelente"];

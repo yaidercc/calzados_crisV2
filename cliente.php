@@ -32,6 +32,7 @@
                 <a href="#">mas comprados <i class="fas fa-cart-plus"></i></a>
                 <a href="#">mas baratos <i class="fas fa-coins"></i></a>
             </div>
+
         </div>
 
         <!--contenido principal-->
@@ -53,7 +54,7 @@
                         <h1>tenis nike</h1>
                         <p>para: hombre</p>
                         <h2>$ 350.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
+                        <p><i class="fas fa-cart-plus"></i> 4</p>
                     </div>
                     <div class="botones">
                         <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
@@ -68,6 +69,7 @@
                         <p>para: hombre</p>
                         <h2>$ 240.500</h2>
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
+
                     </div>
                     <div class="botones">
                         <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
@@ -81,8 +83,8 @@
                     <div class="contenedor-descripcion">
                         <h1>tenis adidas</h1>
                         <p>para: hombre</p>
-                        <h2>$ 240.500</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
+                        <h2>$ 240.000</h2>
+                        <p><i class="fas fa-cart-plus"></i> 8</p>
                     </div>
                     <div class="botones">
                         <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
