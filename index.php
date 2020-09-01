@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Inicio-Calzados Cris</title>
+    <link rel="icon" type="png" href="img/icon.png" />
+    <title>Calzados</title>
 </head>
 <body>
     <!--contenedor de la pagina-->
@@ -24,7 +25,7 @@
                 <a href="#" class="cerrar" >entrar</a>
             </div>
             <div class="registrate" id="registrate">
-                <a href="#" class="cerrar" >registrate</a>
+                <a href="#" class="cerrar" >registro</a>
             </div>
         </header>
         <!--filtros-->
@@ -72,31 +73,29 @@
                         <a href="#" class="sol">SOLICITAR</a>
                     </div>
                 </div>
-
+               
+               
                 <div class="producto">
-                    <img class="imagen" src="img/zapatos.png" height="100%" width="100%">
+                    <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
                     <div class="precio">
-                        <h1>tacones color piel</h1>
+                        <h1>tenis adidas</h1>
                         <p>para: hombre</p>
-                        <h2>$ 85.000</h2>
+                        <h2>$ 240.500</h2>
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
-                    
                     <div class="botones">
                         <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="sol">SOLICITAR</a>
                     </div>
                 </div>
-
                 <div class="producto">
-                    <img class="imagen" src="img/plataformas.jpg" height="100%" width="100%">
+                    <img class="imagen" src="img/tacones.jpg" height="100%" width="100%">
                     <div class="precio">
-                        <h1>plataformas negras</h1>
+                        <h1>tenis adidas</h1>
                         <p>para: hombre</p>
-                        <h2>$ 78.000</h2>
+                        <h2>$ 240.500</h2>
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
-                    
                     <div class="botones">
                         <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="sol">SOLICITAR</a>

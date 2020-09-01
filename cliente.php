@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Productos</title>
+    <link rel="icon" type="png" href="img/icon.png" />
+    <title>Inicio </title>
 </head>
 <body>
     <!--contenedor de la pagina-->
@@ -26,9 +27,10 @@
         <!--filtros-->
         <div class="filtros">
             <div class="nav">
-                <a href="#">mujer</a>
-                <a href="#">hombre</a>
-                <a href="#">mas filtros <i class="fas fa-chevron-down"></i></a>
+                <a href="#">mujer <i class="fas fa-female"></i></a>
+                <a href="#">hombre  <i class="fas fa-male"></i></a>
+                <a href="#">mas comprados <i class="fas fa-cart-plus"></i></a>
+                <a href="#">mas baratos <i class="fas fa-coins"></i></a>
             </div>
         </div>
 
@@ -47,16 +49,16 @@
             <div class="container">
                 <!--productos-->
                 <div class="producto">
-                    <img class="imagen" src="img/nike.jpg" height="100%" width="100%">
+                    <img class="imagen" src="img/plataformas.jpg" height="100%" width="100%">
                     <div class="precio">
                         <h1>tenis nike</h1>
                         <p>para: hombre</p>
                         <h2>$ 350.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 4</p>
+                        <p><i class="fas fa-cart-plus"></i> 4</p>
                     </div>
                     <div class="botones">
                         <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                        <a href="#" class="sol v2">SOLICITAR</a>
                     </div>
                     
                 </div>
@@ -64,14 +66,15 @@
                 <div class="producto">
                     <img class="imagen" src="img/plataformas.jpg" height="100%" width="100%">
                     <div class="precio">
-                        <h1>zapatillas vans</h1>
+                        <h1>plataformas negras</h1>
                         <p>para: mujer</p>
                         <h2>$ 80.900</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 8</p>
+                        
+                        <p><i class="fas fa-cart-plus"></i> 8</p>
                     </div>
                     <div class="botones">
                         <a href="#" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                        <a href="#" class="sol v2">SOLICITAR</a>
                     </div>
                 </div>
                 <div class="producto">
@@ -80,28 +83,27 @@
                         <h1>tenis adidas</h1>
                         <p>para: hombre</p>
                         <h2>$ 240.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 8</p>
+                        <p><i class="fas fa-cart-plus"></i> 8</p>
                     </div>
                     <div class="botones">
                         <a href="#" class="car" ><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="sol">SOLICITAR</a>
+                        <a href="#" class="sol v2">SOLICITAR</a>
                     </div>
                 </div>
 
                 <div class="producto">
                     <img class="imagen" src="img/zapatos.png" height="100%" width="100%">
                     <div class="precio">
-                        <h1>tacones color piel</h1>
+                        <h1>plataforms negras</h1>
                         <p>para: mujer</p>
-                        <h2>$ 55.000</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 5</p>
+                        <h2>$ 95.000</h2>
+                        <p><i class="fas fa-cart-plus"></i> 8</p>
                     </div>
                     <div class="botones">
-                        <a href="" class="car"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="vista_producto.php" class="sol">SOLICITAR</a>
+                        <a href="#" class="car" ><i class="fas fa-shopping-cart"></i></a>
+                        <a href="vista_producto.php" class="sol v2">SOLICITAR</a>
                     </div>
                 </div>
-                
             </div>
             
         </main>
@@ -111,10 +113,30 @@
             <div class="popup carro" id="productos">
                 <a href="#" id="btn-cerrar-popup1" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>carrito</h1>
-                    <form action="">
-                        <input class="btn-submit" id="sks" type="submit" value="entrar">
-                        <input class="btn-submit" type="submit" value="registro">
-                    </form>
+                    <scroll-container> 
+                        <form action="">
+                            <scroll-page>
+                                <div class="pendientes">
+                                    <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
+                                    <p class="desc"><strong>NOMBRE COMPRADOR:</p>
+                                    <p class="desc"><strong>NOMBRE PRODUCTO: </p>
+                              
+                                    <input type="submit" class="btn-submit" value="entregado"> 
+                                </div>
+                            </scroll-page>
+                            <form action="">
+                            <scroll-page>
+                                <div class="pendientes">
+                                    <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
+                                    <p class="desc"><strong>NOMBRE PRODUCTO: </p>
+                                    <p class="desc"><strong>DIRECCION:</p>                            
+                                    <input type="submit" class="btn-submit" value="entregado"> 
+                                </div>
+                            </scroll-page>
+                            </form>
+                    </scroll-container> 
+                    
+                    <input class="btn-submit" id="sks" type="submit" value="Vaciar">
             </div>
         </div>
 
@@ -125,7 +147,7 @@
         <!--pie de pagina-->
         <footer class="pie">
             <div class="redes">
-                <a href="#" class="red"><i class="fab fa-whatsapp-square"></i><span>3148582774</span></a>
+                <a href="#" class="red" ><i class="fab fa-whatsapp-square"></i><span>3148582774</span></a>
                 <a href="#" class="red"><i class="fab fa-facebook-square"></i><span>yaidercc.1</span></a>
                 <a href="#" class="red"><i class="fab fa-instagram-square"></i><span>@yaidercc</span></a>
             </div>

@@ -96,6 +96,7 @@ h4{
 .header .navegacion .cerrar{
     grid-area:salir;
     background-color:#7FC4FD ;
+    font-size: 1.5rem;
 }
 .header .barra-busqueda{
     grid-area: busqueda;
@@ -136,7 +137,7 @@ h4{
 }
 .filtros .nav a{
     margin-right: 2rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .filtros .nav a:hover{
     color:#2699FB ;
@@ -151,7 +152,7 @@ h4{
     color: #2699FB;
 }
 .principal .container{
-    padding:2rem 4rem;
+    padding:1rem;
     /*alinear horizontalmente*/
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -159,15 +160,16 @@ h4{
 
 /*PRODUCTOS*/
 .principal .container .producto{
-    width: 36rem;
+    max-width: 34rem;
     height: 42rem;
     box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);/*sombra exterior*/
     display: grid;
-    grid-template-rows:20rem 13rem 8rem;
+    grid-template-rows:20rem 13rem auto;
     grid-template-areas: "imagen"
                         "descripcion"
                         "botones";
     padding: 1rem;
+    margin-right:1rem;
 }
 .principal .container .producto .botones{
     grid-area: botones;
@@ -180,11 +182,15 @@ h4{
     display: inline-block;
     padding: 1rem 0px;
     text-align: center;
-    width: 50px;
+    width: 5rem;
     margin-right: 10px;
     transition: background-color 0.5s;
     transform-origin: left;
 }
+.car.v2{
+    width: 15%;
+}
+
 .car:hover{
     background-color: #57d668;
 
@@ -210,6 +216,9 @@ h4{
     transition: background-color 0.5s;
     transform-origin: left;
 }
+.sol.v2{
+    width: 80%;
+}
 
 .sol:hover{
     background-color:#76b8f1 ;
@@ -222,6 +231,11 @@ h4{
 .precio{
     grid-area:descripcion;
     color: #2699FB;
+    height: 100%;
+    
+}
+.precio h1{
+    font-size: 2.8rem;
 }
 .principal .cabeza-main{
     grid-area: cabezamain;
@@ -452,6 +466,10 @@ label i{
     height: 40rem;
     color:#2699FB ;
 }
+.popup.carro{
+    width: 60rem;
+    height: 60rem;
+}
 .popup.notificaciones{
     width: 60rem;
     height: 60rem;
@@ -478,8 +496,8 @@ scroll-container {
   }
     scroll-container {
     display: block;
-    width: 80%;
-    height: 450px;
+    max-width: 80%;
+    max-height: 80%;
     overflow-y: scroll;
     scroll-behavior: smooth;
   }
@@ -539,7 +557,8 @@ scroll-container {
     
     
 }
-.popup form .btn-submit{
+.popup .btn-submit{
+    margin-bottom: 0.5rem;
     padding: 0 2rem;
     height: 40px;
     line-height: 40px;
@@ -616,15 +635,14 @@ scroll-container {
     margin-left: 1rem;
     color: #2699FB; 
 }
-.contenedor-producto .caracteristicas .elecciones .tallas{
+.contenedor-producto .caracteristicas .elecciones .hijo{
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
 .contenedor-producto .caracteristicas .elecciones .tallas .listado-tallas{
     width: 20rem;
     height: 3rem;
-    display: flex;
     margin-left: 1rem;
     padding: 0rem 1rem;
 
@@ -649,7 +667,7 @@ scroll-container {
     border-bottom:3px solid #2699FB;
 }
 .contenedor-producto .caracteristicas .hijo{
-    margin-bottom:3rem;
+    margin-bottom:2.7rem;
 }
 .contenedor-producto .caracteristicas .colores .color{
     display: inline-block;
@@ -670,6 +688,7 @@ scroll-container {
     background-color: #2699FB;
     padding: 1rem;
     font-size: 2rem;
+    height: 100%;
 }
     .pie .redes{
         display: flex;

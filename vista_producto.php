@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" type="png" href="img/icon.png" />
     <title>Inicio</title>
 </head>
 <body>
@@ -42,12 +43,12 @@
                     <div class="icons">
                         <i class="flecha fas fa-chevron-left"></i>
                         <div class="puntuaciones">
-                            <a href="#"><i class="fas fa-star"></i></a>
-                            <a href="#"><i class="fas fa-star"></i></a>
-                            <a href="#"><i class="fas fa-star"></i></a>
-                            <a href="#"><i class="fas fa-star"></i></a>
-                            <a href="#"><i class="fas fa-star"></i></a>
-                            <p>buena</p>
+                            <a href="#" id="1"><i class="fas fa-star"></i></a>
+                            <a href="#" id="2"><i class="fas fa-star"></i></a>
+                            <a href="#" id="3"><i class="fas fa-star"></i></a>
+                            <a href="#" id="4"><i class="fas fa-star"></i></a>
+                            <a href="#" id="5"><i class="fas fa-star"></i></a>
+                            <p id="texto">buena</p>
                         </div>
                         <i class="flecha fas fa-chevron-right"></i>
                     </div>

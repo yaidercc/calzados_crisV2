@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="png" href="img/icon.png" />
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Inicio</title>
+    <title>Administrar</title>
 </head>
 <body>
     <!--contenedor de la pagina-->
@@ -30,10 +31,11 @@
         <!--filtros-->
         <div class="filtros">
             <div class="nav">
-                <a href="#">mujer</a>
-                <a href="#">hombre</a>
-                <a href="#">mas filtros  <i class="fas fa-chevron-down"></i></a>
-                <a href="gestionar_producto.php">agregar productos</a>
+                <a href="#">mujer <i class="fas fa-female"></i></a>
+                <a href="#">hombre  <i class="fas fa-male"></i></a>
+                <a href="#">mas comprados <i class="fas fa-cart-plus"></i></a>
+                <a href="#">mas baratos <i class="fas fa-coins"></i></a>
+                <a href="gestionar_producto.php">agregar productos <i class="fas fa-plus"></i></a>
             </div>
         </div>
 
@@ -52,7 +54,7 @@
                         <input type="text" value="tenis nike" class="inp">
                         <p>para: hombre</p>
                         <input type="text" value="350.000" class="inp">
-                        <p><i class="fas fa-cart-arrow-down"></i> 4</p>
+                        <p><i class="fas fa-cart-plus"></i> 4</p>
                         <div class="visible">
                             <p class="txt">visibilidad del producto</p>
                             <i class="fas fa-eye"></i>
@@ -70,7 +72,7 @@
                         <input type="text" value="plataformas negras" class="inp">
                         <p>para: mujer</p>
                         <input type="text" value="80.000" class="inp">
-                        <p><i class="fas fa-cart-arrow-down"></i> 8</p>
+                        <p><i class="fas fa-cart-plus"></i> 8</p>
                         <div class="visible">
                             <p class="txt">visibilidad del producto</p>
                             <i class="fas fa-eye"></i>
@@ -88,7 +90,7 @@
                         <input type="text" value="tenis adidas" class="inp">
                         <p>para: hombre</p>
                         <input type="text" value="240.000" class="inp">
-                        <p><i class="fas fa-cart-arrow-down"></i> 8</p>
+                        <p><i class="fas fa-cart-plus"></i> 8</p>
                         <div class="visible">
                             <p class="txt">visibilidad del producto</p>
                             <i class="fas fa-eye"></i>
@@ -106,7 +108,7 @@
                         <input type="text" value="tacones" class="inp">
                         <p>para: mujer</p>
                         <input type="text" value="55.000" class="inp">
-                        <p><i class="fas fa-cart-arrow-down"></i> 5</p>
+                        <p><i class="fas fa-cart-plus"></i> 5</p>
                         <div class="visible">
                             <p class="txt">visibilidad del producto</p>
                             <i class="fas fa-eye"></i>

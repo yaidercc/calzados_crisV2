@@ -109,15 +109,27 @@ if(btnAbrirpopup3 &&  btncerrar3){
 
 
 
-var cont=0;
-document.querySelectorAll('.car').addEventListener('click', function(e){
-     e.preventDefault();
-     cont+=1;
-     document.querySelector('.num_notifs').textContent=cont;
-});
+var cont=0;//contador de elementos agregados al carro
+var carro=document.querySelectorAll('.car');//boton encargado de agregar elementos
+var cantidades=document.querySelector('.num_notifs');//numero de productos agregado
+for(var i=0;i<carro.length;i++){// ciclo para agregar evento a todos los elementos con la misma clase
+        carro[i].addEventListener('click', function(e){//evento que va a tener todos los elementos
+                e.preventDefault();// cortar la funcion del acion en los formularios
+                cont+=1;
+                cantidades.innerText=cont;//agregar
+        });
+}
 
-document.querySelector('#sks').addEventListener('click', function(e){
-        e.preventDefault();
-        cont=0;
-        document.querySelector('.num_notifs').textContent=cont;
-   });
+// vaciar carro
+
+
+   // calificaiones
+   var calificaiones=["mala","regular","buena", "muy buena","excelente"];
+   var aux1=document.querySelector(".puntuaciones");
+   aux1.addEventListener('mouseenter',cal);
+
+   function cal(e){
+        e.stopPropagation();
+        var auxi=e.target.children;
+        console.log(auxi);
+   }
