@@ -126,10 +126,16 @@ for(var i=0;i<carro.length;i++){// ciclo para agregar evento a todos los element
    // calificaiones
    var calificaiones=["mala","regular","buena", "muy buena","excelente"];
    var aux1=document.querySelector(".puntuaciones");
-   aux1.addEventListener('mouseenter',cal);
+   aux1.addEventListener('click',cal);
 
-   function cal(e){
+   function cal(e,calf=""){
         e.stopPropagation();
-        var auxi=e.target.children;
-        console.log(auxi);
+        e.preventDefault();
+        var calf=e.target.id;
+        if(calf!=""){
+                document.getElementById('texto').innerText=calificaiones[calf-1];
+                console.log(calificaiones[calf-1]);
+        }
+        
+       
    }

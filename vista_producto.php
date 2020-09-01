@@ -43,12 +43,12 @@
                     <div class="icons">
                         <i class="flecha fas fa-chevron-left"></i>
                         <div class="puntuaciones">
-                            <a href="#" id="1"><i class="fas fa-star"></i></a>
-                            <a href="#" id="2"><i class="fas fa-star"></i></a>
-                            <a href="#" id="3"><i class="fas fa-star"></i></a>
-                            <a href="#" id="4"><i class="fas fa-star"></i></a>
-                            <a href="#" id="5"><i class="fas fa-star"></i></a>
-                            <p id="texto">buena</p>
+                            <a href="#" ><i id="1" class="fas fa-star"></i></a>
+                            <a href="#" ><i id="2" class="fas fa-star"></i></a>
+                            <a href="#" ><i  id="3" class="fas fa-star"></i></a>
+                            <a href="#"><i  id="4" class="fas fa-star"></i></a>
+                            <a href="#" ><i id="5" class="fas fa-star"></i></a>
+                            <p id="texto"></p>
                         </div>
                         <i class="flecha fas fa-chevron-right"></i>
                     </div>
