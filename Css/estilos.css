@@ -353,13 +353,46 @@ h4{
    /**  ----------       ESTILOS -> SECCION DE FOTO > VISTA_PRODUCTO  ------------  **/  
 .contenedor-producto .foto{
     grid-area:img;
-   
+    display: grid;
+    grid-template-rows: 90% auto;
+    grid-template-areas: "slider" 
+                        "estrellis";
+    
+}
+.container-producto .foto .slider{
+    grid-area: slider;
+    height: 100%;
+}
+.slidesjs-pagination{
+    padding: 4rem;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+}
+.slidesjs-pagination a{
+    margin-right:2rem ;
+}
+
+.slidesjs-next{
+    float: right;
+    padding-right:1.5rem;
+}
+.slidesjs-previous{
+    float: left;
+    padding-left: 1.5rem;
+}
+.slider a{
+    color: #096BA7;
+}
+.container-producto .foto .slider img{
+    height: 1000px;
 }
 .contenedor-producto .foto .puntuaciones .icons p,.icons .flecha{
     color:#2699FB;
 }
 .contenedor-producto .foto .puntuaciones{
     text-align:center;
+    margin: 5px auto;
 }
 .contenedor-producto .foto .flecha{
     font-size: 3rem;

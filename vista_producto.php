@@ -40,10 +40,15 @@
         <main class="principal">
             <div class="contenedor-producto">
                 <div class="foto">
+                    <div class="slider">
                     <img class="imagen" src="img/adidas.jpg" height="90%" width="100%">
+
+                        <img class="imagen" src="img/adidas.jpg" height="90%" width="100%">
+                        <img class="imagen" src="img/adidas.jpg" height="90%" width="100%">
+                    </div>
+        
                     <!--estrellas-->
                     <div class="icons">
-                        <i class="flecha fas fa-chevron-left"></i>
                         <div class="puntuaciones">
                             <a href="#" id="1"><i class="fas fa-star"></i></a>
                             <a href="#" id="2"><i class="fas fa-star"></i></a>
@@ -53,7 +58,6 @@
                             <br/>
                             <span class="calificacion"></span>
                         </div>
-                        <i class="flecha fas fa-chevron-right"></i>
                     </div>
                 </div>
                 <div class="caracteristicas">
@@ -115,8 +119,21 @@
 
     <!--archivos y links-->
     <script src='js/main.js'></script> 
+    
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script> 
+    <script src='js/jquery.slides.js'></script> 
+    <script>
+ 
+    $(function(){
+        $(".slider").slidesjs({
+            width: 940,
+            height: 900
+        });
+    });
+
+ </script>
     </script>
 </body>
 </html>

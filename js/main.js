@@ -132,3 +132,4 @@ if(btnAbrirpopup3 &&  btncerrar3){
             calif.innerHTML = `${calificaciones[auxi - 1]}`;
         }
     });
+    
