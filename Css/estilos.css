@@ -108,7 +108,7 @@ h4{
     align-items: center;
     justify-content: center;
 }
-.header .salir{
+.header .salir,.registrate{
     grid-area: salir;
     width: 100%;
     padding: 2rem;
@@ -122,11 +122,20 @@ h4{
 .header .salir:hover{
     cursor: pointer;
     background-color: #7FC4FD;
+}
 
+.header .salir:hover{
+    cursor: pointer;
+    background-color: #7FC4FD;
+}
+.header .registrate:hover{
+    cursor: pointer;
+    background-color: #7FC4FD;
 }
 
 .header .registrate{
     grid-area: registro;
+    font-size: 2rem;
 }
 
 

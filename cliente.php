@@ -40,7 +40,7 @@
             <div class="cabeza-main">
                 <h1 class="calzado">calzados para hombre y para mujer</h1>
                 <a href="#" id="carrito" class="carrito">
-                    <span class="numero_notificaiones">0</span>
+                    <span class="numero_productos">0</span>
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </div>
