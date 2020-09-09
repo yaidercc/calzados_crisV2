@@ -53,8 +53,8 @@
                     </div>
 
                     <div class="botones">
-                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
+                        
+                        <a href="#" class="btn-solicitar v1 inicio">iniciar sesion</a>
                     </div>
                 </div>
 
@@ -67,8 +67,7 @@
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
+                        <a href="#" class="btn-solicitar v1 inicio">iniciar sesion</a>
                     </div>
                 </div>
                
@@ -81,8 +80,7 @@
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
+                        <a href="#" class="btn-solicitar v1 inicio">iniciar sesion</a>
                     </div>
                 </div>
                
@@ -95,8 +93,7 @@
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
+                        <a href="#" class="btn-solicitar v1 inicio">iniciar sesion</a>
                     </div>
                 </div>
                 

@@ -283,7 +283,9 @@ h4{
 .btn-solicitar.v1{
     width: 80%;
 }
-
+.btn-solicitar.inicio{
+    width:100%;
+}
 .btn-solicitar:hover{
     background-color:#76b8f1 ;
 }
@@ -649,7 +651,7 @@ label i{
 }
 .popup.carro{
     width: 60rem;
-    height: 60rem;
+    height: 40rem;
 }
 .popup.notificaciones{
     width: 60rem;
@@ -677,6 +679,7 @@ scroll-container {
     display: block;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 0.5rem;
   }
 scroll-container {
     display: block;
