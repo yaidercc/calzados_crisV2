@@ -1,0 +1,88 @@
+/** BORRA LA BD EXISTENTE Y CREA UNA NUEVA**/
+CREATE DATABASE calzados_cris;
+USE calzados_cris;
+
+CREATE TABLE detalle_compras (
+  ID_COMPRA int(11) NOT NULL,
+  CANTIDAD int(11) NOT NULL,
+  TOTAL int(11) DEFAULT NULL,
+  TALLAS varchar(5) DEFAULT NULL,
+  pagado int(2) NOT NULL,
+  ID_PRODUCTO_FK int(11) NOT NULL,
+  NRO_FACTURA_FK int(11) NOT NULL,
+  FOREIGN KEY (NRO_FACTURA_FK) REFERENCES encabezado_ventas(NRO_FACTURA),
+  FOREIGN KEY (ID_PRODUCTO_FK) REFERENCES productos(ID_PRODUCTO)
+  on update no action
+  on delete no action
+) ENGINE=InnoDB;
+
+CREATE TABLE encabezado_ventas(
+  NRO_FACTURA int(11) NOT NULL,
+  FECHA_COMPRA date NOT NULL,
+  ID_USUARIO_FK int(11) NOT NULL,
+  FOREIGN KEY (ID_USUARIO_FK) REFERENCES usuarios(ID_USUARIO)
+  on update no action
+  on delete no action
+) ENGINE=InnoDB;
+
+CREATE TABLE generos (
+  ID_GENERO int(11) NOT NULL,
+  NOMBRE_GENERO varchar(15) DEFAULT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE productos (
+  ID_PRODUCTO int(11) NOT NULL,
+  NOMBRE_PRODUCTO varchar(25) NOT NULL,
+  IMAGEN longblob NOT NULL,
+  PRECIO int(11) NOT NULL,
+  TALLA_MENOR VARCHAR(5),
+  TALLA_MAYOR VARCHAR(5),
+  COLOR1 VARCHAR(10),
+  COLOR2 VARCHAR(10),
+  COLOR3 VARCHAR(10),
+  CANTIDAD int(11) NOT NULL,
+  CANTIDAD_COMPRAS INT(5) auto_increment,
+  ID_GENERO_FK int(11) NOT NULL,
+  FOREIGN KEY (ID_GENERO_FK) REFERENCES generos(ID_GENERO)
+  on update no action
+  on delete no action
+) ENGINE=InnoDB ;
+
+CREATE TABLE tipo_usuarios (
+  ID_TIPO_USUARIO int(11) NOT NULL,
+  NOMBRE_TIPO_USUARIO varchar(25) DEFAULT NULL
+) ENGINE=InnoDB ;
+
+CREATE TABLE usuarios (
+  ID_USUARIO int(11) NOT NULL,
+  IDENTIFICACION varchar(20) NOT NULL PRIMARY KEY,
+  PRIMER_NOMBRE varchar(15) NOT NULL,
+  SEGUNDO_NOMBRE varchar(15) DEFAULT NULL,
+  PRIMER_APELLIDO varchar(15) NOT NULL,
+  SEGUNDO_APELLIDO varchar(15) NOT NULL,
+  CORRE varchar(45) DEFAULT NULL,
+  CLAVE varchar(20) NOT NULL,
+  DIRECCION varchar(30) NOT NULL,
+  TELEFONO int(11) NOT NULL,
+  ID_TIPO_USUARIO_FK int(11) NOT NULL,
+  ID_GENERO_FK int(11) NOT NULL,
+  FOREIGN KEY (ID_TIPO_USUARIO_FK) REFERENCES tipo_usuarios(ID_TIPO_USUARIO),
+	FOREIGN KEY (ID_GENERO_FK) REFERENCES generos(ID_GENERO)
+) ENGINE=InnoDB;
+
+/*Usuarios predeterminados del sistema*/
+INSERT INTO usuarios(ID_USUARIO,IDENTIFICACION,PRIMER_NOMBRE,PRIMER_APELLIDO,SEGUNDO_APELLIDO,CORRE,CLAVE,DIRECCION,TELEFONO,ID_TIPO_USUARIO_FK,ID_GENERO_FK)
+VALUES(1,'1000538315','yaider', 'cordoba','cordoba','yaiderc19@gmail.com','123','cll 55c #2-70 int 122',2222222,5,1);
+
+/*Generos de Los productos y de los usuarios*/
+INSERT INTO generos(ID_GENERO,NOMBRE_GENERO) 
+VALUES 
+(1 , 'hombre'),
+(2, 'mujer'),
+(3, 'mujer y hombre');
+
+/*Tipos de usuarios*/
+INSERT INTO tipo_usuarios(ID_TIPO_USUARIO,NOMBRE_TIPO_USUARIO) 
+VALUES
+(1, 'administrador'),
+(2,'cliente');
