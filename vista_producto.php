@@ -66,7 +66,7 @@
                         <div class="hijo tallas">
                             <p>tallas: </p>
                             <div class="caja">
-                                <select class="listado-tallas" name="select">
+                                <select class="listado-tallas" name="tallas">
                                     <option>---- Seleccionar Talla ----</option>
                                 </select>
                             </div>

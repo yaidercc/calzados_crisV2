@@ -69,9 +69,9 @@
                 <div class="producto">
                     <img class="imagen" src="img/plataformas.jpg" height="100%" width="100%">
                     <div class="contenedor-descripcion">
-                        <input type="text" value="plataformas negras" class="inp">
+                        <input type="text" name="nombreProducto" value="plataformas negras" class="inp">
                         <p>para: mujer</p>
-                        <input type="text" value="80.000" class="inp">
+                        <input type="text" name="precio" value="80.000" class="inp">
                         <p><i class="fas fa-cart-plus"></i> 8</p>
                         <div class="visible">
                             <p class="txt">visibilidad del producto</p>
@@ -87,9 +87,9 @@
                 <div class="producto">
                     <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
                     <div class="contenedor-descripcion">
-                        <input type="text" value="tenis adidas" class="inp">
+                        <input type="text" name="nombreProducto" value="tenis adidas" class="inp">
                         <p>para: hombre</p>
-                        <input type="text" value="240.000" class="inp">
+                        <input type="text" name="" value="240.000" class="inp">
                         <p><i class="fas fa-cart-plus"></i> 8</p>
                         <div class="visible">
                             <p class="txt">visibilidad del producto</p>

@@ -59,7 +59,7 @@
                 <div class="columnas">
                     <div class="lado-izquierdo">
                         <p>nombre producto</p>
-                        <input type="text" placeholder="ingrese nombre del producto" focus>
+                        <input type="text" placeholder="ingrese nombre del producto">
                         
                         <div class="contenedor-general">
                             <div class="lft">
