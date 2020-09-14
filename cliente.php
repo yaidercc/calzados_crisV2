@@ -20,7 +20,7 @@
                 <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
             </div>
             <div class="salir">
-                <a href="index.php" class="cerrar" id="abrir">salir</a>
+                <a href="php/cerrar_sesion.php" class="cerrar" id="abrir">salir</a>
             </div>
         </header>
 

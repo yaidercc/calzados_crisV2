@@ -56,7 +56,7 @@
 
                     <div class="botones">
 
-                        <a href="#" class="btn-solicitar v1 inicio">iniciar sesion</a>
+                        <a href="#" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-solicitar v1 inicio">iniciar sesion</a>
+                        <a href="#" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>
                     </div>
                 </div>
 
@@ -82,7 +82,7 @@
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-solicitar v1 inicio">iniciar sesion</a>
+                        <a href="#" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-solicitar v1 inicio">iniciar sesion</a>
+                        <a href="#" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>
                     </div>
                 </div>
 
@@ -110,7 +110,7 @@
                     <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <div class="elementos">
                         <h1>iniciar sesion</h1>
-                        <form action="php/iniciar_sesion.php" method="POST">
+                        <form method="POST" id="formularioini" onsubmit="return iniciar_sesion()">
                             <div class="contenedor-inputs">
                                 <input type="number" name="nit" placeholder="ingrese su cedula" required>
                                 <input type="password" name="clave" placeholder="ingrese clave" required>
@@ -128,20 +128,23 @@
                 <a href="#" id="btn-cerrar-popup4" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                 <div class="elementos">
                     <h1>registrarse</h1>
-                    <form action="#">
+                    <form onsubmit="return insertarDatos()"  id="formulario" >
                         <div class="contenedor-inputs">
                             <div class="contenedor-division">
                                 <div class="columna-izquierda">
                                     <input type="text" name="nombre" placeholder="ingrese su nombre" required>
                                     <input type="number" name="nitr" placeholder="ingrese su cedula" required>
-                                    <input type="password" name="clave" placeholder="ingrese su direccion" required>
+                                    <input type="text" name="direccion" placeholder="ingrese su direccion" required>
                                     <input type="password" name="clave" placeholder="ingrese clave" required>
                                 </div>
                                 <div class="columna-derecha">
-                                    <input type="text" name="nombre" placeholder="ingrese su apellido" required>
-                                    <input type="email" name="nombre" placeholder="ingrese su correo" required>
+                                    <input type="text" name="apellido" placeholder="ingrese su apellido" required>
+                                    <input type="email" name="correo" placeholder="ingrese su correo" required>
                                     <input type="number" name="telefono" placeholder="ingrese su numero de contacto" required>
-                                    <input type="password" name="clave" placeholder="repita su clave clave" required>
+                                    <input type="password" name="clave2" placeholder="repita su clave clave" required>
+                                    <select class="gen" name="genero">
+                                        <option>---- Seleccionar Talla ----</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -164,9 +167,10 @@
 
     <!--archivos y links-->
     <script src='js/main.js'></script>
+    <script src='procesos/procesos.js'></script>
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="librerias/sweetalert.min.js"></script>
 </body>
 
 </html>

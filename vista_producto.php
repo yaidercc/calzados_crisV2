@@ -38,6 +38,10 @@
 
         <!--contenido principal-->
         <main class="principal">
+                <a href="#" id="carrito" class="carrito">
+                    <span class="numero_productos">0</span>
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
             <div class="contenedor-producto">
                 <div class="foto">
                     <div class="slider">
@@ -101,6 +105,7 @@
                         <div class="elements">
                             <a href="cliente.php" class="btn-carrito flecha"><i class="fas fa-chevron-left"></i></a>
                             <a href="#" class="btn-solicitar">SOLICITAR</a>
+                            <a href="#" class="btn-carrito v2"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>

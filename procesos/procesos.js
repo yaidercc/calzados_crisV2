@@ -1,14 +1,18 @@
-function insertarDatos() {
-  $.ajax({
+
+function iniciar_sesion() {
+  $.ajax({  
     type: "POST",
-    url: "../php/registrarse.php",
-    data: $("#formulario").serialize(),
-    success: function (r) {
-      if (r == 1) {
-        $("#formulario")[0].reset();
-        swal("exito", ":D", "success");
+    url: "Php/iniciar_sesion.php",
+    data: $('#formularioini').serialize(),
+    success:function(r) {
+      console.log(r);
+      if (r>0) {
+        $('#formularioini')[0].reset();
+        location.href="cliente.php";
       } else {
-        swal("error", ":D", "error");
+        swal("¡Error al ingresar!", "identificacion y/o contraseña, incorrectos", "error");
       }
-    },
-  })
+    }
+  });
+  return false;
+}

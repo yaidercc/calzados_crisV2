@@ -293,7 +293,7 @@ h4{
             /**IMAGEN DEL PRODUCTO**/
 .imagen{
     grid-area: imagen;
-    background-color: teal;
+    background-color: #30b9f8 ;
 }
 
             /**CARACTERISTICAS Y PRECIO**/

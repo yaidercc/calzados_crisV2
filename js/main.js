@@ -20,9 +20,10 @@ var btnAbrirpopup4 = document.getElementById("registrate"),
   btncerrar4 = document.getElementById("btn-cerrar-popup4");
 if (btnAbrirpopup4 && btncerrar4) {
   btnAbrirpopup4.addEventListener("click", function () {
-    overlay4.classList.add("activate");
-    popup4.classList.add("activate");
+          overlay4.classList.add("activate");
+          popup4.classList.add("activate");
   });
+   
   btncerrar4.addEventListener("click", function () {
     overlay4.classList.remove("activate");
     popup4.classList.add("activate");
@@ -73,6 +74,14 @@ if (btnAbrirpopup3 && btncerrar3) {
     overlay3.classList.remove("activate");
     popup3.classList.add("activate");
   });
+}
+var ingresar= document.getElementsByName('registrate');
+if(ingresar){
+  for (let i=0; i<ingresar.length;i++){
+    ingresar[i].addEventListener('click', function(){
+      swal("No Se Puede Realizar Esta Accion", "registrate o inicia sesion para realizar una compra.", "warning");
+    });
+  }
 }
 // modificar input type file
 
