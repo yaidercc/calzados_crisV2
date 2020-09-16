@@ -1,9 +1,12 @@
 <?php
-     class Conexion{
-          public static function conectar(){
-               $conexion = new PDO('mysql:host=localhost; dbname=calzados', 'root', '');
-               return $conexion;
-          }
+     try{
+          $conexion = new PDO('mysql:host=localhost; dbname=calzados', 'root', '');
+     }catch(Exception $e){
+          die("Error" .$e->getMessage());
+     }finally{
+
      }
+
+    /* */
           
 ?>

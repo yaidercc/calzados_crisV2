@@ -1,3 +1,8 @@
+<?php
+    include 'php/conexion.php';
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="icon" type="png" href="img/icon.png" />
+    <link rel="icon" type="png" href="img/icon.png"/>
     <title>Calzados </title>
 </head>
 <body>
@@ -17,7 +22,8 @@
                 <h1>calzados cris</h1>
             </div>
             <div class="navegacion">
-                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
+                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"><?php echo " " .$_SESSION['nombre']; ?></i>
+                </a>
             </div>
             <div class="salir">
                 <a href="php/cerrar_sesion.php" class="cerrar" id="abrir">salir</a>
@@ -57,7 +63,6 @@
                         <p><i class="fas fa-cart-plus"></i> 4</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="btn-solicitar v1">SOLICITAR</a>
                     </div>
                 </div>
@@ -72,7 +77,6 @@
 
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="btn-solicitar v1">SOLICITAR</a>
                     </div>
                 </div>
@@ -87,7 +91,6 @@
                         <p><i class="fas fa-cart-plus"></i> 8</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="btn-solicitar v1">SOLICITAR</a>
                     </div>
                 </div>
@@ -102,7 +105,6 @@
                         <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
                     </div>
                     <div class="botones">
-                        <a href="#" class="btn-carrito v1"><i class="fas fa-shopping-cart"></i></a>
                         <a href="#" class="btn-solicitar v1">SOLICITAR</a>
                     </div>
                 </div>

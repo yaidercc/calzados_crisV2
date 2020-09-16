@@ -281,7 +281,7 @@ h4{
     transform-origin: left;
 }
 .btn-solicitar.v1{
-    width: 80%;
+    width: 100%;
 }
 .btn-solicitar.inicio{
     width:100%;
@@ -661,6 +661,7 @@ label i{
 .interno .elementos{
     margin: 3rem auto;
 }
+                         /**  ----------       ESTILOS -> POP-UP REGISTRARSE   ------------  **/
 .popup.formu{
     width: 80rem;
     height: 50rem;
@@ -681,12 +682,11 @@ label i{
 .popup.formu .contenedor-inputs .contenedor-division input{
     margin:20px auto;
 }
-.popup.formu .elementos .btn-submit{
-    
+.popup.formu .contenedor-inputs .contenedor-division .genre{
+    width: 50%;
 }
 
                 /**  ----------       ESTILOS -> POP-UP NOTIFICACIONES   ------------  **/
-
 
 .popup form .pendientes{
     border:3px solid #096BA7;

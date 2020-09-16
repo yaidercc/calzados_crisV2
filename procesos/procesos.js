@@ -1,4 +1,3 @@
-
 function iniciar_sesion() {
   $.ajax({  
     type: "POST",
@@ -8,11 +7,11 @@ function iniciar_sesion() {
       console.log(r);
       if (r>0) {
         $('#formularioini')[0].reset();
-        location.href="cliente.php";
       } else {
         swal("¡Error al ingresar!", "identificacion y/o contraseña, incorrectos", "error");
       }
     }
+    
   });
   return false;
 }

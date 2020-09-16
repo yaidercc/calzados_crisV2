@@ -31,11 +31,29 @@
           $consultaIniciar=null;
      }*/
      
+     include "Conexion.php";
+     session_start();
+     $datos=array(
+          'nit' => $_POST['nit'],
+          'clave' => $_POST['clave']
+     );
+     $queryIniciar=$conexion->prepare("SELECT * FROM `usuarios` WHERE `IDENTIFICACION`=:nit AND `CLAVE`=:clave");
+     $queryIniciar->bindParam(':nit',$datos['nit'], PDO::PARAM_STR);
+     $queryIniciar->bindParam(':clave',$datos['clave'], PDO::PARAM_STR);
+     $queryIniciar->execute();
+     $resultados=$queryIniciar->fetch(PDO::FETCH_OBJ);
+     if($resultados==FALSE){
+          header('location: ../index.php');
+     }else if($queryIniciar->rowCount()==1){
+           $_SESSION['nit']=$resultados->ID_TIPO_USUARIO_FK;
+           $_SESSION['nombre']=$resultados->PRIMER_NOMBRE;
+         if($_SESSION['nit']==1){
+               header('location: ../cliente.php');
+         }else{
+          header('location: ../cliente.php');
+         }
 
-     require_once "../procesos/crud.php";
-         $datos=array(
-              'nit' => $_POST['nit'],
-              'clave' => $_POST['clave']
-         );
-          echo Crud::iniciar_sesion($datos);
+     }
+    $r=(string)$queryIniciar->rowCount();
+     //echo Crud::iniciar_sesion($datos);
 ?>

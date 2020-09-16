@@ -1,6 +1,9 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,6 +77,17 @@
                 </div>
 
                 <div class="producto">
+                <?php
+                    include "php/Conexion.php";
+                    $consultaGeneros=$conexion->prepare("SELECT * FROM productos");
+                    $consultaGeneros->execute();
+                    while($row=$consultaGeneros->fetch(PDO::FETCH_ASSOC)){
+                        echo '<option value="' .$row['ID_GENERO']. '">' .$row['NOMBRE_GENERO'] . '</option>';
+                    }
+                ?>
+                    <?php
+                        echo '<img src="'.$mostrar["IMAGEN"].'" width="100" heigth="100"><br>';
+                    ?>
                     <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
                     <div class="contenedor-descripcion">
                         <h1>tenis adidas</h1>
@@ -110,6 +124,7 @@
                     <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <div class="elementos">
                         <h1>iniciar sesion</h1>
+                        
                         <form method="POST" id="formularioini" onsubmit="return iniciar_sesion()">
                             <div class="contenedor-inputs">
                                 <input type="number" name="nit" placeholder="ingrese su cedula" required>
@@ -128,7 +143,8 @@
                 <a href="#" id="btn-cerrar-popup4" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                 <div class="elementos">
                     <h1>registrarse</h1>
-                    <form onsubmit="return insertarDatos()"  id="formulario" >
+                    
+                    <form onsubmit="return Registrarse()"  id="formulario" >
                         <div class="contenedor-inputs">
                             <div class="contenedor-division">
                                 <div class="columna-izquierda">
@@ -136,16 +152,27 @@
                                     <input type="number" name="nitr" placeholder="ingrese su cedula" required>
                                     <input type="text" name="direccion" placeholder="ingrese su direccion" required>
                                     <input type="password" name="clave" placeholder="ingrese clave" required>
+                                    
+                                    <!--Cargar Generos-->
+                                    <select class="listado-tallas" name="tallas">
+                                        <option value="0">---- Seleccionar Talla ----</option>
+                                        <?php
+                                        include "php/Conexion.php";
+                                        $consultaGeneros=$conexion->prepare("SELECT * FROM generos  WHERE ID_GENERO!=3");
+                                        $consultaGeneros->execute();
+                                        while($row=$consultaGeneros->fetch(PDO::FETCH_ASSOC)){
+                                            echo '<option value="' .$row['ID_GENERO']. '">' .$row['NOMBRE_GENERO'] . '</option>';
+                                        }
+                                    ?>
+                                    </select>
                                 </div>
                                 <div class="columna-derecha">
                                     <input type="text" name="apellido" placeholder="ingrese su apellido" required>
                                     <input type="email" name="correo" placeholder="ingrese su correo" required>
                                     <input type="number" name="telefono" placeholder="ingrese su numero de contacto" required>
                                     <input type="password" name="clave2" placeholder="repita su clave clave" required>
-                                    <select class="gen" name="genero">
-                                        <option>---- Seleccionar Talla ----</option>
-                                    </select>
                                 </div>
+                                
                             </div>
                         </div>
                 </div>
@@ -171,6 +198,7 @@
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="librerias/sweetalert.min.js"></script>
+    
 </body>
 
 </html>
