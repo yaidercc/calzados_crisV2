@@ -1,3 +1,7 @@
+<?php
+    include 'php/conexion.php';
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +24,11 @@
             <div class="navegacion">
                 <a href="#" class="chat" id="chateasion"><i title="notificaciones" class="fas fa-comments" > </i>chat</a>
                 <a href="#" id="notificar"class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
-                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
+                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i><?php echo " " .$_SESSION['nombre']; ?></a>
             </div>
 
             <div class="salir">
-                <a href="#" class="cerrar" id="abrir">salir</a>
+                <a href="php/cerrar_sesion.php" class="cerrar" id="abrir">salir</a>
             </div>
 
         </header>

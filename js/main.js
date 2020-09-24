@@ -1,6 +1,6 @@
 //ventana emergente de iniciar sesion
-var btnAbrirpopup = document.getElementById("abrir"),
-  overlay = document.getElementById("login"),
+var btnAbrirpopup = document.getElementById("olvido"),
+  overlay = document.getElementById("notificaciones"),
   popup = document.getElementById("popup"),
   btncerrar = document.getElementById("btn-cerrar-popup");
 if (btnAbrirpopup && btncerrar) {
@@ -14,21 +14,7 @@ if (btnAbrirpopup && btncerrar) {
   });
 }
 
-var btnAbrirpopup4 = document.getElementById("registrate"),
-  overlay4 = document.getElementById("rego"),
-  popup4 = document.getElementById("pop"),
-  btncerrar4 = document.getElementById("btn-cerrar-popup4");
-if (btnAbrirpopup4 && btncerrar4) {
-  btnAbrirpopup4.addEventListener("click", function () {
-          overlay4.classList.add("activate");
-          popup4.classList.add("activate");
-  });
-   
-  btncerrar4.addEventListener("click", function () {
-    overlay4.classList.remove("activate");
-    popup4.classList.add("activate");
-  });
-}
+
 
 // ventana emergente de carrito
 var btnAbrirpopup1 = document.getElementById("carrito"),
@@ -162,5 +148,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // validacion de fromularios php PDO
-
 

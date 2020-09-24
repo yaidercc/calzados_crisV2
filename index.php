@@ -23,11 +23,11 @@
             </div>
 
             <div class="salir" id="abrir">
-                <a href="#" class="cerrar">entrar</a>
+                <a href="iniciar_sesion.php" class="cerrar">entrar</a>
             </div>
 
             <div class="registrate" id="registrate">
-                <a href="#" class="cerrar">registro</a>
+                <a href="registrarse.php" class="cerrar">registro</a>
             </div>
         </header>
         <!--filtros-->
@@ -81,23 +81,23 @@
                     include "php/Conexion.php";
                     $consultaGeneros=$conexion->prepare("SELECT * FROM productos");
                     $consultaGeneros->execute();
-                    while($row=$consultaGeneros->fetch(PDO::FETCH_ASSOC)){
-                        echo '<option value="' .$row['ID_GENERO']. '">' .$row['NOMBRE_GENERO'] . '</option>';
-                    }
-                ?>
-                    <?php
-                        echo '<img src="'.$mostrar["IMAGEN"].'" width="100" heigth="100"><br>';
+                    while($row=$consultaGeneros->fetch(PDO::FETCH_OBJ)){?>
+                    
+                    <?
+                        echo '<img src="'.$row->IMAGEN.'" class="imagen" width="100" heigth="100"><br>';
                     ?>
-                    <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
                     <div class="contenedor-descripcion">
-                        <h1>tenis adidas</h1>
+                        <h1><?php echo $row->NOMBRE_PRODUCTO;?></h1>
                         <p>para: hombre</p>
-                        <h2>$ 240.500</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
+                        <h2>$ <?php echo $row->PRECIO;?></h2>
+                        <p><i class="fas fa-cart-arrow-down"></i> <?php echo $row->CANTIDAD_COMPRAS;?></p>
                     </div>
                     <div class="botones">
                         <a href="#" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>
                     </div>
+                    <?php
+                    }
+                    ?>
                 </div>
 
                 <div class="producto">
@@ -117,70 +117,7 @@
 
         </main>
 
-        <!--pop-up iniciar sesion-->
-        <div class="overlay" id="login">
-            <div class="popup" id="popup">
-                <div class="interno">
-                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <div class="elementos">
-                        <h1>iniciar sesion</h1>
-                        
-                        <form method="POST" id="formularioini" onsubmit="return iniciar_sesion()">
-                            <div class="contenedor-inputs">
-                                <input type="number" name="nit" placeholder="ingrese su cedula" required>
-                                <input type="password" name="clave" placeholder="ingrese clave" required>
-                            </div>
-                            <input class="btn-submit" type="submit" value="entrar">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--pop-up registro-->
-        <div class="overlay" id="rego">
-            <div class="popup formu" id="pop">
-                <a href="#" id="btn-cerrar-popup4" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                <div class="elementos">
-                    <h1>registrarse</h1>
-                    
-                    <form onsubmit="return Registrarse()"  id="formulario" >
-                        <div class="contenedor-inputs">
-                            <div class="contenedor-division">
-                                <div class="columna-izquierda">
-                                    <input type="text" name="nombre" placeholder="ingrese su nombre" required>
-                                    <input type="number" name="nitr" placeholder="ingrese su cedula" required>
-                                    <input type="text" name="direccion" placeholder="ingrese su direccion" required>
-                                    <input type="password" name="clave" placeholder="ingrese clave" required>
-                                    
-                                    <!--Cargar Generos-->
-                                    <select class="listado-tallas" name="tallas">
-                                        <option value="0">---- Seleccionar Talla ----</option>
-                                        <?php
-                                        include "php/Conexion.php";
-                                        $consultaGeneros=$conexion->prepare("SELECT * FROM generos  WHERE ID_GENERO!=3");
-                                        $consultaGeneros->execute();
-                                        while($row=$consultaGeneros->fetch(PDO::FETCH_ASSOC)){
-                                            echo '<option value="' .$row['ID_GENERO']. '">' .$row['NOMBRE_GENERO'] . '</option>';
-                                        }
-                                    ?>
-                                    </select>
-                                </div>
-                                <div class="columna-derecha">
-                                    <input type="text" name="apellido" placeholder="ingrese su apellido" required>
-                                    <input type="email" name="correo" placeholder="ingrese su correo" required>
-                                    <input type="number" name="telefono" placeholder="ingrese su numero de contacto" required>
-                                    <input type="password" name="clave2" placeholder="repita su clave clave" required>
-                                </div>
-                                
-                            </div>
-                        </div>
-                </div>
-                <input class="btn-submit" type="submit" value="entrar">
-                </form>
-            </div>
-        </div>
-    </div>
+     
 
     <!--pie de pagina-->
     <footer class="pie">
@@ -194,7 +131,6 @@
 
     <!--archivos y links-->
     <script src='js/main.js'></script>
-    <script src='procesos/procesos.js'></script>
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="librerias/sweetalert.min.js"></script>

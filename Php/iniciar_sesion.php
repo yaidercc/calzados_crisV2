@@ -31,29 +31,25 @@
           $consultaIniciar=null;
      }*/
      
-     include "Conexion.php";
+     require "Conexion.php";
+     sleep(1);//retrasar consulta, un segundo
      session_start();
      $datos=array(
           'nit' => $_POST['nit'],
           'clave' => $_POST['clave']
      );
-     $queryIniciar=$conexion->prepare("SELECT * FROM `usuarios` WHERE `IDENTIFICACION`=:nit AND `CLAVE`=:clave");
+     $queryIniciar=$conexion->prepare("SELECT * FROM `usuarios` WHERE `NOMBRE_USUARIO`=:nit AND `CLAVE`=:clave");
      $queryIniciar->bindParam(':nit',$datos['nit'], PDO::PARAM_STR);
      $queryIniciar->bindParam(':clave',$datos['clave'], PDO::PARAM_STR);
      $queryIniciar->execute();
      $resultados=$queryIniciar->fetch(PDO::FETCH_OBJ);
+     
      if($resultados==FALSE){
-          header('location: ../index.php');
-     }else if($queryIniciar->rowCount()==1){
-           $_SESSION['nit']=$resultados->ID_TIPO_USUARIO_FK;
-           $_SESSION['nombre']=$resultados->PRIMER_NOMBRE;
-         if($_SESSION['nit']==1){
-               header('location: ../cliente.php');
-         }else{
-          header('location: ../cliente.php');
-         }
-
+          echo json_encode(array('error' =>true));// si no encuentra los datos, devuelve un false
+     }else{
+          $resultados2=$queryIniciar->fetch(PDO::FETCH_ASSOC);
+          echo json_encode(array('error' => false, 'tipo' =>  $resultados->ID_TIPO_USUARIO_FK));//mandar datos al archivo js, por JSON en caso de haberlos encontrado
+          $_SESSION['nit']=$resultados->ID_TIPO_USUARIO_FK;
+          $_SESSION['nombre']=$resultados->PRIMER_NOMBRE;
      }
-    $r=(string)$queryIniciar->rowCount();
-     //echo Crud::iniciar_sesion($datos);
 ?>

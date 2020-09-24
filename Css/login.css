@@ -1,0 +1,195 @@
+*{
+     padding: 0;
+     margin: 0;
+}
+body{
+     font-family: 'Archivo Narrow', sans-serif;
+     text-transform: capitalize;
+}
+a{
+     text-decoration: none;
+}
+input[type=text],input[type=password],input[type=email]{
+     width: 85%;
+     height: 45px;
+     margin-bottom:10px;
+     padding: 0px 10px;
+     font-family: 'Archivo Narrow', sans-serif;
+     font-size:16px;
+     border:none;
+     background-color: #d8e9f7;
+     border-bottom: 2px solid #2699FB;
+}
+input[type=text],input[type=password],input[type=email]{
+     padding-left: 40px;
+}
+input[type=text],input[type=password],input[type=email]:focus{
+     border-bottom: 2px solid #2699FB;
+}
+.titulo-registro{
+     color:#2699FB;
+     text-align: center;
+     margin-bottom: 50px;
+     font-size: 50px;
+}
+.input{
+     position: relative;
+}
+.input i{
+     position: absolute;
+     left: 0;
+     top: 1px;
+     padding: 12px 10px ;
+     color:#000;
+}
+.input.contenedor i{
+     color: #2699FB;
+     padding: 15px 12px;
+
+
+}
+.contenedor-general{
+     width: 100%;
+     min-height: 100vh;
+     display:grid;
+     margin: 0 auto;
+     grid-template-columns: 30% 70%;
+     grid-template-areas: "ir formulario";
+}
+.contenedor-general .cambiar{
+     grid-area: ir;
+     background-color: #2699FB;
+     color: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.contenedor-imagen{
+     margin-bottom: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+}
+.contenedor-texto{
+     margin-top:40px;
+}
+.contenedor-texto h1{
+     text-align: center;
+}
+.contenedor-link{
+     margin-top: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.contenedor-general .cambiar a{
+     width: 200px;
+     text-align: center;
+     border:1px solid #fff;
+     color: #fff;
+     
+     
+}
+.formularios.iniciar .input{
+     width: 600px;
+}
+.olvide{
+     color: #2699FB;
+     transition: .3s all;
+     left: 0;
+}
+.olvide:hover{
+     text-decoration: underline;
+}
+.formulario.iniciar .input input{
+     width: 100%;
+     text-align: center;
+}
+.contenedor-general .cambiar a:hover{
+     color: #2699FB;
+     background-color: #fff;
+     transition: .3s all;
+}
+.contenedor-general .form-registro{
+     grid-area: formulario;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.contenedor-general .form-registro .formulario.registrarse{
+     width: 810px;
+     display: grid;
+     grid-template-columns: 50% 50%;
+     grid-template-areas: "izquierda derecha";
+}
+.contenedor-general .form-registro .formulario .columna-izquierda{
+     grid-area: izquierda;
+}
+.contenedor-general .form-registro .formulario .columna-derecha{
+     grid-area: derecha;
+}
+
+ select{
+     width: 95%;
+     height: 30px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.btn-enviar{
+     margin-top:20px;
+}
+.btn-enviar input{
+     width: 200px;
+     height: 35px;
+     margin-bottom: 15px;
+     background-color: #2699FB ;
+     border: none;
+     color: #fff;
+     font-family: 'Archivo Narrow', sans-serif;
+     font-size: 18px;
+     cursor: pointer;
+     transition: .3s;
+     box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.btn-enviar input:hover{
+ background-color: #97bfe2 ;
+}
+.overlay{
+     background-color:rgba(0, 0, 0, 0.3);
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     visibility: hidden;
+ }
+ .overlay.activate{
+     visibility: visible;
+ }
+ .popup{
+     background-color: #f8f8f8;
+     box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+     text-align: center;
+     width: 70rem;
+     height: 40rem;
+     color:#2699FB ;
+ }
+ .popup.notificaciones{
+     width: 40rem;
+     height: 30rem;
+ } 
+ .btn-cerrar-popup{
+     font-size: 1.4rem;
+     line-height: 16px;
+     display: block;
+     text-align: right;
+     color: #bbbbbb;
+     transition: .3s ease all;
+     padding: 1rem;
+ }
