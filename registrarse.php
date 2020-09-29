@@ -5,7 +5,9 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
+     <script src="librerias/jquery-3.5.1.min.js"></script>
      <link rel="stylesheet" href="css/login.css">
+     <link rel="icon" type="png" href="img/icon.png"/>
      <title>Registrarse - Calzados</title>
 </head>
 
@@ -32,22 +34,22 @@
                          <div class="columna-izquierda">
                               <div class="input contenedor">
                                    <i class="fas fa-user"></i>
-                                   <input type="text" placeholder="Ingrese Su Nombre">
+                                   <input type="text" name="nombre" placeholder="Ingrese Su Nombre">
                               </div>
 
                               <div class="input contenedor">
                                    <i class="fas fa-user"></i>
-                                   <input type="text" placeholder="Ingrese Su nombre De Usuario">
+                                   <input type="text" name="username" placeholder="Ingrese Su nombre De Usuario">
                               </div>
 
                               <div class="input contenedor">
                                    <i class="fas fa-map-marker-alt"></i>
-                                   <input type="text" placeholder="Ingrese Su Direccion">
+                                   <input type="text" name="direccion" placeholder="Ingrese Su Direccion">
                               </div>
                               <div class="input contenedor">
                                    <i class="fas fa-key"></i>
-                                   <input type="password" placeholder="Ingrese Su Clave">
-                                   <select>
+                                   <input type="password" name="clave" placeholder="Ingrese Su Clave">
+                                   <select name="genero" require>
                                         <option>Seleccionar Genero</option>
                                         <?php
                                         include "php/Conexion.php";
@@ -59,37 +61,41 @@
                                         ?>
                                    </select>
                               </div>
+                              
 
                          </div>
                          <div class="derecha">
                               <div class="input contenedor">
                                    <i class="fas fa-user"></i>
-                                   <input type="text" placeholder="Ingrese Su Apellido">
+                                   <input type="text" name="apellido" placeholder="Ingrese Su Apellido">
                               </div>
 
                               <div class="input contenedor">
                                    <i class="fas fa-phone-square-alt"></i>
-                                   <input type="text" placeholder="Ingrese Su numero De Contacto">
+                                   <input type="text" name="telefono" placeholder="Ingrese Su numero De Contacto">
                               </div>
                               <div class="input contenedor">
                                    <i class="fas fa-envelope"></i>
-                                   <input type="email" placeholder="Ingrese Su Correo">
+                                   <input type="email" name="correo" placeholder="Ingrese Su Correo">
                               </div>
 
                               <div class="input contenedor">
                                    <i class="fas fa-key"></i>
-                                   <input type="password" placeholder="repita Su Clave">
+                                   <input type="password" name="repclave" placeholder="repita Su Clave">
                               </div>
+                              
 
                          </div>
                          <div class="btn-enviar">
-                              <input type="submit" value="Ingresar">
+                              <input type="submit" class="reg" value="Registrarse">
                               <a class="olvide" href="index.php">Ir al inicio</a>
                          </div>
                          
                </form>
           </div>
      </div>
+     <script src='js/procesos.js'></script>
+     <script src="librerias/sweetalert.min.js"></script>
      <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
 </body>
 

@@ -55,58 +55,29 @@
             <div class="container-productos">
                 <!--productos-->
                 <div class="producto">
-                    <img class="imagen" src="img/nike.jpg" height="100%" width="100%">
-                    <div class="contenedor-descripcion">
-                        <h1>tenis nike</h1>
-                        <p>para: hombre</p>
-                        <h2>$ 350.000</h2>
-                        <p><i class="fas fa-cart-plus"></i> 4</p>
-                    </div>
-                    <div class="botones">
-                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
-                    </div>
-                </div>
+                    <?php
+                        include "php/Conexion.php";
+                        $consultaCalzados=$conexion->prepare("SELECT * FROM productos");
+                        $consultaCalzados->execute();
+                        while($row=$consultaCalzados->fetch(PDO::FETCH_OBJ)){?>
+                            <div class="imagen">
+                                <?php
+                                    echo '<img src="'.$row->IMAGEN.'">';
+                                ?>
+                            </div>
+                            <div class="contenedor-descripcion">
+                                <h1><?php echo $row->NOMBRE_PRODUCTO;?></h1>
+                                <p>para: hombre</p>
+                                <h2>$ <?php echo $row->PRECIO;?></h2>
+                                <p><i class="fas fa-cart-plus"></i> <?php echo $row->CANTIDAD_COMPRAS;?></p>
+                            </div>
 
-                <div class="producto">
-                    <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
-                    <div class="contenedor-descripcion">
-                        <h1>tenis adidas</h1>
-                        <p>para: hombre</p>
-                        <h2>$ 240.500</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
-
-                    </div>
-                    <div class="botones">
-                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
-                    </div>
-                </div>
-               
-               
-                <div class="producto">
-                    <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
-                    <div class="contenedor-descripcion">
-                        <h1>tenis adidas</h1>
-                        <p>para: hombre</p>
-                        <h2>$ 240.000</h2>
-                        <p><i class="fas fa-cart-plus"></i> 8</p>
-                    </div>
-                    <div class="botones">
-                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
-                    </div>
-                </div>
-               
-                
-                <div class="producto">
-                    <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
-                    <div class="contenedor-descripcion">
-                        <h1>tenis adidas</h1>
-                        <p>para: hombre</p>
-                        <h2>$ 240.500</h2>
-                        <p><i class="fas fa-cart-arrow-down"></i> 10003</p>
-                    </div>
-                    <div class="botones">
-                        <a href="#" class="btn-solicitar v1">SOLICITAR</a>
-                    </div>
+                            <div class="botones">
+                                <?php echo '<a href="vista_producto.php?id='.$row->ID_PRODUCTO.'" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>' ?>
+                            </div>
+                        <?php
+                            }
+                        ?>
                 </div>
                 
             </div>

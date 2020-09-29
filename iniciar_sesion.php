@@ -5,7 +5,9 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
+     <script src="librerias/jquery-3.5.1.min.js"></script>
      <link rel="stylesheet" href="css/login.css">
+     <link rel="icon" type="png" href="img/icon.png"/>
      <title>Iniciar sesion - Calzados</title>
 </head>
 
@@ -71,7 +73,7 @@
                </div>
           </div>
      </div>
-     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+     
      <script src='js/main.js'></script>
      <script src='js/procesos.js'></script>
      <script src="librerias/sweetalert.min.js"></script>

@@ -133,7 +133,7 @@
             <div class="popup notificaciones" id="popup-notificaiones">
                 <a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                     <h1>entregas pendientes</h1>
-                    <scroll-container> 
+                    <scroll-container class="scroll-container"> 
                     <form action="#">
                         <scroll-page>
                             <div class="pendientes">

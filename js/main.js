@@ -146,6 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
     calif.innerHTML = `${calificaciones[auxi - 1]}`;
   }
 });
-
+$(function(){
+  $("body").hide().fadeIn(600);
+});
 // validacion de fromularios php PDO
 

@@ -50,6 +50,6 @@
           $resultados2=$queryIniciar->fetch(PDO::FETCH_ASSOC);
           echo json_encode(array('error' => false, 'tipo' =>  $resultados->ID_TIPO_USUARIO_FK));//mandar datos al archivo js, por JSON en caso de haberlos encontrado
           $_SESSION['nit']=$resultados->ID_TIPO_USUARIO_FK;
-          $_SESSION['nombre']=$resultados->PRIMER_NOMBRE;
+          $_SESSION['nombre']=$resultados->NOMBRE;
      }
 ?>

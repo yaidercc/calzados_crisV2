@@ -22,7 +22,7 @@
                 <a href="#" class="chat" id="chateasion"><i title="notificaciones" class="fas fa-comments" > </i>chat</a>
             </div>
             <div class="salir">
-                <a href="#" class="cerrar" id="abrir">salir</a>
+                <a href="php/cerrar_sesion.php" class="cerrar" id="abrir">salir</a>
             </div>
         </header>
         <!--filtros de la pagina-->
