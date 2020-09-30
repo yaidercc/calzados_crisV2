@@ -28,7 +28,7 @@
                </div>
           </div>
           <div class="form-registro">
-               <form action="" id="formregistro">
+               <form action="" id="formregistro" >
                     <h1 class="titulo-registro">registrate</h1>
                     <div class="formulario registrarse">
                          <div class="columna-izquierda">
@@ -49,7 +49,7 @@
                               <div class="input contenedor">
                                    <i class="fas fa-key"></i>
                                    <input type="password" name="clave" placeholder="Ingrese Su Clave">
-                                   <select name="genero" require>
+                                   <select name="genero" required>
                                         <option>Seleccionar Genero</option>
                                         <?php
                                         include "php/Conexion.php";

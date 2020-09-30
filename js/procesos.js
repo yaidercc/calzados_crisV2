@@ -47,13 +47,16 @@ jQuery(document).on('submit','#formregistro',function(event){
     .done(function(respuesta){
       console.log(respuesta);
       if(!respuesta.error){
-        if(respuesta.validar==1){
+        if(respuesta.validar=='unico'){
           console.log("1");
           $('.reg').val('Registrarse');
-          //location.href="iniciar_sesion.php";
+         // location.href="iniciar_sesion.php";
+        }else if(respuesta.validar=='repetido'){
+          $('.reg').val('Registrarse');
+          swal("hubo un error al registrarse","el nombre de usuario ya existe", "error");
         }
       }else{
-        if(respuesta.validar==404){
+        if(respuesta.validar=='nocoinciden'){
           console.log("2");
           swal("hubo un error al registrarse","las claves no coinciden", "error");
           $('.reg').val('Registrarse');
@@ -71,4 +74,16 @@ jQuery(document).on('submit','#formregistro',function(event){
     .always(function(){
       console.log("complete");
   });
+});
+
+
+jQuery(document).on('submit','#formulario',function(event){
+  event.preventDefault();
+  jQuery.ajax({
+      url:'Php/iniciar_sesion.php',
+      type:'POST',
+      succes:function(r){
+        $('#seccion-pre')
+      }
+  })
 });
