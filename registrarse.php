@@ -6,6 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
      <script src="librerias/jquery-3.5.1.min.js"></script>
+     
      <link rel="stylesheet" href="css/login.css">
      <link rel="icon" type="png" href="img/icon.png"/>
      <title>Registrarse - Calzados</title>
@@ -28,27 +29,27 @@
                </div>
           </div>
           <div class="form-registro">
-               <form action="" id="formregistro" >
+               <form action="" id="formregistro" ">
                     <h1 class="titulo-registro">registrate</h1>
                     <div class="formulario registrarse">
                          <div class="columna-izquierda">
                               <div class="input contenedor">
                                    <i class="fas fa-user"></i>
-                                   <input type="text" name="nombre" placeholder="Ingrese Su Nombre">
+                                   <input type="text" name="nombre" placeholder="Ingrese Su Nombre" required>
                               </div>
 
                               <div class="input contenedor">
                                    <i class="fas fa-user"></i>
-                                   <input type="text" name="username" placeholder="Ingrese Su nombre De Usuario">
+                                   <input type="text" name="username" placeholder="Ingrese Su nombre De Usuario" required>
                               </div>
 
                               <div class="input contenedor">
                                    <i class="fas fa-map-marker-alt"></i>
-                                   <input type="text" name="direccion" placeholder="Ingrese Su Direccion">
+                                   <input type="text" name="direccion" placeholder="Ingrese Su Direccion" required>
                               </div>
                               <div class="input contenedor">
                                    <i class="fas fa-key"></i>
-                                   <input type="password" name="clave" placeholder="Ingrese Su Clave">
+                                   <input type="password" id="clave" name="clave" placeholder="Ingrese Su Clave" required>
                                    <select name="genero" required>
                                         <option>Seleccionar Genero</option>
                                         <?php
@@ -67,23 +68,23 @@
                          <div class="derecha">
                               <div class="input contenedor">
                                    <i class="fas fa-user"></i>
-                                   <input type="text" name="apellido" placeholder="Ingrese Su Apellido">
+                                   <input type="text" name="apellido" placeholder="Ingrese Su Apellido" required>
                               </div>
 
                               <div class="input contenedor">
                                    <i class="fas fa-phone-square-alt"></i>
-                                   <input type="text" name="telefono" placeholder="Ingrese Su numero De Contacto">
+                                   <input type="number" name="telefono" id="tel" placeholder="Ingrese Su numero De Contacto" required>
                               </div>
                               <div class="input contenedor">
                                    <i class="fas fa-envelope"></i>
-                                   <input type="email" name="correo" placeholder="Ingrese Su Correo">
+                                   <input type="email" name="correo" placeholder="Ingrese Su Correo" required>
                               </div>
 
                               <div class="input contenedor">
                                    <i class="fas fa-key"></i>
-                                   <input type="password" name="repclave" placeholder="repita Su Clave">
+                                   <input type="password" id="repclave" name="repclave" placeholder="repita Su Clave" required>
                               </div>
-                              
+                              <sapn class="nofuerte"><i></i></span>
 
                          </div>
                          <div class="btn-enviar">
@@ -94,6 +95,7 @@
                </form>
           </div>
      </div>
+     <script src="js/validaciones.js"></script>
      <script src='js/procesos.js'></script>
      <script src="librerias/sweetalert.min.js"></script>
      <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>

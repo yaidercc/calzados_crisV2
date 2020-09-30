@@ -9,7 +9,7 @@ body{
 a{
      text-decoration: none;
 }
-input[type=text],input[type=password],input[type=email]{
+input[type=text],input[type=password],input[type=email],input[type=number]{
      width: 85%;
      height: 45px;
      margin-bottom:10px;
@@ -20,11 +20,11 @@ input[type=text],input[type=password],input[type=email]{
      background-color: #d8e9f7;
      border-bottom: 2px solid #2699FB;
 }
-input[type=text],input[type=password],input[type=email]{
+input[type=text],input[type=password],input[type=email],input[type=number]{
      padding-left: 40px;
 }
-input[type=text],input[type=password],input[type=email]:focus{
-     border-bottom: 2px solid #2699FB;
+.nofuerte{
+    color: #fb2626;
 }
 .titulo-registro{
      color:#2699FB;
