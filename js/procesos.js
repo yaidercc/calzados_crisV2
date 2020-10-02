@@ -52,37 +52,7 @@ jQuery(document).on("submit", "#formregistro", function (event) {
       if (!respuesta.error) {
         if (respuesta.validar == "unico") {
           $(".reg").val("Registrarse");
-          location.href="iniciar_sesion.php";
-
-          //validar contraseña
-          /* var errorClave = "";
-          var errorTel = "";
-          var contra = document.querySelector("#clave");
-          var campoPass = document.querySelector("#clave").value;
-          var campoReppass = document.querySelector("#repclave").value;
-          if (campoPass.length < 8 && campoReppass.length < 8) {
-            errorClave =
-              "por su seguridad la clave debe tener: mas de 8 caracteres, al menos una mayuscula y al menos un caracter especial.";
-            document.querySelector(".nofuerte").innerText = errorClave;
-          } else {
-            regex = /^(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ]/;
-            if (!regex.test(contra.value)) {
-              errorClave =
-                "por su seguridad la clave debe tener: mas de 8 caracteres, al menos una mayuscula y al menos un caracter especial.";
-              document.querySelector(".nofuerte").innerText = errorClave;
-              errorClave="";
-            }
-          }
-
-          //validar telefono
-          telefono = document.querySelector("#tel").value;
-          if (telefono.length < 7) {
-            errorTel = " telefono invalido";
-            numeral.className = "fas fa-circle";
-            document.querySelector(".nofuerte").innerText = errorTel;
-          } else {
-            errorTel = "";
-          }*/
+          location.href = "iniciar_sesion.php";
         } else if (respuesta.validar == "repetido") {
           $(".reg").val("Registrarse");
           swal(
@@ -93,6 +63,13 @@ jQuery(document).on("submit", "#formregistro", function (event) {
         }
       } else {
         var error = "";
+        if (respuesta.validar == "usuario corto") {
+          error =
+            "por su seguridad el nombre de usuario debe tener al menos 5 caracteres.";
+          document.querySelector(".nofuerte").innerText = error;
+          console.log("ususario corto");
+        }
+        error = "";
         if (respuesta.validar == "nocoinciden") {
           swal(
             "hubo un error al registrarse",
@@ -101,21 +78,19 @@ jQuery(document).on("submit", "#formregistro", function (event) {
           );
           $(".reg").val("Registrarse");
         } else if (respuesta.validar == "muy corta") {
-            $(".reg").val("Registrarse");
-            console.log("menos de 8");
-            error =
-              "por su seguridad la clave debe tener al menos mas de 8 caracteres.";
-            document.querySelector(".nofuerte").innerText = error;
+          $(".reg").val("Registrarse");
+          console.log("menos de 8");
+          error =
+            "por su seguridad la clave debe tener al menos mas de 8 caracteres.";
+          document.querySelector(".nofuerte").innerText = error;
         }
-        
+        error = "";
         if (respuesta.validar == "telefono invalido") {
           $(".reg").val("Registrarse");
           console.log("telefono invalido");
           error = "Digite un telefono valido.";
           document.querySelector(".nofuerte").innerText = error;
         }
-        
-        
       }
     })
     .fail(function (resp) {
@@ -124,13 +99,26 @@ jQuery(document).on("submit", "#formregistro", function (event) {
     .always(function () {});
 });
 
-jQuery(document).on("submit", "#formulario", function (event) {
-  event.preventDefault();
-  jQuery.ajax({
-    url: "Php/iniciar_sesion.php",
-    type: "POST",
-    succes: function (r) {
-      $("#seccion-pre");
-    },
+$(document).ready(function () {
+  $("#mujer").click(function (e) {
+    e.preventDefault();
+    var sistema = getUrl();
+    location.href=sistema+'filtrar_productos.php?generos=2';
   });
 });
+$(document).ready(function () {
+  $("#hombre").click(function (e) {
+    e.preventDefault();
+    var sistema = getUrl();
+    location.href=sistema+'filtrar_productos.php?generos=1';
+  });
+});
+
+function getUrl() {
+  var loc = window.location;
+  var pathName = loc.pathname.substring(0, loc.pathname.lastIndexOf("/") + 1);
+  return loc.href.substring(
+    0,
+    loc.href.length - ((loc.pathname + loc.search + loc.hash).length - pathName.length)
+  );
+}

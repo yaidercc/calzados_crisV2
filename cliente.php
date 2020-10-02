@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="librerias/jquery-3.5.1.min.js"></script>
     <link rel="icon" type="png" href="img/icon.png"/>
     <title>Calzados </title>
 </head>
@@ -33,8 +34,8 @@
         <!--filtros-->
         <div class="filtros">
             <div class="nav">
-                <a href="#">mujer <i class="fas fa-female"></i></a>
-                <a href="#">hombre  <i class="fas fa-male"></i></a>
+                <a href="#" id="mujer">mujer <i class="fas fa-female"></i></a>
+                <a href="#" id="hombre" >hombre  <i class="fas fa-male"></i></a>
                 <a href="#">mas comprados <i class="fas fa-cart-plus"></i></a>
                 <a href="#">mas baratos <i class="fas fa-coins"></i></a>
             </div>
@@ -54,31 +55,32 @@
             <!--contenedor productos-->
             <div class="container-productos">
                 <!--productos-->
-                <div class="producto">
-                    <?php
+                <?php
                         include "php/Conexion.php";
                         $consultaCalzados=$conexion->prepare("SELECT * FROM productos");
                         $consultaCalzados->execute();
                         while($row=$consultaCalzados->fetch(PDO::FETCH_OBJ)){?>
-                            <div class="imagen">
-                                <?php
-                                    echo '<img src="'.$row->IMAGEN.'">';
-                                ?>
-                            </div>
-                            <div class="contenedor-descripcion">
-                                <h1><?php echo $row->NOMBRE_PRODUCTO;?></h1>
-                                <p>para: hombre</p>
-                                <h2>$ <?php echo $row->PRECIO;?></h2>
-                                <p><i class="fas fa-cart-plus"></i> <?php echo $row->CANTIDAD_COMPRAS;?></p>
-                            </div>
+                            <div class="producto">
+                                <div class="imagen">
+                                    <?php
+                                        echo '<img src="'.$row->IMAGEN.'">';
+                                    ?>
+                                </div>
+                                <div class="contenedor-descripcion">
+                                    <h1><?php echo $row->NOMBRE_PRODUCTO;?></h1>
+                                    <p>para: hombre</p>
+                                    <h2>$ <?php echo $row->PRECIO;?></h2>
+                                    <p><i class="fas fa-cart-plus"></i> <?php echo $row->CANTIDAD_COMPRAS;?></p>
+                                </div>
 
-                            <div class="botones">
-                                <?php echo '<a href="vista_producto.php?id='.$row->ID_PRODUCTO.'" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>' ?>
+                                <div class="botones">
+                                    <?php echo '<a href="vista_producto.php?id='.$row->ID_PRODUCTO.'" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>' ?>
+                                </div>
+                           
                             </div>
                         <?php
                             }
                         ?>
-                </div>
                 
             </div>
             
@@ -134,6 +136,7 @@
 
     <!--archivos y links-->
     <script src='js/main.js'></script> 
+    <script src='js/procesos.js'></script> 
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     </script>
