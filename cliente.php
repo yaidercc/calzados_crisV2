@@ -35,9 +35,9 @@
         <div class="filtros">
             <div class="nav">
                 <a href="#" id="mujer">mujer <i class="fas fa-female"></i></a>
-                <a href="#" id="hombre" >hombre  <i class="fas fa-male"></i></a>
-                <a href="#">mas comprados <i class="fas fa-cart-plus"></i></a>
-                <a href="#">mas baratos <i class="fas fa-coins"></i></a>
+                <a href="#" id="hombre">hombre  <i class="fas fa-male"></i></a>
+                <a href="#" id="mas_comprados">mas comprados <i class="fas fa-cart-plus"></i></a>
+                <a href="#" id="mas_baratos">mas baratos <i class="fas fa-coins"></i></a>
             </div>
 
         </div>

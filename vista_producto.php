@@ -1,3 +1,5 @@
+<?php include "php/Conexion.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,9 +50,31 @@
             <div class="contenedor-producto">
                 <div class="foto">
                     <div class="slider">
-                        <img class="imagen" src="img/adidas.jpg" height="90%" width="100%">
-                        <img class="imagen" src="img/adidas.jpg" height="90%" width="100%">
-                        <img class="imagen" src="img/adidas.jpg" height="90%" width="100%">
+                        <?php
+                            $id_producto = $_GET['id'];
+                            $consultaImagenes = $conexion->prepare("SELECT IMAGEN,IMAGEN2,IMAGEN3 FROM productos WHERE ID_PRODUCTO=$id_producto ");
+                            
+                            $consultaImagenes->execute();
+                            while ($row = $consultaImagenes->fetch(PDO::FETCH_OBJ)) { ?>
+                                <div class="imagen">
+                                    <?php
+                                        echo '<img src="' . $row->IMAGEN. '">';
+                                    ?>
+                                </div>
+                                <div class="imagen">
+                                    <?php
+                                        echo '<img src="' . $row->IMAGEN2. '">';
+                                    ?>
+                                </div>
+                                <div class="imagen">
+                                    <?php
+                                        echo '<img src="' . $row->IMAGEN3. '">';
+                                    ?>
+                                </div>
+                        <?php
+                        }
+                        ?>
+
                     </div>
 
                     <!--estrellas-->
@@ -68,8 +92,8 @@
                 </div>
                 <div class="caracteristicas">
                     <?php
-                    include "php/Conexion.php";
-                    $consultaCalzados = $conexion->prepare("SELECT * FROM productos");
+                    $id_producto = $_GET['id'];
+                    $consultaCalzados = $conexion->prepare("SELECT * FROM productos WHERE ID_PRODUCTO=$id_producto ");
                     $consultaCalzados->execute();
                     while ($row = $consultaCalzados->fetch(PDO::FETCH_OBJ)) { ?>
                         <h1 class="title"><?php echo $row->NOMBRE_PRODUCTO; ?></h1>
@@ -106,9 +130,10 @@
 
                             <div class="hijo colores">
                                 <p class="color">colores: </p>
-                                <a href="#" class="color rojo">rojo</a>
-                                <a href="#" class="color verde">verde</a>
-                                <a href="#" class="color amarillo">amarillo</a>
+                                <a href="#" class="later"><?php echo $row->COLOR1; ?>,&nbsp;</a>
+                                <a href="#" class="later"><?php echo $row->COLOR2; ?>,&nbsp;</a>
+                                <a href="#" class="later"><?php echo $row->COLOR3; ?></a>
+                                
                             </div>
                         </div>
                         <div class="contenedor-botones">
@@ -169,7 +194,7 @@
     </div>
 
     <!--archivos y links-->
-    
+
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src='js/procesos.js'></script>

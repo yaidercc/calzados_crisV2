@@ -49,13 +49,13 @@
             <!--contenedor productos-->
             <div class="container-productos">
                 <!--productos-->
-
-                <div class="producto">
-                    <?php
+                <?php
                         include "php/Conexion.php";
                         $consultaGeneros=$conexion->prepare("SELECT * FROM productos");
                         $consultaGeneros->execute();
                         while($row=$consultaGeneros->fetch(PDO::FETCH_OBJ)){?>
+                <div class="producto">
+                    
                             <div class="imagen">
                                 <?php
                                     echo '<img src="'.$row->IMAGEN.'">';
@@ -71,35 +71,11 @@
                             <div class="botones">
                                 <?php echo '<a href="#" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>' ?>
                             </div>
-                        <?php
+                        
+                </div>
+                <?php
                             }
                         ?>
-                </div>
-                <div class="producto">
-                    <?php
-                        include "php/Conexion.php";
-                        $consultaGeneros=$conexion->prepare("SELECT * FROM productos");
-                        $consultaGeneros->execute();
-                        while($row=$consultaGeneros->fetch(PDO::FETCH_OBJ)){?>
-                            <div class="imagen">
-                                <?php
-                                    echo '<img src="'.$row->IMAGEN.'">';
-                                ?>
-                            </div>
-                            <div class="contenedor-descripcion">
-                                <h1><?php echo $row->NOMBRE_PRODUCTO;?></h1>
-                                <p>para: hombre</p>
-                                <h2>$ <?php echo $row->PRECIO;?></h2>
-                                <p><i class="fas fa-cart-plus"></i> <?php echo $row->CANTIDAD_COMPRAS;?></p>
-                            </div>
-
-                            <div class="botones">
-                                <?php echo '<a href="#" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>' ?>
-                            </div>
-                        <?php
-                            }
-                        ?>
-                </div>
             </div>
 
         </main>

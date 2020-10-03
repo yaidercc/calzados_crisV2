@@ -19,7 +19,7 @@
                               }else{
                                    echo json_encode(array('error' => false, 'validar'=> 'unico' ));
                                    $queriRegistrar=$conexion->prepare("INSERT INTO `usuarios`(`NOMBRE_USUARIO`, `NOMBRE`, `APELLIDO`, `CORREO`, `CLAVE`, `DIRECCION`, `TELEFONO`,`ID_GENERO_FK`,`ID_TIPO_USUARIO_FK`) 
-                                   VALUES (?,?,?,?,?,?,?,?,1)");
+                                   VALUES (?,?,?,?,?,?,?,?,2)");
                                    $queriRegistrar->bindParam(1,$_POST['username'], PDO::PARAM_STR);
                                    $queriRegistrar->bindParam(2,$_POST['nombre'], PDO::PARAM_STR);
                                    $queriRegistrar->bindParam(3,$_POST['apellido'], PDO::PARAM_STR);

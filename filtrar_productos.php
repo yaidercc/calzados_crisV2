@@ -25,11 +25,26 @@ session_start();
         }
         if (!empty($_REQUEST['generos'])) {
             $genero = strtolower($_REQUEST['generos']);
-            $where = "ID_GENERO_FK=$genero";
+            if($genero=='hombre'){
+                $where = "WHERE ID_GENERO_FK=1";
+                $titulo="para hombre";
+            }else{
+                $where = "WHERE ID_GENERO_FK=2";
+                $titulo="para mujer";
+            }
+
+         
         }
         if (!empty($_REQUEST['economicos'])) {
-            $genero = strtolower($_REQUEST['generos']);
-            $where = "";
+            $economicos = strtolower($_REQUEST['economicos']);
+            if($economicos=='mas_comprados'){
+                $where = "ORDER BY CANTIDAD_COMPRAS DESC";
+                $titulo="mas comprados";
+            }else{
+                $where = "ORDER BY PRECIO ASC";
+                $titulo="mas baratos";
+            }
+           
         }
         ?>
         <!--cabecera de pagina-->
@@ -51,8 +66,8 @@ session_start();
             <div class="nav">
                 <a href="#" id="mujer">mujer <i class="fas fa-female"></i></a>
                 <a href="#" id="hombre">hombre <i class="fas fa-male"></i></a>
-                <a href="#">mas comprados <i class="fas fa-cart-plus"></i></a>
-                <a href="#">mas baratos <i class="fas fa-coins"></i></a>
+                <a href="#" id="mas_comprados">mas comprados <i class="fas fa-cart-plus"></i></a>
+                <a href="#" id="mas_baratos">mas baratos <i class="fas fa-coins"></i></a>
             </div>
 
         </div>
@@ -60,7 +75,7 @@ session_start();
         <!--contenido principal-->
         <main class="principal">
             <div class="cabeza-main">
-                <h1 class="calzado">calzados para hombre y para mujer</h1>
+                <h1 class="calzado">calzados <?php echo $titulo;?></h1>
                 <a href="#" id="carrito" class="carrito">
                     <span class="numero_productos">0</span>
                     <i class="fas fa-shopping-cart"></i>
@@ -72,15 +87,10 @@ session_start();
                 <!--productos-->
                 <?php
                 include "php/Conexion.php";
-                $gen = 0;
-                if (!empty($_REQUEST['generos'])) {
-                    $gen = $_REQUEST['generos'];
-                }
-                $consultaCalzados = $conexion->prepare("SELECT * FROM productos WHERE $where ");
+                $consultaCalzados = $conexion->prepare("SELECT * FROM productos  $where ");
                 $consultaCalzados->execute();
                 while ($row = $consultaCalzados->fetch(PDO::FETCH_OBJ)) { ?>
                     <div class="producto">
-
                         <div class="imagen">
                             <?php
                             echo '<img src="' . $row->IMAGEN . '">';
@@ -96,10 +106,11 @@ session_start();
                         <div class="botones">
                             <?php echo '<a href="vista_producto.php?id=' . $row->ID_PRODUCTO . '" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>' ?>
                         </div>
+                
+                    </div>
                     <?php
                 }
                     ?>
-                    </div>
 
             </div>
 

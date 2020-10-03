@@ -394,7 +394,7 @@ scroll-container {
     margin: 2.5rem auto;
     padding: 2rem;
     display: grid;
-    grid-template-rows:10rem 8rem auto 7rem;
+    grid-template-rows:10rem 8rem 10rem 7rem;
     grid-template-areas: "titulos"
                             "files"
                          "contenidos"
@@ -406,6 +406,25 @@ scroll-container {
     align-items: center;
     justify-content: center;
 }
+.elementos-producto .files{
+    grid-area: files;
+}
+.contenedor-boton .btn_agregar{
+    background-color: #2699FB;
+    padding: 1rem 0px;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    width: 27rem;
+    transition: background-color 0.5s;
+    transform-origin: left;
+    cursor: pointer;
+    border: none;
+}
+.btn_agregar:hover{
+    background-color:#76b8f1 ;
+}
+
 .contenedor-producto{
     width: 110rem;
     height: 65rem;
@@ -469,6 +488,9 @@ scroll-container {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+}
+.colors{
+    color:#000;
 }
                     /**  ----------   ESTILOS -> SECCION CARACTERISTICAS > VISTA_PRODUCTO   ------------  **/ 
 .contenedor-producto .caracteristicas{
@@ -535,15 +557,10 @@ scroll-container {
 .contenedor-producto .caracteristicas .colores .color{
     display: inline-block;
 }
-.contenedor-producto .caracteristicas .colores .color.rojo{
-    color: #fb2626;
+.contenedor-producto .caracteristicas .colores .colors{
+    color: #000;
 }
-.contenedor-producto .caracteristicas .colores .color.verde{
-    color: #3ffb26;
-}
-.contenedor-producto .caracteristicas .colores .color.amarillo{
-    color: #e6fb26;
-}
+
                     /**  ----------       ESTILOS -> GESTIONAR PRODUCTO   ------------  **/
 .puntuaciones a i{
     color:#2699FB;
