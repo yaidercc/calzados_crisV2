@@ -1,17 +1,19 @@
 <?php
-    include 'php/conexion.php';
-    session_start();
+include 'php/conexion.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="png" href="img/icon.png" />
     <link rel="stylesheet" href="css/estilos.css">
     <title>Administrar</title>
 </head>
+
 <body>
     <!--contenedor de la pagina-->
     <div class="contenedor">
@@ -22,9 +24,9 @@
                 <h1>calzados cris</h1>
             </div>
             <div class="navegacion">
-                <a href="#" class="chat" id="chateasion"><i title="notificaciones" class="fas fa-comments" > </i>chat</a>
-                <a href="#" id="notificar"class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
-                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i><?php echo " " .$_SESSION['nombre']; ?></a>
+                <a href="#" class="chat" id="chateasion"><i title="notificaciones" class="fas fa-comments"> </i>chat</a>
+                <a href="#" id="notificar" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
+                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i><?php echo " " . $_SESSION['nombre']; ?></a>
             </div>
 
             <div class="salir">
@@ -36,7 +38,7 @@
         <div class="filtros">
             <div class="nav">
                 <a href="#">mujer <i class="fas fa-female"></i></a>
-                <a href="#">hombre  <i class="fas fa-male"></i></a>
+                <a href="#">hombre <i class="fas fa-male"></i></a>
                 <a href="#">mas comprados <i class="fas fa-cart-plus"></i></a>
                 <a href="#">mas baratos <i class="fas fa-coins"></i></a>
                 <a href="gestionar_producto.php">agregar productos <i class="fas fa-plus"></i></a>
@@ -47,93 +49,53 @@
         <main class="principal">
             <div class="cabeza-main">
                 <h1 class="calzado">calzados para hombre y para mujer</h1>
-                
+
             </div>
             <!--contenedor productos-->
             <div class="container-productos">
                 <!--productos-->
-                <div class="producto">
-                    <img class="imagen" src="img/nike.jpg" height="100%" width="100%">
-                    <div class="contenedor-descripcion">
-                        <input type="text" value="tenis nike" class="inp">
-                        <p>para: hombre</p>
-                        <input type="text" value="350.000" class="inp">
-                        <p><i class="fas fa-cart-plus"></i> 4</p>
-                        <div class="visible">
-                            <p class="txt">visibilidad del producto</p>
-                            <i class="fas fa-eye"></i>
+                <?php
+                include "php/Conexion.php";
+                $consultaCalzados = $conexion->prepare("SELECT * FROM productos");
+                $consultaCalzados->execute();
+                while ($row = $consultaCalzados->fetch(PDO::FETCH_OBJ)) { ?>
+                    <div class="producto">
+                        <div class="imagen">
+                            <?php
+                            echo '<img src="' . $row->IMAGEN . '">';
+                            ?>
+                        </div>
+                        <div class="contenedor-descripcion">
+                            <h1><?php echo $row->NOMBRE_PRODUCTO; ?></h1>
+                            <p>para: hombre</p>
+                            <h2>$ <?php echo $row->PRECIO; ?></h2>
+                            
+                            <div class="visible">
+                            <p><i class="fas fa-cart-plus"></i>  <?php echo $row->CANTIDAD_COMPRAS; ?></p>
+                                &nbsp;&nbsp;&nbsp; <span>|</span>&nbsp;
+                                <a href="#" class="txt">preguntas<i class="fas fa-question"></i></a>
+                                
+                            </div>
+                        </div>
+                        <div class="botones">
+                           <?php echo '<a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>';?>
+                           <?php echo '<a href="vista_producto_admin.php?id='.$row->ID_PRODUCTO.'" class="btn-solicitar v1">modificar</a>';?>
                         </div>
                     </div>
-                    <div class="botones">
-                        <a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="btn-solicitar v1">modificar</a>
-                    </div>
-                </div>
+                <?php
+                }
+                ?>
 
-                <div class="producto">
-                    <img class="imagen" src="img/plataformas.jpg" height="100%" width="100%">
-                    <div class="contenedor-descripcion">
-                        <input type="text" name="nombreProducto" value="plataformas negras" class="inp">
-                        <p>para: mujer</p>
-                        <input type="text" name="precio" value="80.000" class="inp">
-                        <p><i class="fas fa-cart-plus"></i> 8</p>
-                        <div class="visible">
-                            <p class="txt">visibilidad del producto</p>
-                            <i class="fas fa-eye"></i>
-                        </div>
-                    </div>
-                    <div class="botones">
-                        <a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="btn-solicitar v1">modificar</a>
-                    </div>
-                </div>
-
-                <div class="producto">
-                    <img class="imagen" src="img/adidas.jpg" height="100%" width="100%">
-                    <div class="contenedor-descripcion">
-                        <input type="text" name="nombreProducto" value="tenis adidas" class="inp">
-                        <p>para: hombre</p>
-                        <input type="text" name="" value="240.000" class="inp">
-                        <p><i class="fas fa-cart-plus"></i> 8</p>
-                        <div class="visible">
-                            <p class="txt">visibilidad del producto</p>
-                            <i class="fas fa-eye"></i>
-                        </div>
-                    </div>
-                    <div class="botones">
-                        <a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="btn-solicitar v1">modificar</a>
-                    </div>
-                </div>
-
-                <div class="producto">
-                    <img class="imagen" src="img/zapatos.png" height="100%" width="100%">
-                    <div class="contenedor-descripcion">
-                        <input type="text" value="tacones" class="inp">
-                        <p>para: mujer</p>
-                        <input type="text" value="55.000" class="inp">
-                        <p><i class="fas fa-cart-plus"></i> 5</p>
-                        <div class="visible">
-                            <p class="txt">visibilidad del producto</p>
-                            <i class="fas fa-eye"></i>
-                        </div>
-                    </div>
-                    <div class="botones">
-                        <a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>
-                        <a href="#" class="btn-solicitar v1">modificar</a>
-                    </div>
-                </div>
-                
             </div>
-            
+
         </main>
 
-         <!--notificaciones-->
-         <div class="overlay" id="notificaciones">
+        <!--notificaciones-->
+        <div class="overlay" id="notificaciones">
             <div class="popup notificaciones" id="popup-notificaiones">
                 <a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>entregas pendientes</h1>
-                    <scroll-container class="scroll-container"> 
+                <h1>entregas pendientes</h1>
+                <scroll-container class="scroll-container">
                     <form action="#">
                         <scroll-page>
                             <div class="pendientes">
@@ -144,8 +106,8 @@
                                 <p class="desc"><strong>DIRECCION:</p>
                                 <p class="desc"><strong>TELEFONO: </p>
                                 <p class="desc"><strong>CANTIDAD:</p>
-                                <p class="desc"><strong>TOTAL:</p>                               
-                                <input type="submit" class="btn-submit" value="entregado"> 
+                                <p class="desc"><strong>TOTAL:</p>
+                                <input type="submit" class="btn-submit" value="entregado">
                             </div>
                         </scroll-page>
                     </form>
@@ -159,8 +121,8 @@
                                 <p class="desc"><strong>DIRECCION:</p>
                                 <p class="desc"><strong>TELEFONO: </p>
                                 <p class="desc"><strong>CANTIDAD:</p>
-                                <p class="desc"><strong>TOTAL:</p>                               
-                                <input type="submit" class="btn-submit" value="entregado"> 
+                                <p class="desc"><strong>TOTAL:</p>
+                                <input type="submit" class="btn-submit" value="entregado">
                             </div>
                         </scroll-page>
                     </form>
@@ -174,12 +136,12 @@
                                 <p class="desc"><strong>DIRECCION:</p>
                                 <p class="desc"><strong>TELEFONO: </p>
                                 <p class="desc"><strong>CANTIDAD:</p>
-                                <p class="desc"><strong>TOTAL:</p>                               
-                                <input type="submit" class="btn-submit" value="entregado"> 
+                                <p class="desc"><strong>TOTAL:</p>
+                                <input type="submit" class="btn-submit" value="entregado">
                             </div>
                         </scroll-page>
                     </form>
-            </scroll-container> 
+                </scroll-container>
             </div>
         </div>
 
@@ -188,9 +150,9 @@
         <div class="overlay" id="chat">
             <div class="popup" id="chatear">
                 <a href="#" id="btn-cerrar-popup3" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                    <h1>conversacion</h1>
-                    <form action="#">
-                    </form>
+                <h1>conversacion</h1>
+                <form action="#">
+                </form>
             </div>
         </div>
 
@@ -204,9 +166,10 @@
         </footer>
     </div>
     <!--archivos y links-->
-    <script src='js/main.js'></script> 
+    <script src='js/main.js'></script>
     <script src="https://kit.fontawesome.com/2efdabf6ca.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     </script>
 </body>
+
 </html>

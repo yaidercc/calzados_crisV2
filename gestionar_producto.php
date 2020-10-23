@@ -104,7 +104,7 @@
                             <input type="text" placeholder="precio" name="precio" required>
                             <p>sexo</p>
 
-                            <select name="genero" required>
+                            <select name="genero">
                                 <option>Seleccionar Genero</option>
                                 <?php
                                 include "php/Conexion.php";
@@ -135,6 +135,7 @@
                     <div class="contenedor-boton">
                         <a href="administrador.php" class="btn-carrito flecha"><i class="fas fa-chevron-left"></i></a>
                         <input class="btn_agregar" type="submit" class="agg" value="agregar producto" >
+                        <a href="#" id="limpiar" class="btn-carrito clean"><i class="fas fa-broom"></i></a>
                     </div>
                 </form>
             </div>

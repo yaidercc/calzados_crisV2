@@ -57,7 +57,7 @@
                                         $consultaGeneros = $conexion->prepare("SELECT * FROM generos  WHERE ID_GENERO!=3");
                                         $consultaGeneros->execute();
                                         while ($row = $consultaGeneros->fetch(PDO::FETCH_ASSOC)) {
-                                             echo '<option value="' . $row['ID_GENERO'] . '">' . $row['NOMBRE_GENERO'] . '</option>';
+                                             echo '<option value="' . $row->ID_GENERO . '">' . $row['NOMBRE_GENERO'] . '</option>';
                                         }
                                         ?>
                                    </select>

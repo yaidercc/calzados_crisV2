@@ -106,7 +106,10 @@ for (let i = 0; i < agregar.length; i++) {
     e.preventDefault();
     e.stopPropagation();
     CantidadProdutos += 1;
+    if(carro){
     carro.innerText = CantidadProdutos;
+
+    }
   });
 }
 if (vaciar) {

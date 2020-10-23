@@ -285,6 +285,10 @@ scroll-container {
 }
 .principal .container-productos .producto .visible .txt{
     padding-right: 1rem;
+    color:#2699FB;
+} 
+.principal .container-productos .producto .visible .txt:hover{
+    text-decoration: inherit;
 } 
         /*  BOTON AGREGAR AL CARRITO  */
 
@@ -568,6 +572,10 @@ scroll-container {
 .puntuaciones a.seleccionado i {
     color: #ffff00;
 }
+.btn-carrito.clean{
+    margin-left: 10px;
+    background:#fb3026;
+}
                     /**  ----------       ESTILOS -> PREGUNTAS PRODUCTO   ------------  **/
 .preguntas-producto{
     color:#000;
@@ -591,8 +599,13 @@ scroll-container {
     width: 45rem;
     height:5rem;
     text-align: center;
+}
 
-    
+.preguntas-producto .contenedor-preguntas .btn-resp{
+    color:#b1b1b1;
+}
+.preguntas-producto .contenedor-preguntas .btn-resp:hover{
+    color:#747272;
 }
                     /**  ----------       ESTILOS -> GESTIONAR PRODUCTO   ------------  **/
 

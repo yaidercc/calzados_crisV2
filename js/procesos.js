@@ -101,6 +101,34 @@ jQuery(document).on("submit", "#formregistro", function (event) {
     .always(function () {});
 });
 
+//funcion preguntar
+jQuery(document).on("submit", "#responder", function (event) {
+  event.preventDefault();
+  jQuery
+    .ajax({
+      url: "Php/responder.php",
+      type: "POST",
+      dataType: "json",
+      data: $(this).serialize(),
+      beforeSend: function () {
+        $("#resp").val("Enviando...");
+      },
+    })
+    .done(function (respuesta) {
+      if (!respuesta.error) {
+        console.log(respuesta);
+        location.href = "vista_producto_admin.php";
+        $("#resp").val("Enviar");
+      }
+    })
+    .fail(function (resp) {
+      console.log(resp.responseText);
+    })
+    .always(function () {
+      console.log("complete");
+    });
+});
+
 //funcion insertar productos
 jQuery(document).on("submit", "#form_insertar", function (event) {
   event.preventDefault();
@@ -132,8 +160,12 @@ jQuery(document).on("submit", "#form_insertar", function (event) {
           swal("producto agregado con exito", ":)", "success");
         }
       } else {
-         if(respuesta.validar=="repetido"){
-          swal("hubo un error al agregar el producto", "este producto ya existe", "error");
+        if (respuesta.validar == "repetido") {
+          swal(
+            "hubo un error al agregar el producto",
+            "este producto ya existe",
+            "error"
+          );
         }
         $(".agg").val("agregar producto");
       }
@@ -218,4 +250,60 @@ function getUrl() {
     loc.href.length -
       ((loc.pathname + loc.search + loc.hash).length - pathName.length)
   );
+}
+
+//limpiar todos los campos
+var limpiar = document.querySelector("#limpiar");
+limpiar.addEventListener("click", function () {
+  let campos = document.querySelectorAll(
+    "input[type='text'],input[type='file'],input[type='number']"
+  );
+  for (var i = 0; i < campos.length; i++) {
+    campos[i].value = "";
+  }
+});
+
+//funcion para agregar separador de miles en inputs
+function puntitos(donde, caracter) {
+  pat = /[\*,\+,\(,\),\?,\\,\$,\[,\],\^]/;
+  valor = donde.value;
+  largo = valor.length;
+  crtr = true;
+  if (isNaN(caracter) || pat.test(caracter) == true) {
+    if (pat.test(caracter) == true) {
+      caracter = "\\" + caracter;
+    }
+    carcter = new RegExp(caracter, "g");
+    valor = valor.replace(carcter, "");
+    donde.value = valor;
+    crtr = false;
+  } else {
+    var nums = new Array();
+    cont = 0;
+    for (m = 0; m < largo; m++) {
+      if (valor.charAt(m) == "." || valor.charAt(m) == " ") {
+        continue;
+      } else {
+        nums[cont] = valor.charAt(m);
+        cont++;
+      }
+    }
+  }
+
+  var cad1 = "",
+    cad2 = "",
+    tres = 0;
+  if (largo > 3 && crtr == true) {
+    for (k = nums.length - 1; k >= 0; k--) {
+      cad1 = nums[k];
+      cad2 = cad1 + cad2;
+      tres++;
+      if (tres % 3 == 0) {
+        if (k != 0) {
+          cad2 = "." + cad2;
+        }
+      }
+    }
+    donde.value = cad2;
+  }
 }
