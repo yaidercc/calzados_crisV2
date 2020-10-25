@@ -171,20 +171,26 @@
                             ?></p>
                             <p class="pregunta"><?php echo $row->MENSAJE;?></p>
                             <p class="tiempo">publicado hace un momento</p>
-                            <p class="titulo-res">respuesta: </p>
-                            <span class="respuesta"></span>
+                            <p class="titulo-res">respuesta: <p></p></p>
+                            <span class="respuesta"><?php echo $row->RESPUESTA?></span>
                             <?php
-                             echo '<a href="vista_producto_admin.php?id='.$_GET["id"].'&?id_pre=1" class="btn-resp v1">responder</a>';
+                                if($row->RESPUESTA!=NULL){
+                                    echo '<a href="vista_producto_admin.php?id='.$_GET["id"].'&id_pre='.$row->ID_PREGUNTA.'" class="btn-resp v1">editar</a>';
+                                }else{
+                                    echo '<a href="vista_producto_admin.php?id='.$_GET["id"].'&id_pre='.$row->ID_PREGUNTA.'" class="btn-resp v1">responder</a>';
+                                }
+                            
                              ?>
                         </scroll-page>
                         <?php
                             }
                         ?>
                     </scroll-container>
-                    <form action="" id="responder" onsubmit="return preguntas()">
+                    <form action="Php/responder.php" method="POST">
                         <input class="campo-pregunta" type="text" name="mensaje" placeholder="Hacer una pregunta">
-                        <input type="submit" class="btn-enviar" id="resp"value="enviar">
-                        
+                        <input type="hidden" name="id_product" value=<?php echo $_GET['id'];?> >
+                        <input type="hidden" name="id_preg" value=<?php echo $_GET['id_pre'];?>>
+                        <input type="submit" value="Enviar" class="btn-enviar"> 
                     </form>
                     <span class="nofuerte"></span>
                 </div>

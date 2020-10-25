@@ -73,13 +73,16 @@ session_start();
                             <div class="visible">
                             <p><i class="fas fa-cart-plus"></i>  <?php echo $row->CANTIDAD_COMPRAS; ?></p>
                                 &nbsp;&nbsp;&nbsp; <span>|</span>&nbsp;
-                                <a href="#" class="txt">preguntas<i class="fas fa-question"></i></a>
+                                <?php
+                                    echo '<a href="vista_producto_admin.php?id='.$row->ID_PRODUCTO.'&id_pre='.'" class="txt">preguntas<i class="fas fa-question"></i></a>';
+                                ?>
+                                
                                 
                             </div>
                         </div>
                         <div class="botones">
                            <?php echo '<a href="#" class="btn-carrito eliminar"><i class="fas fa-trash-alt"></i></a>';?>
-                           <?php echo '<a href="vista_producto_admin.php?id='.$row->ID_PRODUCTO.'" class="btn-solicitar v1">modificar</a>';?>
+                           <?php echo '<a href="gestionar_producto.php?id='.$row->ID_PRODUCTO.'" class="btn-solicitar v1">modificar</a>';?>
                         </div>
                     </div>
                 <?php

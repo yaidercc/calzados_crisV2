@@ -117,15 +117,23 @@ jQuery(document).on("submit", "#responder", function (event) {
     .done(function (respuesta) {
       if (!respuesta.error) {
         console.log(respuesta);
-        location.href = "vista_producto_admin.php";
+        location.href = "vista_producto_admin.php?id="+respuesta.id_producto+"&?id_pre="+respuesta.id_pregunta;
+        swal(
+          "hubo un error al registrarse",
+          "las claves no coinciden",
+          "error"
+        );
         $("#resp").val("Enviar");
       }
     })
     .fail(function (resp) {
       console.log(resp.responseText);
+      $("#resp").val("Enviar");
     })
     .always(function () {
       console.log("complete");
+      console.log(respuesta);
+      $("#resp").val("Enviar");
     });
 });
 
@@ -254,14 +262,17 @@ function getUrl() {
 
 //limpiar todos los campos
 var limpiar = document.querySelector("#limpiar");
-limpiar.addEventListener("click", function () {
-  let campos = document.querySelectorAll(
-    "input[type='text'],input[type='file'],input[type='number']"
-  );
-  for (var i = 0; i < campos.length; i++) {
-    campos[i].value = "";
-  }
-});
+if(limpiar){
+  limpiar.addEventListener("click", function () {
+    let campos = document.querySelectorAll(
+      "input[type='text'],input[type='file'],input[type='number']"
+    );
+    for (var i = 0; i < campos.length; i++) {
+      campos[i].value = "";
+    }
+  });
+}
+  
 
 //funcion para agregar separador de miles en inputs
 function puntitos(donde, caracter) {

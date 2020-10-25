@@ -29,7 +29,7 @@
                </div>
           </div>
           <div class="form-registro">
-               <form action="" id="formregistro" ">
+               <form action="" id="formregistro">
                     <h1 class="titulo-registro">registrate</h1>
                     <div class="formulario registrarse">
                          <div class="columna-izquierda">

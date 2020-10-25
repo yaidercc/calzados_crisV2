@@ -1,4 +1,6 @@
-<?php include "php/Conexion.php"; ?>
+<?php include "php/Conexion.php";
+    session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -152,32 +154,41 @@
                 <h1 class="title">Preguntas Sobre El producto</h1>
 
                 <div class="contenedor-preguntas">
-                    <scroll-container class="contenedor-scroll">
+                <scroll-container class="contenedor-scroll">
+                    <?php
+                    $id_producto = $_GET['id'];
+                    $consultaCalzados = $conexion->prepare("SELECT * FROM preguntas WHERE ID_PRODUCTO_FK=$id_producto");
+                    $consultaCalzados->execute();
+                    while ($row = $consultaCalzados->fetch(PDO::FETCH_OBJ)) { ?>
                         <scroll-page class="scroll-page">
-                            <p class="user">yaider cordoba cordoba: </p>
-                            <p class="pregunta">Lorem ipsum dolor sit amet consectetur adi quibusdam animi beatae!</p>
+                            <p class="user"><?php 
+                                $consultarUser=$conexion->prepare("SELECT usuarios.*,
+                                preguntas.*
+                                FROM usuarios 
+                                INNER JOIN preguntas
+                                on usuarios.ID_USUARIO=preguntas.ID_USUARIO_FK");
+                                   $consultarUser->execute();
+                                   $apunt = $consultarUser->fetch(PDO::FETCH_OBJ);
+                                print_r($apunt->NOMBRE. "\t". $apunt->APELLIDO);
+                            ?></p>
+                            <p class="pregunta"><?php echo $row->MENSAJE;?></p>
                             <p class="tiempo">publicado hace un momento</p>
-                            <p class="titulo-res">respuesta: </p>
-                            <p class="respuesta">si, si tenemos</p>
+                            <p class="titulo-res">respuesta: <p></p></p>
+                            <span class="respuesta"><?php echo $row->RESPUESTA?></span>
+                            <?php
+                                echo '<a href="vista_producto_admin.php?id='.$_GET["id"].'&id_pre='.$row->ID_PREGUNTA.'" class="btn-resp v1">editar</a>';
+                                echo '<a href="php/eliminar_pregunta.php?id='.$_GET["id"].'&id_pre='.$row->ID_PREGUNTA.'" class="btn-resp v1">eliminar</a>';
+                            ?>
                         </scroll-page>
-                        <scroll-page class="scroll-page">
-                            <p class="user">yaider cordoba cordoba: </p>
-                            <p class="pregunta">Lorem ipsum dolor sit amet consectetur adi quibusdam animi beatae!</p>
-                            <p class="tiempo">publicado hace un momento</p>
-                            <p class="titulo-res">respuesta: </p>
-                            <p class="respuesta">si, si tenemos</p>
-                        </scroll-page>
-                        <scroll-page class="scroll-page">
-                            <p class="user">yaider cordoba cordoba: </p>
-                            <p class="pregunta">Lorem ipsum dolor sit amet consectetur adi quibusdam animi beatae!</p>
-                            <p class="tiempo">publicado hace un momento</p>
-                            <p class="titulo-res">respuesta: </p>
-                            <p class="respuesta">si, si tenemos</p>
-                        </scroll-page>
+                        <?php
+                            }
+                        ?>
                     </scroll-container>
-                    <form action="" onsubmit="return preguntas()">
-                        <input class="campo-pregunta" type="text" placeholder="Hacer una pregunta">
-                        <input type="submit" class="btn-enviar" value="enviar">
+                    <form action="Php/preguntas.php" method="POST">
+                        <input class="campo-pregunta" type="text" name="mensaje" placeholder="Hacer una pregunta">
+                        <input type="text" name="id_product" value=<?php echo $_GET['id'];?> >
+                        <input type="text" name="id_user" value=<?php echo $_SESSION['nit']; ?>>
+                        <input type="submit" value="Enviar" class="btn-enviar"> 
                     </form>
                 </div>
             </div>
