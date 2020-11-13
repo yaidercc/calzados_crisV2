@@ -1,4 +1,6 @@
-<?php include "php/Conexion.php"; ?>
+<?php include "php/Conexion.php";
+    session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +26,7 @@
             </div>
             <div class="navegacion">
                 <a href="#" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
-                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i>yaider</a>
+                <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i><?php echo " " . $_SESSION['nombre']; ?></a>
             </div>
             <div class="salir">
                 <a href="php/cerrar_sesion.php" class="cerrar" id="abrir">salir</a>
@@ -170,16 +172,19 @@
                                 print_r($apunt->NOMBRE. "\t". $apunt->APELLIDO);
                             ?></p>
                             <p class="pregunta"><?php echo $row->MENSAJE;?></p>
-                            <p class="tiempo">publicado hace un momento</p>
                             <p class="titulo-res">respuesta: <p></p></p>
                             <span class="respuesta"><?php echo $row->RESPUESTA?></span>
                             <?php
                                 if($row->RESPUESTA!=NULL){
                                     echo '<a href="vista_producto_admin.php?id='.$_GET["id"].'&id_pre='.$row->ID_PREGUNTA.'" class="btn-resp v1">editar</a>';
                                 }else{
-                                    echo '<a href="vista_producto_admin.php?id='.$_GET["id"].'&id_pre='.$row->ID_PREGUNTA.'" class="btn-resp v1">responder</a>';
+                                    if($_SESSION['nit']==$row->ID_USUARIO_FK){
+                                        echo '<a href="vista_producto.php?id='.$_GET["id"].'&id_pre='.$row->ID_PREGUNTA.'" class="btn-resp v1">editar</a>';
+    
+                                        echo '<a href="#" onclick="EliminarProducto('.$_GET['id_pre'].')" class="btn-resp v1">eliminar</a>';   
+                                    }
                                 }
-                            
+
                              ?>
                         </scroll-page>
                         <?php

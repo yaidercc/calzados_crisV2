@@ -25,7 +25,7 @@ session_start();
             </div>
             <div class="navegacion">
                 <a href="#" class="chat" id="chateasion"><i title="notificaciones" class="fas fa-comments"> </i>chat</a>
-                <a href="#" id="notificar" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>notificaciones</a>
+                <a href="productos_pendientes.php" id="notificar" class="notificaciones"><i title="notificaciones" class="fas fa-bell"> </i>Pendientes</a>
                 <a href="#" class="nombre"><i title="notificaciones" class="fas fa-user"> </i><?php echo " " . $_SESSION['nombre']; ?></a>
             </div>
 
@@ -92,64 +92,7 @@ session_start();
             </div>
 
         </main>
-
-        <!--notificaciones-->
-        <div class="overlay" id="notificaciones">
-            <div class="popup notificaciones" id="popup-notificaiones">
-                <a href="#" id="btn-cerrar-popup2" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                <h1>entregas pendientes</h1>
-                <scroll-container class="scroll-container">
-                    <form action="#">
-                        <scroll-page>
-                            <div class="pendientes">
-                                <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
-                                <p class="desc"><strong>NOMBRE COMPRADOR:</p>
-                                <p class="desc"><strong>NOMBRE PRODUCTO: </p>
-                                <p class="desc"><strong>TALLA: </p>
-                                <p class="desc"><strong>DIRECCION:</p>
-                                <p class="desc"><strong>TELEFONO: </p>
-                                <p class="desc"><strong>CANTIDAD:</p>
-                                <p class="desc"><strong>TOTAL:</p>
-                                <input type="submit" class="btn-submit" value="entregado">
-                            </div>
-                        </scroll-page>
-                    </form>
-                    <form action="#">
-                        <scroll-page>
-                            <div class="pendientes">
-                                <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
-                                <p class="desc"><strong>NOMBRE COMPRADOR:</p>
-                                <p class="desc"><strong>NOMBRE PRODUCTO: </p>
-                                <p class="desc"><strong>TALLA: </p>
-                                <p class="desc"><strong>DIRECCION:</p>
-                                <p class="desc"><strong>TELEFONO: </p>
-                                <p class="desc"><strong>CANTIDAD:</p>
-                                <p class="desc"><strong>TOTAL:</p>
-                                <input type="submit" class="btn-submit" value="entregado">
-                            </div>
-                        </scroll-page>
-                    </form>
-                    <form action="#">
-                        <scroll-page>
-                            <div class="pendientes">
-                                <input type="hidden" name="idsc" value="<?php echo $mostrar['ID_COMPRA'] ?>">
-                                <p class="desc"><strong>NOMBRE COMPRADOR:</p>
-                                <p class="desc"><strong>NOMBRE PRODUCTO: </p>
-                                <p class="desc"><strong>TALLA: </p>
-                                <p class="desc"><strong>DIRECCION:</p>
-                                <p class="desc"><strong>TELEFONO: </p>
-                                <p class="desc"><strong>CANTIDAD:</p>
-                                <p class="desc"><strong>TOTAL:</p>
-                                <input type="submit" class="btn-submit" value="entregado">
-                            </div>
-                        </scroll-page>
-                    </form>
-                </scroll-container>
-            </div>
-        </div>
-
-
-
+        
         <div class="overlay" id="chat">
             <div class="popup" id="chatear">
                 <a href="#" id="btn-cerrar-popup3" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>

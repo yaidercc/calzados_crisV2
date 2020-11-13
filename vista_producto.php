@@ -1,5 +1,5 @@
 <?php include "php/Conexion.php";
-    session_start();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
     <script src="librerias/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src='js/main.js'></script>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" type="png" href="img/icon.png" />
@@ -53,26 +54,26 @@
                 <div class="foto">
                     <div class="slider">
                         <?php
-                            $id_producto = $_GET['id'];
-                            $consultaImagenes = $conexion->prepare("SELECT IMAGEN,IMAGEN2,IMAGEN3 FROM productos WHERE ID_PRODUCTO=$id_producto ");
-                            
-                            $consultaImagenes->execute();
-                            while ($row = $consultaImagenes->fetch(PDO::FETCH_OBJ)) { ?>
-                                <div class="imagen">
-                                    <?php
-                                        echo '<img src="' . $row->IMAGEN. '">';
-                                    ?>
-                                </div>
-                                <div class="imagen">
-                                    <?php
-                                        echo '<img src="' . $row->IMAGEN2. '">';
-                                    ?>
-                                </div>
-                                <div class="imagen">
-                                    <?php
-                                        echo '<img src="' . $row->IMAGEN3. '">';
-                                    ?>
-                                </div>
+                        $id_producto = $_GET['id'];
+                        $consultaImagenes = $conexion->prepare("SELECT IMAGEN,IMAGEN2,IMAGEN3 FROM productos WHERE ID_PRODUCTO=$id_producto ");
+
+                        $consultaImagenes->execute();
+                        while ($row = $consultaImagenes->fetch(PDO::FETCH_OBJ)) { ?>
+                            <div class="imagen">
+                                <?php
+                                echo '<img src="' . $row->IMAGEN . '">';
+                                ?>
+                            </div>
+                            <div class="imagen">
+                                <?php
+                                echo '<img src="' . $row->IMAGEN2 . '">';
+                                ?>
+                            </div>
+                            <div class="imagen">
+                                <?php
+                                echo '<img src="' . $row->IMAGEN3 . '">';
+                                ?>
+                            </div>
                         <?php
                         }
                         ?>
@@ -135,7 +136,7 @@
                                 <a href="#" class="later"><?php echo $row->COLOR1; ?>,&nbsp;</a>
                                 <a href="#" class="later"><?php echo $row->COLOR2; ?>,&nbsp;</a>
                                 <a href="#" class="later"><?php echo $row->COLOR3; ?></a>
-                                
+
                             </div>
                         </div>
                         <div class="contenedor-botones">
@@ -154,41 +155,47 @@
                 <h1 class="title">Preguntas Sobre El producto</h1>
 
                 <div class="contenedor-preguntas">
-                <scroll-container class="contenedor-scroll">
-                    <?php
-                    $id_producto = $_GET['id'];
-                    $consultaCalzados = $conexion->prepare("SELECT * FROM preguntas WHERE ID_PRODUCTO_FK=$id_producto");
-                    $consultaCalzados->execute();
-                    while ($row = $consultaCalzados->fetch(PDO::FETCH_OBJ)) { ?>
-                        <scroll-page class="scroll-page">
-                            <p class="user"><?php 
-                                $consultarUser=$conexion->prepare("SELECT usuarios.*,
+                    <scroll-container class="contenedor-scroll">
+                        <?php
+                        $id_producto = $_GET['id'];
+                        $consultaCalzados = $conexion->prepare("SELECT * FROM preguntas WHERE ID_PRODUCTO_FK=$id_producto");
+                        $consultaCalzados->execute();
+                        while ($row = $consultaCalzados->fetch(PDO::FETCH_OBJ)) { ?>
+                            <scroll-page class="scroll-page">
+                                <table id="wiri">
+                                    <p class="user"><?php
+                                                    $consultarUser = $conexion->prepare("SELECT usuarios.*,
                                 preguntas.*
                                 FROM usuarios 
                                 INNER JOIN preguntas
                                 on usuarios.ID_USUARIO=preguntas.ID_USUARIO_FK");
-                                   $consultarUser->execute();
-                                   $apunt = $consultarUser->fetch(PDO::FETCH_OBJ);
-                                print_r($apunt->NOMBRE. "\t". $apunt->APELLIDO);
-                            ?></p>
-                            <p class="pregunta"><?php echo $row->MENSAJE;?></p>
-                            <p class="tiempo">publicado hace un momento</p>
-                            <p class="titulo-res">respuesta: <p></p></p>
-                            <span class="respuesta"><?php echo $row->RESPUESTA?></span>
-                            <?php
-                                echo '<a href="vista_producto_admin.php?id='.$_GET["id"].'&id_pre='.$row->ID_PREGUNTA.'" class="btn-resp v1">editar</a>';
-                                echo '<a href="php/eliminar_pregunta.php?id='.$_GET["id"].'&id_pre='.$row->ID_PREGUNTA.'" class="btn-resp v1">eliminar</a>';
-                            ?>
-                        </scroll-page>
+                                                    $consultarUser->execute();
+                                                    $apunt = $consultarUser->fetch(PDO::FETCH_OBJ);
+                                                    print_r($apunt->NOMBRE . "\t" . $apunt->APELLIDO);
+                                                    ?></p>
+                                    <p class="pregunta"><?php echo $row->MENSAJE; ?></p>
+                                    <p class="titulo-res">respuesta: <p></p>
+                                    </p>
+                                    <span class="respuesta"><?php echo $row->RESPUESTA ?></span>
+                                    <?php
+                                    if ($_SESSION['nit'] == $row->ID_USUARIO_FK) {
+                                        echo '<a href="vista_producto.php?id=' . $_GET["id"] . '&id_pre=' . $row->ID_PREGUNTA . '" class="btn-resp v1">editar</a>';
+                                        echo '<a href="#" onclick="AlertarEliminar(' . $row->ID_PREGUNTA . ')" class="btn-resp v1">eliminar</a>';
+                                    }
+                                    ?>
+                                </table>
+                            </scroll-page>
                         <?php
-                            }
+                        }
                         ?>
                     </scroll-container>
+
                     <form action="Php/preguntas.php" method="POST">
-                        <input class="campo-pregunta" type="text" name="mensaje" placeholder="Hacer una pregunta">
-                        <input type="text" name="id_product" value=<?php echo $_GET['id'];?> >
-                        <input type="text" name="id_user" value=<?php echo $_SESSION['nit']; ?>>
-                        <input type="submit" value="Enviar" class="btn-enviar"> 
+                        <input class="campo-pregunta" type="text" name="mensaje" placeholder="Hacer una pregunta" required>
+                        <input type="hidden" name="id_product" value=<?php echo $_GET['id']; ?>>
+                        <input type="hidden" name="id_user" value=<?php echo $_SESSION['nit']; ?>>
+
+                        <input type="submit" value="Enviar" class="btn-enviar">
                     </form>
                 </div>
             </div>
@@ -210,6 +217,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src='js/procesos.js'></script>
     <script src='js/jquery.slides.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
         $(function() {
             $(".slider").slidesjs({

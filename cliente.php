@@ -74,7 +74,7 @@
                                 </div>
 
                                 <div class="botones">
-                                    <?php echo '<a href="vista_producto.php?id='.$row->ID_PRODUCTO.'" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>' ?>
+                                    <?php echo '<a href="vista_producto.php?id='.$row->ID_PRODUCTO.'&id_pre='.'" name="registrate" class="btn-solicitar v1 inicio">solicitar</a>' ?>
                                 </div>
                            
                             </div>

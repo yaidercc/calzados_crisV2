@@ -1,207 +1,203 @@
-                            /**  ----------       ESTILOS -> GENERALES    ------------  **/
+/**  ----------       ESTILOS -> GENERALES    ------------  **/
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-html{
-    font-size: 62.5%; /** resete para rems - 62.5%=10px**/
+html {
+  font-size: 62.5%; /** resete para rems - 62.5%=10px**/
 }
-body{
-    font-family: 'Archivo Narrow', sans-serif;
-    font-size: 1.6rem;
-    color: #fff;
-    text-transform: capitalize;
+body {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  text-transform: capitalize;
 }
-i{
-    cursor: pointer;
+i {
+  cursor: pointer;
 }
-a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: capitalize;
+a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
 }
 
 /*sistema de tamaños que son directamente proporcionales*/
-h1{
-    font-size: 3.8rem;
-
+h1 {
+  font-size: 3.8rem;
 }
-h2{
-    font-size: 3.4rem;
-
+h2 {
+  font-size: 3.4rem;
 }
-h3{
-    font-size: 3rem;
-
+h3 {
+  font-size: 3rem;
 }
-h4{
-    font-size: 2.6rem;
-    
+h4 {
+  font-size: 2.6rem;
 }
 .scroll-container {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
 scroll-container {
-    display: block;
-    width: 80%;
-    height: 80%;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+  display: block;
+  width: 80%;
+  height: 80%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 .overlay scroll-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80%;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  font-size: 16px;
 }
-.preguntas-producto .contenedor-preguntas scroll-page{
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    font-size: 16px;
-    margin-top:2rem;
+.preguntas-producto .contenedor-preguntas scroll-page {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  font-size: 16px;
+  margin-top: 2rem;
 }
 .preguntas-producto .contenedor-preguntas scroll-container {
-    display: block;
-    width: 90rem;
-    height: 30rem;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+  display: block;
+  width: 90rem;
+  height: 30rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 .preguntas-producto .contenedor-preguntas .btn-enviar {
-    background: #2699FB;
-    text-transform: capitalize;
-    border:none;
-    width: 10rem;
-    height: 5rem;
-    color: #fff;
-    margin-left:1rem;
-    cursor: pointer;
+  background: #2699fb;
+  text-transform: capitalize;
+  border: none;
+  width: 10rem;
+  height: 5rem;
+  color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
 }
 .preguntas-producto .contenedor-preguntas .tiempo {
-    color:#9b9b9b;
-    font-size: 1.3rem;
+  color: #9b9b9b;
+  font-size: 1.3rem;
 }
-.contenedor{
-    height: 100%;
-    min-height: 100vh;/*altura minima de toda la pantalla*/
-    margin: 0 auto;
-    display: grid;
-    grid-template-rows: 6rem 4rem  100rem 5rem ; 
-    grid-template-areas: "header"
-                          "filtros"
-                          "principal"
-                          "pie";
-    transition: all .3s ease;
-}
-
-                            /**  ----------     ESTILOS ->  ENCABEZADO PRINCIPAL   ------------  **/
-
-.header{
-    background-color: #2699FB;
-    color: white;
-    font-size: 1.6rem;
-    grid-area: header;
-    display: grid;
-    grid-template-columns: auto 1fr auto  auto ;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
-    align-items: center;
-    justify-content: space-between;
-    grid-gap: 5px;/*espaceado de 20px entre las divisiones del grid*/
-    grid-template-areas: "logo busqueda  iconos registro salir";
+.contenedor {
+  height: 100%;
+  min-height: 100vh; /*altura minima de toda la pantalla*/
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 6rem 4rem 100rem 5rem;
+  grid-template-areas:
+    "header"
+    "filtros"
+    "principal"
+    "pie";
+  transition: all 0.3s ease;
 }
 
-.header .navegacion{
-    grid-area: iconos;
-    padding: 0rem 2rem;
-    display: grid;
-    grid-template-columns: auto 1fr;/*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
-    grid-gap: 2.5rem;/*espaceado de 20px entre las divisiones del grid*/
-    grid-template-areas: "chat noti name";
-}
-.header .navegacion a{
-    font-size: 1.9rem;
+/**  ----------     ESTILOS ->  ENCABEZADO PRINCIPAL   ------------  **/
+
+.header {
+  background-color: #2699fb;
+  color: white;
+  font-size: 1.6rem;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto; /*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 5px; /*espaceado de 20px entre las divisiones del grid*/
+  grid-template-areas: "logo busqueda  iconos registro salir";
 }
 
-.header .navegacion .chat{
-    grid-area: chat;
+.header .navegacion {
+  grid-area: iconos;
+  padding: 0rem 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr; /*1fr significa que el elemento ocupa todo el espacio que necesita y los auto se acomodan a lo que deje por decirlo asi*/
+  grid-gap: 2.5rem; /*espaceado de 20px entre las divisiones del grid*/
+  grid-template-areas: "chat noti name";
 }
-.header  .contenedor-logo{
-    grid-area: logo;
-    padding: 0rem 1rem;
-}
-.header .navegacion .notificaciones{
-   grid-area:noti;
-}
-.header .navegacion .nombre{
-    grid-area:name;
-}
-.header .navegacion .fas{
-    padding: 0rem 1rem;
-}
-.header .navegacion .cerrar{
-    grid-area:salir;
-    background-color:#7FC4FD ;
-    font-size: 1.5rem;
-}
-.header .barra-busqueda{
-    grid-area: busqueda;
-    display: flex;/*centrar elementos */
-    align-items: center;
-    justify-content: center;
-}
-.header .salir,.registrate{
-    grid-area: salir;
-    width: 100%;
-    padding: 2rem;
-    transition: background-color 0.5s;
-    transform-origin: left;
-}
-.header .salir a{
-    font-size: 2rem;
+.header .navegacion a {
+  font-size: 1.9rem;
 }
 
-.header .salir:hover{
-    cursor: pointer;
-    background-color: #7FC4FD;
+.header .navegacion .chat {
+  grid-area: chat;
+}
+.header .contenedor-logo {
+  grid-area: logo;
+  padding: 0rem 1rem;
+}
+.header .navegacion .notificaciones {
+  grid-area: noti;
+}
+.header .navegacion .nombre {
+  grid-area: name;
+}
+.header .navegacion .fas {
+  padding: 0rem 1rem;
+}
+.header .navegacion .cerrar {
+  grid-area: salir;
+  background-color: #7fc4fd;
+  font-size: 1.5rem;
+}
+.header .barra-busqueda {
+  grid-area: busqueda;
+  display: flex; /*centrar elementos */
+  align-items: center;
+  justify-content: center;
+}
+.header .salir,
+.registrate {
+  grid-area: salir;
+  width: 100%;
+  padding: 2rem;
+  transition: background-color 0.5s;
+  transform-origin: left;
+}
+.header .salir a {
+  font-size: 2rem;
 }
 
-.header .salir:hover{
-    cursor: pointer;
-    background-color: #7FC4FD;
-}
-.header .registrate:hover{
-    cursor: pointer;
-    background-color: #7FC4FD;
+.header .salir:hover {
+  cursor: pointer;
+  background-color: #7fc4fd;
 }
 
-.header .registrate{
-    grid-area: registro;
-    font-size: 2rem;
+.header .salir:hover {
+  cursor: pointer;
+  background-color: #7fc4fd;
+}
+.header .registrate:hover {
+  cursor: pointer;
+  background-color: #7fc4fd;
 }
 
+.header .registrate {
+  grid-area: registro;
+  font-size: 2rem;
+}
 
-                    /**  ----------       ESTILOS -> FILTROS DE LOS PRODUCTOS    ------------  **/
-.filtros{
-    grid-area: filtros;
-    background-color: #7FC4FD;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+/**  ----------       ESTILOS -> FILTROS DE LOS PRODUCTOS    ------------  **/
+.filtros {
+  grid-area: filtros;
+  background-color: #7fc4fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.filtros .nav a{
-    margin-right: 2rem;
-    font-size: 1.5rem;
-    transition: .3s;
+.filtros .nav a {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
 }
-.filtros .nav a:hover{
-    color:#2699FB ;
+.filtros .nav a:hover {
+  color: #2699fb;
 }
 
 /*.filtros.cabecera{
@@ -224,680 +220,740 @@ scroll-container {
     margin: 0;
 }*/
 
-                    /**  ----------       ESTILOS -> CONTENIDO PRINCIPAL DE LA PAGINA    ------------  **/
+/**  ----------       ESTILOS -> CONTENIDO PRINCIPAL DE LA PAGINA    ------------  **/
 
-.principal{
-    grid-area: principal;
-}
-
-.principal .cabeza-main{
-    grid-area: cabezamain;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
+.principal {
+  grid-area: principal;
 }
 
-.principal .calzado{
-    padding: 0rem 1rem;
-    color: #2699FB;
+.principal .cabeza-main {
+  grid-area: cabezamain;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
 }
 
-                        /**  ----------       ESTILOS -> CONTENEDOR DE PRODUCTOS    ------------  **/
-
-.principal .container-productos{
-    padding:1rem;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+.principal .calzado {
+  padding: 0rem 1rem;
+  color: #2699fb;
 }
 
-                        /**  ----------       ESTILOS -> DESCRIPCION DEL PRODUCTO    ------------  **/
-.principal .container-productos .producto{
-    max-width: 34rem;
-    height: 42rem;
-    box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);
-    display: grid;
-    grid-template-rows:20rem 13rem auto;
-    grid-template-areas: "imagen"
-                        "descripcion"
-                        "botones";
-    padding: 1rem;
-    margin-right:1rem;
-}                   
-            /**BOTONES**/
+/**  ----------       ESTILOS -> CONTENEDOR DE PRODUCTOS    ------------  **/
 
-.principal .container-productos .producto .botones{
-    grid-area: botones;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
-.principal .container-productos .producto .inp{
-    width: 100%;
-    height:25px;
-    padding: 10px;
-
-}
-.principal .container-productos .producto .visible{
-    display: flex;
-    align-items:center;
-    padding-top:1rem;
-}
-.principal .container-productos .producto .visible .txt{
-    padding-right: 1rem;
-    color:#2699FB;
-} 
-.principal .container-productos .producto .visible .txt:hover{
-    text-decoration: inherit;
-} 
-        /*  BOTON AGREGAR AL CARRITO  */
-
-.btn-carrito{
-    background-color: #35b446;
-    display: inline-block;
-    padding: 1rem 0px;
-    text-align: center;
-    width: 5rem;
-    margin-right: 10px;
-    transition: background-color 0.5s;
-    transform-origin: left;
-}
-.btn-carrito.v1{
-    width: 15%;
+.principal .container-productos {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.btn-carrito:hover{
-    background-color: #57d668;
+/**  ----------       ESTILOS -> DESCRIPCION DEL PRODUCTO    ------------  **/
+.principal .container-productos .producto {
+  max-width: 34rem;
+  height: 42rem;
+  box-shadow: -1px 3px 10px 0px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-rows: 20rem 13rem auto;
+  grid-template-areas:
+    "imagen"
+    "descripcion"
+    "botones";
+  padding: 1rem;
+  margin-right: 1rem;
+}
+/**BOTONES**/
 
+.principal .container-productos .producto .botones {
+  grid-area: botones;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
-.btn-carrito.flecha{
-    background-color:#76b8f1;
+.principal .container-productos .producto .inp {
+  width: 100%;
+  height: 25px;
+  padding: 10px;
 }
-.btn-carrito.flecha:hover{
-    background-color:#9dbfdd;
+.principal .container-productos .producto .visible {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
 }
-.principal .container-productos .btn-carrito.eliminar{
-    background-color: #fb2626;
+.principal .container-productos .producto .visible .txt {
+  padding-right: 1rem;
+  color: #2699fb;
 }
-.principal .container-productos .btn-carrito.eliminar:hover{
-    background-color: #e67575;
+.principal .container-productos .producto .visible .txt:hover {
+  text-decoration: inherit;
 }
-        /*BOTON SOLICITAR*/
-.btn-solicitar{
-    background-color: #2699FB;
-    display: inline-block;
-    padding: 1rem 0px;
-    text-align: center;
-    width: 27rem;
-    transition: background-color 0.5s;
-    transform-origin: left;
+/*  BOTON AGREGAR AL CARRITO  */
+
+.btn-carrito {
+  background-color: #35b446;
+  display: inline-block;
+  padding: 1rem 0px;
+  text-align: center;
+  width: 5rem;
+  margin-right: 10px;
+  transition: background-color 0.5s;
+  transform-origin: left;
 }
-.btn-solicitar.v1{
-    width: 100%;
-}
-.btn-solicitar.inicio{
-    width:100%;
-}
-.btn-solicitar:hover{
-    background-color:#76b8f1 ;
+.btn-carrito.v1 {
+  width: 15%;
 }
 
-            /**IMAGEN DEL PRODUCTO**/
-.imagen{
-    grid-area: imagen;
-    background-color: #30b9f8 ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.btn-carrito:hover {
+  background-color: #57d668;
 }
-.imagen img{
-    height: 100%;
-    width: 100%;
+.btn-carrito.flecha {
+  background-color: #76b8f1;
+}
+.btn-carrito.flecha:hover {
+  background-color: #9dbfdd;
+}
+.principal .container-productos .btn-carrito.eliminar {
+  background-color: #fb2626;
+}
+.principal .container-productos .btn-carrito.eliminar:hover {
+  background-color: #e67575;
+}
+/*BOTON SOLICITAR*/
+.btn-solicitar {
+  background-color: #2699fb;
+  display: inline-block;
+  padding: 1rem 0px;
+  text-align: center;
+  width: 27rem;
+  transition: background-color 0.5s;
+  transform-origin: left;
+}
+.btn-solicitar.v1 {
+  width: 100%;
+}
+.btn-solicitar.inicio {
+  width: 100%;
+}
+.btn-solicitar:hover {
+  background-color: #76b8f1;
 }
 
-            /**CARACTERISTICAS Y PRECIO**/
-.contenedor-descripcion{
-    grid-area:descripcion;
-    color: #2699FB;
-    height: 100%;
-    
+/**IMAGEN DEL PRODUCTO**/
+.imagen {
+  grid-area: imagen;
+  background-color: #30b9f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.contenedor-descripcion h1{
-    font-size: 2.8rem;
+.imagen img {
+  height: 100%;
+  width: 100%;
+}
+
+/**CARACTERISTICAS Y PRECIO**/
+.contenedor-descripcion {
+  grid-area: descripcion;
+  color: #2699fb;
+  height: 100%;
+}
+.contenedor-descripcion h1 {
+  font-size: 2.8rem;
 }
 
 /**  ----------       ESTILOS -> BOTON CARRITO   ------------  **/
 
-.carrito{
-    display: inline-block;
-    padding: 1rem 2rem;
-    text-align: center;
-    position: relative;
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 10px;
-    color:#fff ;
-    background-color: #2699FB;
-    transition: background-color 0.5s;
-    transform-origin: left;
+.carrito {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 10px;
+  color: #fff;
+  background-color: #2699fb;
+  transition: background-color 0.5s;
+  transform-origin: left;
 }
 
-.carrito:hover{
-    border:1px solid #2699FB;
-    color: #2699FB;
-    background-color: #fff;
-}
-     
-                /**  ----------    ESTILOS -> VISTA PRODUCTO  ------------  **/  
-
-.elementos-producto{
-    border: 5px solid #2699FB;
-    height: 60rem;
-    width: 80rem;
-    color: #2699FB;
-    margin: 2.5rem auto;
-    padding: 2rem;
-    display: grid;
-    grid-template-rows:10rem 8rem 10rem 7rem;
-    grid-template-areas: "titulos"
-                            "files"
-                         "contenidos"
-                         "botones";
-}
-.elementos-producto .contenedor-boton{
-    grid-area:botones;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.elementos-producto .files{
-    grid-area: files;
-}
-.contenedor-boton .btn_agregar{
-    background-color: #2699FB;
-    padding: 1rem 0px;
-    text-align: center;
-    color: #fff;
-    text-transform: capitalize;
-    width: 27rem;
-    transition: background-color 0.5s;
-    transform-origin: left;
-    cursor: pointer;
-    border: none;
-}
-.btn_agregar:hover{
-    background-color:#76b8f1 ;
+.carrito:hover {
+  border: 1px solid #2699fb;
+  color: #2699fb;
+  background-color: #fff;
 }
 
-.contenedor-producto{
-    width: 110rem;
-    height: 65rem;
-    margin: 20px auto;
-    border: 5px solid #2699FB;
-    display: grid;
-    grid-template-columns: 45% 55% ;
-    grid-template-areas: "img caracteristicas";
+/**  ----------    ESTILOS -> VISTA PRODUCTO  ------------  **/
+
+.elementos-producto {
+  border: 5px solid #2699fb;
+  height: 60rem;
+  width: 80rem;
+  color: #2699fb;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 10rem 8rem 10rem 7rem;
+  grid-template-areas:
+    "titulos"
+    "files"
+    "contenidos"
+    "botones";
+}
+.elementos-producto .contenedor-boton {
+  grid-area: botones;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.elementos-producto .files {
+  grid-area: files;
+}
+.contenedor-boton .btn_agregar {
+  background-color: #2699fb;
+  padding: 1rem 0px;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  width: 27rem;
+  transition: background-color 0.5s;
+  transform-origin: left;
+  cursor: pointer;
+  border: none;
+}
+.btn_agregar:hover {
+  background-color: #76b8f1;
 }
 
-   /**  ----------       ESTILOS -> SECCION DE FOTO > VISTA_PRODUCTO  ------------  **/  
-.contenedor-producto .foto{
-    grid-area:img;
-    display: grid;
-    grid-template-rows: 90% auto;
-    grid-template-areas: "slider" 
-                        "estrellis";
+.contenedor-producto {
+  width: 110rem;
+  height: 65rem;
+  margin: 20px auto;
+  border: 5px solid #2699fb;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-areas: "img caracteristicas";
+}
+/**  ----------       ESTILOS -> PENDIENTES  ------------  **/
+.container-productos-pendientes .pedido {
+  display: grid;
+}
+
+.container-productos-pendientes {
+  padding: 1rem;
+}
+.container-productos-pendientes .pedido .lista-pe .titulos th {
+  color: #2699fb;
+  text-align: left;
+  font-size: 20px;
+}
+.container-productos-pendientes .herramientas {
+  text-align: right;
+  display: inline-block;
+}
+.container-productos-pendientes .herramientas a {
+  color: #000;
+  margin-right: 20px;
+  color: #fff;
+  display: inline-block;
+  width: 150px;
+  height: 25px;
+  text-align: center;
+}
+/*estilos iconos*/
+.container-productos-pendientes .lista-pe .fa-truck-moving  {
+    color: #30b9f8;
+}
     
-}
-.container-producto .foto .slider{
-    grid-area: slider;
-    height: 100%;
-}
-.slidesjs-pagination{
-    padding: 4rem;
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-}
-.slidesjs-pagination a{
-    margin-right:2rem ;
+.container-productos-pendientes .lista-pe .fa-check  {
+    color: #35b446;
 }
 
-.slidesjs-next{
-    float: right;
-    padding-right:1.5rem;
-}
-.slidesjs-previous{
-    float: left;
-    padding-left: 1.5rem;
-}
-.slider a{
-    color: #096BA7;
-}
-.container-producto .foto .slider img{
-    height: 1000px;
-}
-.contenedor-producto .foto .puntuaciones .icons p,.icons .flecha{
-    color:#2699FB;
-}
-.contenedor-producto .foto .puntuaciones{
-    text-align:center;
-    margin: 5px auto;
-}
-.contenedor-producto .foto .flecha{
-    font-size: 3rem;
-    cursor: pointer;
-}
-.contenedor-producto .foto .icons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-}
-.colors{
-    color:#000;
-}
-                    /**  ----------   ESTILOS -> SECCION CARACTERISTICAS > VISTA_PRODUCTO   ------------  **/ 
-.contenedor-producto .caracteristicas{
-    grid-area:caracteristicas;
-    display: grid;
-    grid-template-rows:8rem auto 8rem;
-    grid-template-areas: "nombre"
-                         "etc" 
-                         "btns";
-}
-.contenedor-producto .caracteristicas .title{
-    grid-area:nombre;
-    text-align:center;
-    color: #2699FB;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-.contenedor-producto .caracteristicas .elecciones{
-    color: #000;
-    grid-area:etc;
-    font-size:3rem ;
-}
-.contenedor-producto .caracteristicas .elecciones .hijo.general{
-    display:flex;
-}
-.contenedor-producto .caracteristicas .elecciones .later{
-    margin-left: 1rem;
-    color: #2699FB; 
-}
-.contenedor-producto .caracteristicas .elecciones .hijo{
-    display: flex;
-    align-items: center;
+.container-productos-pendientes .lista-pe .fa-times  {
+    color: #fb2626;
+   
 }
 
-.contenedor-producto .caracteristicas .elecciones .tallas .listado-tallas{
-    width: 20rem;
-    height: 3rem;
-    margin-left: 1rem;
-    padding: 0rem 1rem;
 
+/*estilos botones*/
+.container-productos-pendientes .herramientas .camino {
+  background-color: #30b9f8;
 }
-.contenedor-producto .caracteristicas .contenedor-botones{
-    grid-area:btns;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contenedor-producto .caracteristicas .contenedor-botones .btn-solicitar{
-    margin-right: 1rem;
-}
-.contenedor-producto .caracteristicas .unidades{
-    display: flex;
-}
-.contenedor-producto .caracteristicas .unidades input{
-    width:5rem;
-    text-align:center;
-    margin-left:1rem;
-    border: none;
-    border-bottom:3px solid #2699FB;
-}
-.contenedor-producto .caracteristicas .hijo{
-    margin-bottom:2.7rem;
-}
-.contenedor-producto .caracteristicas .colores .color{
-    display: inline-block;
-}
-.contenedor-producto .caracteristicas .colores .colors{
-    color: #000;
+.container-productos-pendientes .herramientas .camino:hover {
+  background-color: #9dd3ed;
 }
 
-                    /**  ----------       ESTILOS -> GESTIONAR PRODUCTO   ------------  **/
-.puntuaciones a i{
-    color:#2699FB;
+.container-productos-pendientes .herramientas .cancel {
+  background-color: #fb2626;
+}
+.container-productos-pendientes .herramientas .cancel:hover {
+  background-color: #ff7979;
+}
+
+.container-productos-pendientes .herramientas .entregado {
+  background-color: #35b446;
+}
+.container-productos-pendientes .herramientas .entregado:hover {
+  background-color: #7df58d;
+}
+
+.container-productos-pendientes .pedido .lista-pe tr td {
+  padding: 20px;
+  padding-left: 0px;
+}
+/**  ----------       ESTILOS -> SECCION DE FOTO > VISTA_PRODUCTO  ------------  **/
+.contenedor-producto .foto {
+  grid-area: img;
+  display: grid;
+  grid-template-rows: 90% auto;
+  grid-template-areas:
+    "slider"
+    "estrellis";
+}
+.container-producto .foto .slider {
+  grid-area: slider;
+  height: 100%;
+}
+.slidesjs-pagination {
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slidesjs-pagination a {
+  margin-right: 2rem;
+}
+
+.slidesjs-next {
+  float: right;
+  padding-right: 1.5rem;
+}
+.slidesjs-previous {
+  float: left;
+  padding-left: 1.5rem;
+}
+.slider a {
+  color: #096ba7;
+}
+.container-producto .foto .slider img {
+  height: 1000px;
+}
+.contenedor-producto .foto .puntuaciones .icons p,
+.icons .flecha {
+  color: #2699fb;
+}
+.contenedor-producto .foto .puntuaciones {
+  text-align: center;
+  margin: 5px auto;
+}
+.contenedor-producto .foto .flecha {
+  font-size: 3rem;
+  cursor: pointer;
+}
+.contenedor-producto .foto .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.colors {
+  color: #000;
+}
+/**  ----------   ESTILOS -> SECCION CARACTERISTICAS > VISTA_PRODUCTO   ------------  **/
+.contenedor-producto .caracteristicas {
+  grid-area: caracteristicas;
+  display: grid;
+  grid-template-rows: 8rem auto 8rem;
+  grid-template-areas:
+    "nombre"
+    "etc"
+    "btns";
+}
+.contenedor-producto .caracteristicas .title {
+  grid-area: nombre;
+  text-align: center;
+  color: #2699fb;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.contenedor-producto .caracteristicas .elecciones {
+  color: #000;
+  grid-area: etc;
+  font-size: 3rem;
+}
+.contenedor-producto .caracteristicas .elecciones .hijo.general {
+  display: flex;
+}
+.contenedor-producto .caracteristicas .elecciones .later {
+  margin-left: 1rem;
+  color: #2699fb;
+}
+.contenedor-producto .caracteristicas .elecciones .hijo {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-producto .caracteristicas .elecciones .tallas .listado-tallas {
+  width: 20rem;
+  height: 3rem;
+  margin-left: 1rem;
+  padding: 0rem 1rem;
+}
+.contenedor-producto .caracteristicas .contenedor-botones {
+  grid-area: btns;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contenedor-producto .caracteristicas .contenedor-botones .btn-solicitar {
+  margin-right: 1rem;
+}
+.contenedor-producto .caracteristicas .unidades {
+  display: flex;
+}
+.contenedor-producto .caracteristicas .unidades input {
+  width: 5rem;
+  text-align: center;
+  margin-left: 1rem;
+  border: none;
+  border-bottom: 3px solid #2699fb;
+}
+.contenedor-producto .caracteristicas .hijo {
+  margin-bottom: 2.7rem;
+}
+.contenedor-producto .caracteristicas .colores .color {
+  display: inline-block;
+}
+.contenedor-producto .caracteristicas .colores .colors {
+  color: #000;
+}
+
+/**  ----------       ESTILOS -> GESTIONAR PRODUCTO   ------------  **/
+.puntuaciones a i {
+  color: #2699fb;
 }
 .puntuaciones a.seleccionado i {
-    color: #ffff00;
+  color: #ffff00;
 }
-.btn-carrito.clean{
-    margin-left: 10px;
-    background:#fb3026;
+.btn-carrito.clean {
+  margin-left: 10px;
+  background: #fb3026;
 }
-                    /**  ----------       ESTILOS -> PREGUNTAS PRODUCTO   ------------  **/
-.preguntas-producto{
-    color:#000;
-    width: 110rem;
-    margin: 0px auto;
-    padding:10px;
+/**  ----------       ESTILOS -> PREGUNTAS PRODUCTO   ------------  **/
+.preguntas-producto {
+  color: #000;
+  width: 110rem;
+  margin: 0px auto;
+  padding: 10px;
 }
-.preguntas-producto h1{
-    text-align: center;
-    color:#2699FB;
+.preguntas-producto h1 {
+  text-align: center;
+  color: #2699fb;
 }
-.preguntas-producto .user, .titulo-res{
-    font-size: 2rem;
-    color:#2699FB;
+.preguntas-producto .user,
+.titulo-res {
+  font-size: 2rem;
+  color: #2699fb;
 }
-.preguntas-producto .contenedor-preguntas{
-    margin-bottom: 5rem;
-    font-size: 1.5rem;
+.preguntas-producto .contenedor-preguntas {
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
 }
-.preguntas-producto .campo-pregunta{
-    width: 45rem;
-    height:5rem;
-    text-align: center;
-}
-
-.preguntas-producto .contenedor-preguntas .btn-resp{
-    color:#b1b1b1;
-}
-.preguntas-producto .contenedor-preguntas .btn-resp:hover{
-    color:#747272;
-}
-                    /**  ----------       ESTILOS -> GESTIONAR PRODUCTO   ------------  **/
-
-    /*  ESTILOS INPUT TIYPE: FILE > GESTIONAR PRODUCTO   */
-
-input[type="file"]{
-    display: none;
+.preguntas-producto .campo-pregunta {
+  width: 45rem;
+  height: 5rem;
+  text-align: center;
 }
 
-input[type="file"]:hover{
-    border: 3px solid #2699FB ;
+.preguntas-producto .contenedor-preguntas .btn-resp {
+  color: #b1b1b1;
 }
-label i{
-    margin-right: .5rem;
+.preguntas-producto .contenedor-preguntas .btn-resp:hover {
+  color: #747272;
+}
+/**  ----------       ESTILOS -> GESTIONAR PRODUCTO   ------------  **/
+
+/*  ESTILOS INPUT TIYPE: FILE > GESTIONAR PRODUCTO   */
+
+input[type="file"] {
+  display: none;
 }
 
-.elementos-producto .files .sub .box{
-    padding:4rem;
+input[type="file"]:hover {
+  border: 3px solid #2699fb;
 }
-.elementos-producto .files .sub{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    
+label i {
+  margin-right: 0.5rem;
+}
+
+.elementos-producto .files .sub .box {
+  padding: 4rem;
+}
+.elementos-producto .files .sub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .js .inputfile {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .inputfile + label {
-    max-width: 15rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    padding: 2rem 2rem;
+  max-width: 15rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 2rem 2rem;
 }
 
-
 .inputfile + label svg {
-    width: 1em;
-    height: 1em;
-    vertical-align: middle;
-    fill: currentColor;
-    margin-top: -0.25em;
-    margin-right: 0.25em;
-    transition: background-color 0.5s;
-    transform-origin: left;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+  transition: background-color 0.5s;
+  transform-origin: left;
 }
 
 .inputfile-1 + label {
-    color: #f1e5e6;
-    background-color: #2699FB ;
-     transition: background-color 0.5s;
-    transform-origin: left;
+  color: #f1e5e6;
+  background-color: #2699fb;
+  transition: background-color 0.5s;
+  transform-origin: left;
 }
 
 .inputfile-1:focus + label,
 .inputfile-1.has-focus + label,
 .inputfile-1 + label:hover {
-    background-color:#76b8f1;
+  background-color: #76b8f1;
 }
-        
-.elementos-producto .files{
-    grid-area: files;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.elementos-producto .files {
+  grid-area: files;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /**  ----------       ESTILOS -> CAMPOS DE TEXTO > GESTIONAR PRODUCTO   ------------  **/
-        
-.elementos-producto .columnas{
-    grid-area: contenidos;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.elementos-producto .columnas {
+  grid-area: contenidos;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.elementos-producto .columnas input,select{
-    margin-bottom:2rem;
-    margin-top: .5rem;
+.elementos-producto .columnas input,
+select {
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
-.elementos-producto h1{
-    text-align:center;
+.elementos-producto h1 {
+  text-align: center;
 }
-.columnas{
-    display: grid;
-    grid-template-columns: 50% 49%;
-    grid-template-areas: "izquierda derecha";
-    grid-gap: 20px;
-    margin: 0px auto;
+.columnas {
+  display: grid;
+  grid-template-columns: 50% 49%;
+  grid-template-areas: "izquierda derecha";
+  grid-gap: 20px;
+  margin: 0px auto;
 }
-.columnas .lado-izquierdo{
-    grid-area: izquierda;
+.columnas .lado-izquierdo {
+  grid-area: izquierda;
 }
-.columnas .lado-derecho{
-    grid-area:derecha;
+.columnas .lado-derecho {
+  grid-area: derecha;
 }
-.elementos-producto .columnas  .contenedor-general{
-   display: grid;
-   grid-template-columns: 15rem 15rem;
-   grid-template-areas: "izquierda-1 derecha-1";
+.elementos-producto .columnas .contenedor-general {
+  display: grid;
+  grid-template-columns: 15rem 15rem;
+  grid-template-areas: "izquierda-1 derecha-1";
 }
-.elementos-producto .columnas .contenedor-general .izquierda{
-    grid-area: izquierda-1;
+.elementos-producto .columnas .contenedor-general .izquierda {
+  grid-area: izquierda-1;
 }
-.elementos-producto .columnas  .contenedor-general .derecha{
-    grid-area: derecha-1;
+.elementos-producto .columnas .contenedor-general .derecha {
+  grid-area: derecha-1;
 }
-.elementos-producto .columnas  .contenedor-general input{
-    width: 10rem;
+.elementos-producto .columnas .contenedor-general input {
+  width: 10rem;
 }
-.elementos-producto input[type="text"],input[type="number"],select{
-    width: 25rem;
-    height: 3.2rem;
-    padding: 1.5rem;
-}
-
-                /**  ----------       ESTILOS -> VENTANAS EMERGENTES   ------------  **/
-.overlay{
-    background-color:rgba(0, 0, 0, 0.3);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-}
-.overlay.activate{
-    visibility: visible;
+.elementos-producto input[type="text"],
+input[type="number"],
+select {
+  width: 25rem;
+  height: 3.2rem;
+  padding: 1.5rem;
 }
 
-.popup{
-    background-color: #f8f8f8;
-    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 70rem;
-    height: 40rem;
-    color:#2699FB ;
+/**  ----------       ESTILOS -> VENTANAS EMERGENTES   ------------  **/
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
 }
-.popup.carro{
-    width: 60rem;
-    height: 40rem;
-}
-.popup.notificaciones{
-    width: 70rem;
-    height: 60rem;
-}
-
-.interno .elementos{
-    margin: 3rem auto;
-}
-                         /**  ----------       ESTILOS -> POP-UP REGISTRARSE   ------------  **/
-.popup.formu{
-    width: 80rem;
-    height: 50rem;
-}
-.popup.formu .contenedor-inputs .contenedor-division{
-    margin:0px auto; 
-    display: grid;
-    grid-template-columns: 40rem 40rem ;
-    grid-template-areas: "izquierda-2 derecha-2";
-    
-}
-.popup.formu .contenedor-inputs .contenedor-division .columna-izquierda{
-    grid-area: izquierda-2;
-}
-.popup.formu .contenedor-inputs .contenedor-division .columna-derecha{
-    grid-area: derecha-2;
-}
-.popup.formu .contenedor-inputs .contenedor-division input{
-    margin:20px auto;
-}
-.popup.formu .contenedor-inputs .contenedor-division .genre{
-    width: 50%;
+.overlay.activate {
+  visibility: visible;
 }
 
-                /**  ----------       ESTILOS -> POP-UP NOTIFICACIONES   ------------  **/
-
-.popup form .pendientes{
-    border:3px solid #096BA7;
-    padding: 10px;
-    width: 100%;
-    margin-top:1rem ;
+.popup {
+  background-color: #f8f8f8;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 70rem;
+  height: 40rem;
+  color: #2699fb;
 }
-                /**  ----------       ESTILOS -> SCROLL DE NOTIFICACIONES   ------------  **/
-
-
-.interno .elementos .contenedor-inputs input{
-    margin: 20px auto;
+.popup.carro {
+  width: 60rem;
+  height: 40rem;
 }
-.btn-submit{
-    margin-bottom: 0.5rem;
-    padding: 0 2rem;
-    height: 4rem;
-    width: 15rem;
-    font-size: 1.7rem;
-    line-height: 40px;
-    border: none;
-    color: #fff;
-    background-color: #2699FB;
-    cursor: pointer;
-    transition: .3s ease all;
-     
-}
-.btn-cerrar-popup{
-    font-size: 1.6rem;
-    line-height: 16px;
-    display: block;
-    text-align: right;
-    color: #bbbbbb;
-    transition: .3s ease all;
-    padding: 1rem;
+.popup.notificaciones {
+  width: 70rem;
+  height: 60rem;
 }
 
-.popup .btn-cerrar-popup:hover{
-    color:#000;
+.interno .elementos {
+  margin: 3rem auto;
 }
-.popup h3{
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    /**opacity: ;**/
+/**  ----------       ESTILOS -> POP-UP REGISTRARSE   ------------  **/
+.popup.formu {
+  width: 80rem;
+  height: 50rem;
 }
-.popup .contenedor-inputs{ 
-    margin: 0px auto;
+.popup.formu .contenedor-inputs .contenedor-division {
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 40rem 40rem;
+  grid-template-areas: "izquierda-2 derecha-2";
 }
-
-.popup .contenedor-inputs input{
-    width: 80%;
-    margin-bottom: 20px;
-    height: 52px;
-    line-height: 52px;
-    font-size:18px;
-    text-align: center;
-    border: 1px solid #bbbbbb;
-    display: flex;
-    
-    
+.popup.formu .contenedor-inputs .contenedor-division .columna-izquierda {
+  grid-area: izquierda-2;
 }
-
-.popup form .btn-submit:hover{
-    background:rgba(38, 153, 251, .5) ;
+.popup.formu .contenedor-inputs .contenedor-division .columna-derecha {
+  grid-area: derecha-2;
+}
+.popup.formu .contenedor-inputs .contenedor-division input {
+  margin: 20px auto;
+}
+.popup.formu .contenedor-inputs .contenedor-division .genre {
+  width: 50%;
 }
 
-.popup .ir-registro{
-    background-color: royalblue;
+/**  ----------       ESTILOS -> POP-UP NOTIFICACIONES   ------------  **/
+
+.popup form .pendientes {
+  border: 3px solid #096ba7;
+  padding: 10px;
+  width: 100%;
+  margin-top: 1rem;
 }
-.popup .ingreso{
-    background-color: saddlebrown;
+/**  ----------       ESTILOS -> SCROLL DE NOTIFICACIONES   ------------  **/
+
+.interno .elementos .contenedor-inputs input {
+  margin: 20px auto;
+}
+.btn-submit {
+  margin-bottom: 0.5rem;
+  padding: 0 2rem;
+  height: 4rem;
+  width: 15rem;
+  font-size: 1.7rem;
+  line-height: 40px;
+  border: none;
+  color: #fff;
+  background-color: #2699fb;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.btn-cerrar-popup {
+  font-size: 1.6rem;
+  line-height: 16px;
+  display: block;
+  text-align: right;
+  color: #bbbbbb;
+  transition: 0.3s ease all;
+  padding: 1rem;
 }
 
-                /**  ----------       ESTILOS -> PIE DE PAGINA   ------------  **/
-
-.pie{
-    grid-area: pie;
-    margin-top: 30%;
-    background-color: #2699FB;
-    padding: 1rem;
-    font-size: 2rem;
-    height: 100%;
+.popup .btn-cerrar-popup:hover {
+  color: #000;
 }
-    .pie .redes{
-        display: flex;
-        justify-content: space-between;
-    }
-    .pie .redes .fab{
-        padding: 0 1rem;
-        font-size: 2.5rem;
-    }
-    .pie .redes .red{
-        display: flex;
-        align-items: center;
-    }
-    .pie .redes a{
-        color: #fff;
+.popup h3 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  /**opacity: ;**/
+}
+.popup .contenedor-inputs {
+  margin: 0px auto;
+}
 
-    }
-    .puntuaciones .calificacion{
-        color: #2699FB;
-    }
-    
+.popup .contenedor-inputs input {
+  width: 80%;
+  margin-bottom: 20px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #bbbbbb;
+  display: flex;
+}
+
+.popup form .btn-submit:hover {
+  background: rgba(38, 153, 251, 0.5);
+}
+
+.popup .ir-registro {
+  background-color: royalblue;
+}
+.popup .ingreso {
+  background-color: saddlebrown;
+}
+
+/**  ----------       ESTILOS -> PIE DE PAGINA   ------------  **/
+
+.pie {
+  grid-area: pie;
+  margin-top: 30%;
+  background-color: #2699fb;
+  padding: 1rem;
+  font-size: 2rem;
+  height: 100%;
+}
+.pie .redes {
+  display: flex;
+  justify-content: space-between;
+}
+.pie .redes .fab {
+  padding: 0 1rem;
+  font-size: 2.5rem;
+}
+.pie .redes .red {
+  display: flex;
+  align-items: center;
+}
+.pie .redes a {
+  color: #fff;
+}
+.puntuaciones .calificacion {
+  color: #2699fb;
+}

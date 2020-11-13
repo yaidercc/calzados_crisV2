@@ -117,7 +117,11 @@ jQuery(document).on("submit", "#responder", function (event) {
     .done(function (respuesta) {
       if (!respuesta.error) {
         console.log(respuesta);
-        location.href = "vista_producto_admin.php?id="+respuesta.id_producto+"&?id_pre="+respuesta.id_pregunta;
+        location.href =
+          "vista_producto_admin.php?id=" +
+          respuesta.id_producto +
+          "&?id_pre=" +
+          respuesta.id_pregunta;
         swal(
           "hubo un error al registrarse",
           "las claves no coinciden",
@@ -223,6 +227,48 @@ jQuery(document).on("submit", "#form_insertar", function (event) {
   });
 });
 
+//funcion eliminar pregunta
+function EliminarProducto(code) {
+  parametros = { id_pro: code };
+  $.ajax({
+    data: parametros,
+    url: "Php/eliminar_pregunta.php?codi=" + code,
+    type: "POST",
+    beforeSend: function () {},
+    success: function () {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Tu pregunta fue eliminada! ",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setTimeout(recha,1600);
+    },
+  });
+}
+function recha() {
+  location.reload();
+ }
+
+
+function AlertarEliminar(code) {
+  var sistema = getUrl();
+  Swal.fire({
+    title: "Cuidado!",
+    text: "Estas seguro que deseas eliminar esta pregunta?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, eliminar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      EliminarProducto(code);
+    }
+  });
+}
+
 //funcion de filtrado de productos
 $(document).ready(function () {
   $("#mujer").click(function (e) {
@@ -262,7 +308,7 @@ function getUrl() {
 
 //limpiar todos los campos
 var limpiar = document.querySelector("#limpiar");
-if(limpiar){
+if (limpiar) {
   limpiar.addEventListener("click", function () {
     let campos = document.querySelectorAll(
       "input[type='text'],input[type='file'],input[type='number']"
@@ -272,7 +318,6 @@ if(limpiar){
     }
   });
 }
-  
 
 //funcion para agregar separador de miles en inputs
 function puntitos(donde, caracter) {
