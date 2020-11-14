@@ -178,9 +178,12 @@ session_start();
                                     </p>
                                     <span class="respuesta"><?php echo $row->RESPUESTA ?></span>
                                     <?php
+
                                     if ($_SESSION['nit'] == $row->ID_USUARIO_FK) {
-                                        echo '<a href="vista_producto.php?id=' . $_GET["id"] . '&id_pre=' . $row->ID_PREGUNTA . '" class="btn-resp v1">editar</a>';
-                                        echo '<a href="#" onclick="AlertarEliminar(' . $row->ID_PREGUNTA . ')" class="btn-resp v1">eliminar</a>';
+                                        $metodo_eliminar = "AlertarEliminar('$row->ID_PREGUNTA','delete')";
+                                        $metodo_editar = "AlertarEliminar('$row->ID_PREGUNTA','change')";
+                                        echo '<a href="vista_producto.php?id=' . $_GET["id"] . '&id_pre=' . $row->ID_PREGUNTA . '" class="btn-resp v1" name="edit">editar</a>';
+                                        echo '<a href="#" onclick="' . $metodo_eliminar . '" class="btn-resp v1">eliminar</a>';
                                     }
                                     ?>
                                 </table>
@@ -189,13 +192,19 @@ session_start();
                         }
                         ?>
                     </scroll-container>
+                    <input type="button" value="yaidercc" onclick="AlertarEliminar(34,'delete')">
+                    <?php
+                    if (isset($_GET['id_pre'])) {
+                        echo '<form action="Php/eliminar_pregunta.php?codi=' . $_GET["id_pre"] . '&caso=change&id='.$_GET['id'].'" method="POST">';
+                    }else{
+                        echo '<form action="Php/preguntas.php" method="POST">';
+                    }
+                    ?>
+                    <input class="campo-pregunta" type="text" name="mensaje" placeholder="Hacer una pregunta" required>';
+                    <input type="hidden" name="id_product" value=<?php echo $_GET['id']; ?>>
+                    <input type="hidden" name="id_user" value=<?php echo $_SESSION['nit']; ?>>
 
-                    <form action="Php/preguntas.php" method="POST">
-                        <input class="campo-pregunta" type="text" name="mensaje" placeholder="Hacer una pregunta" required>
-                        <input type="hidden" name="id_product" value=<?php echo $_GET['id']; ?>>
-                        <input type="hidden" name="id_user" value=<?php echo $_SESSION['nit']; ?>>
-
-                        <input type="submit" value="Enviar" class="btn-enviar">
+                    <input type="submit" value="Enviar" class="btn-enviar">
                     </form>
                 </div>
             </div>

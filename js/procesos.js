@@ -227,12 +227,13 @@ jQuery(document).on("submit", "#form_insertar", function (event) {
   });
 });
 
+
 //funcion eliminar pregunta
-function EliminarProducto(code) {
+function EliminarProducto(code,del) {
   parametros = { id_pro: code };
   $.ajax({
     data: parametros,
-    url: "Php/eliminar_pregunta.php?codi=" + code,
+    url: "Php/eliminar_pregunta.php?codi=" + code +"&caso="+del,
     type: "POST",
     beforeSend: function () {},
     success: function () {
@@ -252,7 +253,7 @@ function recha() {
  }
 
 
-function AlertarEliminar(code) {
+function AlertarEliminar(code,del) {
   var sistema = getUrl();
   Swal.fire({
     title: "Cuidado!",
@@ -264,7 +265,8 @@ function AlertarEliminar(code) {
     confirmButtonText: "Si, eliminar",
   }).then((result) => {
     if (result.isConfirmed) {
-      EliminarProducto(code);
+     EliminarProducto(code,del);
+     console.log(code,del);
     }
   });
 }
